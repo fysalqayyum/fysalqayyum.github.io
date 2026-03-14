@@ -1,0 +1,5 @@
+# Internal / local only
+.claude/
+push-to-live.bat
+DEPLOYMENT.md
+*.bat
