@@ -163,16 +163,35 @@
   });
 
   // ─── 8. EMAIL OBFUSCATION ────────────────────────
+  function buildMailto(subject, body) {
+    var u = 'fysalqayyum';
+    var d = 'yahoo.com';
+    var href = 'mailto:' + u + '@' + d;
+    if (subject) href += '?subject=' + encodeURIComponent(subject);
+    if (body) href += (subject ? '&' : '?') + 'body=' + encodeURIComponent(body);
+    window.location.href = href;
+  }
+
   var emailBtn = document.getElementById('emailBtn');
   if (emailBtn) {
     emailBtn.addEventListener('click', function () {
-      var u = 'fysalqayyum';
-      var d = 'yahoo.com';
-      window.location.href = 'mailto:' + u + '@' + d;
+      buildMailto();
     });
   }
 
-  // ─── 9. FOOTER YEAR ──────────────────────────────
+  // ─── 9. SERVICE CARD CTAs ─────────────────────────
+  document.querySelectorAll('.service-card__cta').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var card = this.closest('.service-card');
+      var service = card.getAttribute('data-service');
+      var subject = 'I need assistance related to ' + service;
+      var body = 'Hello Dr. Qayyum,\n\nI am reaching out regarding your ' + service + ' consulting service.\n\n[Please describe your project or question here]\n\nBest regards,\n[Your Name]';
+      buildMailto(subject, body);
+    });
+  });
+
+  // ─── 10. FOOTER YEAR ──────────────────────────────
   var yearEl = document.getElementById('footerYear');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
