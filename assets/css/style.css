@@ -78,7 +78,7 @@ ul, ol {
   --lh-normal:     1.65;
 
   /* Spacing */
-  --section-padding: clamp(80px, 10vw, 140px) clamp(24px, 6vw, 80px);
+  --section-padding: clamp(50px, 6vw, 90px) clamp(24px, 6vw, 80px);
   --max-width:     1200px;
   --max-width-text:720px;
 }
@@ -153,7 +153,7 @@ h3 { font-size: var(--fs-h3); }
 .section__subtext {
   color: var(--text-muted);
   max-width: var(--max-width-text);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section__subtext--italic {
@@ -772,6 +772,54 @@ h3 { font-size: var(--fs-h3); }
   padding: 0 1rem 0.75rem;
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+/* Playlist grid (4 square cards) */
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.playlist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.playlist-card:hover {
+  border-color: var(--accent-1);
+  transform: translateY(-6px);
+  background: var(--bg-card-hover);
+}
+
+.playlist-card__icon {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.playlist-card:hover .playlist-card__icon {
+  transform: scale(1.15);
+}
+
+.playlist-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.playlist-card__desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* ═══════════════════════════════════════════════════
