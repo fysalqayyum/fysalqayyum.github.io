@@ -179,17 +179,106 @@
     });
   }
 
-  // ─── 9. SERVICE CARD CTAs ─────────────────────────
-  document.querySelectorAll('.service-card__cta').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      var card = this.closest('.service-card');
-      var service = card.getAttribute('data-service');
+  // ─── 9. SERVICE CARD CLICK (whole card) ──────────
+  document.querySelectorAll('.service-card[data-service]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var service = this.getAttribute('data-service');
       var subject = 'I need assistance related to ' + service;
       var body = 'Hello Dr. Qayyum,\n\nI am reaching out regarding your ' + service + ' consulting service.\n\n[Please describe your project or question here]\n\nBest regards,\n[Your Name]';
       buildMailto(subject, body);
     });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
   });
+
+  // ─── 11. TESTIMONIALS SLIDER ────────────────────
+  (function () {
+    var track = document.getElementById('testimonialTrack');
+    var dotsContainer = document.getElementById('testimonialDots');
+    if (!track || !dotsContainer) return;
+
+    var cards = track.querySelectorAll('.testimonial-card');
+    var total = cards.length;
+    var current = 0;
+    var autoInterval;
+
+    // Create dots
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'testimonials-slider__dot';
+      dot.setAttribute('aria-label', 'Testimonial ' + (i + 1));
+      dot.setAttribute('data-index', i);
+      dotsContainer.appendChild(dot);
+    }
+    var dots = dotsContainer.querySelectorAll('.testimonials-slider__dot');
+
+    function goTo(index) {
+      current = ((index % total) + total) % total;
+      // Calculate offset: center the active card
+      var card = cards[current];
+      var trackRect = track.parentElement.getBoundingClientRect();
+      var cardWidth = card.offsetWidth + card.offsetLeft - (current > 0 ? cards[current - 1].offsetLeft + cards[current - 1].offsetWidth : 0);
+
+      // Simple percentage-based offset
+      var offset = 0;
+      for (var j = 0; j < current; j++) {
+        offset += cards[j].offsetWidth + parseFloat(getComputedStyle(cards[j]).marginLeft) + parseFloat(getComputedStyle(cards[j]).marginRight);
+      }
+      var activeWidth = cards[current].offsetWidth;
+      var containerWidth = track.parentElement.offsetWidth;
+      var centerOffset = offset - (containerWidth - activeWidth) / 2;
+
+      track.style.transform = 'translateX(' + (-centerOffset) + 'px)';
+
+      cards.forEach(function (c, i) {
+        c.classList.toggle('active', i === current);
+      });
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    // Dot click
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(this.getAttribute('data-index'), 10));
+        resetAuto();
+      });
+    });
+
+    // Auto-advance
+    function startAuto() {
+      autoInterval = setInterval(function () {
+        goTo(current + 1);
+      }, 5000);
+    }
+
+    function resetAuto() {
+      clearInterval(autoInterval);
+      startAuto();
+    }
+
+    // Touch/swipe support
+    var startX = 0;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+        resetAuto();
+      }
+    });
+
+    // Init
+    goTo(0);
+    startAuto();
+  })();
 
   // ─── 10. FOOTER YEAR ──────────────────────────────
   var yearEl = document.getElementById('footerYear');
