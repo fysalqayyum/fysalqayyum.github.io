@@ -325,6 +325,26 @@
     initObserver.observe(slider);
   })();
 
+  // ─── 13. FAQ SHOW MORE ──────────────────────────────
+  (function () {
+    var faqList = document.getElementById('faqList');
+    var btn = document.getElementById('faqShowMore');
+    if (!faqList || !btn) return;
+
+    btn.addEventListener('click', function () {
+      if (faqList.classList.contains('faq-list--collapsed')) {
+        faqList.classList.remove('faq-list--collapsed');
+        faqList.classList.add('faq-list--expanded');
+        btn.textContent = 'Show Fewer Questions';
+      } else {
+        faqList.classList.remove('faq-list--expanded');
+        faqList.classList.add('faq-list--collapsed');
+        btn.textContent = 'Show All Questions';
+        faqList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  })();
+
   // ─── 10. FOOTER YEAR ──────────────────────────────
   var yearEl = document.getElementById('footerYear');
   if (yearEl) {
