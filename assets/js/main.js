@@ -195,8 +195,19 @@
     });
   });
 
-  // ─── 11. TESTIMONIALS SLIDER ────────────────────
+  // ─── 11. AWARDS MARQUEE (clone cards for seamless loop) ──
   (function () {
+    var track = document.getElementById('awardsTrack');
+    if (!track) return;
+    var cards = track.querySelectorAll('.award-card');
+    cards.forEach(function (card) {
+      track.appendChild(card.cloneNode(true));
+    });
+  })();
+
+  // ─── 12. TESTIMONIALS SLIDER ────────────────────
+  (function () {
+    var slider = document.querySelector('.testimonials-slider');
     var track = document.getElementById('testimonialTrack');
     var dotsContainer = document.getElementById('testimonialDots');
     if (!track || !dotsContainer) return;
@@ -205,6 +216,7 @@
     var total = cards.length;
     var current = 0;
     var autoInterval;
+    var initialized = false;
 
     // Create dots
     for (var i = 0; i < total; i++) {
@@ -218,21 +230,27 @@
 
     function goTo(index) {
       current = ((index % total) + total) % total;
-      // Calculate offset: center the active card
-      var card = cards[current];
-      var trackRect = track.parentElement.getBoundingClientRect();
-      var cardWidth = card.offsetWidth + card.offsetLeft - (current > 0 ? cards[current - 1].offsetLeft + cards[current - 1].offsetWidth : 0);
 
-      // Simple percentage-based offset
-      var offset = 0;
-      for (var j = 0; j < current; j++) {
-        offset += cards[j].offsetWidth + parseFloat(getComputedStyle(cards[j]).marginLeft) + parseFloat(getComputedStyle(cards[j]).marginRight);
-      }
-      var activeWidth = cards[current].offsetWidth;
+      // Use percentage-based positioning (works even when hidden)
+      var cardPercent = 100 / total;
+      var offset = current * cardPercent;
+      // Center the active card: shift by half container minus half card
+      // Each card is ~62% of container (60% + 2% margin)
+      var cardSize = 62; // approximate percentage
+      var centerShift = (100 - cardSize) / 2;
+      var translatePercent = offset * (cardSize / 100) - (centerShift / 100);
+
+      // Pixel-based approach using actual widths (only when visible)
       var containerWidth = track.parentElement.offsetWidth;
-      var centerOffset = offset - (containerWidth - activeWidth) / 2;
-
-      track.style.transform = 'translateX(' + (-centerOffset) + 'px)';
+      if (containerWidth > 0) {
+        var pixelOffset = 0;
+        for (var j = 0; j < current; j++) {
+          pixelOffset += cards[j].offsetWidth + parseFloat(getComputedStyle(cards[j]).marginLeft) + parseFloat(getComputedStyle(cards[j]).marginRight);
+        }
+        var activeWidth = cards[current].offsetWidth;
+        var centerOffset = pixelOffset - (containerWidth - activeWidth) / 2;
+        track.style.transform = 'translateX(' + (-centerOffset) + 'px)';
+      }
 
       cards.forEach(function (c, i) {
         c.classList.toggle('active', i === current);
@@ -275,9 +293,26 @@
       }
     });
 
-    // Init
-    goTo(0);
-    startAuto();
+    // Recalculate on resize
+    window.addEventListener('resize', function () {
+      goTo(current);
+    });
+
+    // Init: wait for element to become visible, then position
+    // Set active class immediately (works even when hidden)
+    cards[0].classList.add('active');
+    dots[0].classList.add('active');
+
+    // Use IntersectionObserver to init when visible
+    var initObserver = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !initialized) {
+        initialized = true;
+        goTo(0);
+        startAuto();
+        initObserver.disconnect();
+      }
+    }, { threshold: 0.1 });
+    initObserver.observe(slider);
   })();
 
   // ─── 10. FOOTER YEAR ──────────────────────────────
