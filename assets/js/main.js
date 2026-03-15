@@ -205,6 +205,16 @@
     });
   })();
 
+  // ─── 11b. COLLABORATOR MARQUEE (clone tiles for seamless loop) ──
+  (function () {
+    var track = document.getElementById('collabTrack');
+    if (!track) return;
+    var tiles = track.querySelectorAll('.collab-tile');
+    tiles.forEach(function (tile) {
+      track.appendChild(tile.cloneNode(true));
+    });
+  })();
+
   // ─── 12. TESTIMONIALS SLIDER ────────────────────
   (function () {
     var slider = document.querySelector('.testimonials-slider');
