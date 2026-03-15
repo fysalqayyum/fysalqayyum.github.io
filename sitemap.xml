@@ -2,15 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.faisalqayyum.com/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.faisalqayyum.com/blog/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.faisalqayyum.com/blog/posts/2026-03-welcome.html</loc>

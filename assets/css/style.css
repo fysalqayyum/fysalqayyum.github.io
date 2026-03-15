@@ -424,6 +424,18 @@ h3 { font-size: var(--fs-h3); }
   transform: translateY(-2px);
 }
 
+.btn--discovery {
+  border-color: var(--accent-3);
+  color: var(--accent-3);
+}
+
+.btn--discovery:hover {
+  border-color: var(--accent-3);
+  background: var(--accent-3);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
 .btn--large {
   padding: 1.15rem 3rem;
   font-size: 1.1rem;
