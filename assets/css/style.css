@@ -425,15 +425,25 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .btn--discovery {
-  border-color: var(--accent-3);
-  color: var(--accent-3);
+  background: var(--accent-3);
+  color: var(--bg-primary);
+  border: 1.5px solid var(--accent-3);
 }
 
 .btn--discovery:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btn--discovery.btn--outline {
+  background: transparent;
+  color: var(--accent-3);
   border-color: var(--accent-3);
+}
+
+.btn--discovery.btn--outline:hover {
   background: var(--accent-3);
   color: var(--bg-primary);
-  transform: translateY(-2px);
 }
 
 .btn--large {
