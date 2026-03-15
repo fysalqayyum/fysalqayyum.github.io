@@ -325,6 +325,25 @@
     initObserver.observe(slider);
   })();
 
+  // ─── 14. TESTIMONIAL ADAPTIVE TEXT SIZE ─────────────
+  (function () {
+    var texts = document.querySelectorAll('.testimonial-card__text');
+    if (!texts.length) return;
+    texts.forEach(function (el) {
+      var len = el.textContent.length;
+      // Scale: short (<150) = 1.05rem, medium (150-350) = 0.95rem, long (>350) = 0.82rem
+      if (len < 150) {
+        el.style.fontSize = '1.05rem';
+      } else if (len < 250) {
+        el.style.fontSize = '0.95rem';
+      } else if (len < 400) {
+        el.style.fontSize = '0.85rem';
+      } else {
+        el.style.fontSize = '0.78rem';
+      }
+    });
+  })();
+
   // ─── 13. FAQ SHOW MORE ──────────────────────────────
   (function () {
     var faqList = document.getElementById('faqList');
