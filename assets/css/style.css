@@ -357,16 +357,21 @@ h3 { font-size: var(--fs-h3); }
 .hero__portrait {
   flex: 0 0 auto;
   display: none;
+  align-self: flex-end;
 }
 
 .hero__portrait img {
-  width: 280px;
+  width: 380px;
   height: auto;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   object-fit: cover;
-  box-shadow: 0 0 60px rgba(224, 123, 40, 0.15);
-  mask-image: radial-gradient(ellipse 90% 90% at center, black 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 90% at center, black 60%, transparent 100%);
+  box-shadow: 0 0 80px rgba(224, 123, 40, 0.12);
+  mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 15%, black 100%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
+                      linear-gradient(to right, transparent 0%, black 15%, black 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
 }
 
 .hero__label {
@@ -476,23 +481,21 @@ h3 { font-size: var(--fs-h3); }
 /* ═══════════════════════════════════════════════════
    8. ABOUT
    ═══════════════════════════════════════════════════ */
-.about__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+.about__content {
   margin-bottom: 4rem;
 }
 
-.about__text p {
+.about__content p {
   margin-bottom: 1.25rem;
 }
 
-.about__image {
-  position: relative;
-  margin-top: 1rem;
+.about__figure {
+  float: right;
+  width: 48%;
+  margin: 0.25rem 0 1rem 2rem;
 }
 
-.about__image img {
+.about__figure img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-md);
@@ -1406,11 +1409,6 @@ h3 { font-size: var(--fs-h3); }
     grid-template-columns: 1fr 1fr;
   }
 
-  .about__grid {
-    grid-template-columns: 3fr 2fr;
-    align-items: start;
-  }
-
   .hero__portrait {
     display: block;
   }
@@ -1502,18 +1500,19 @@ h3 { font-size: var(--fs-h3); }
     margin-top: 2rem;
   }
 
-  /* About — image smaller on mobile */
-  .about__grid {
-    gap: 2rem;
-    margin-bottom: 2.5rem;
+  /* About — image full width on mobile */
+  .about__figure {
+    float: none;
+    width: 100%;
+    margin: 1rem 0 1.5rem 0;
   }
 
-  .about__image img {
-    max-height: 300px;
-  }
-
-  .about__text p {
+  .about__content p {
     font-size: 0.92rem;
+  }
+
+  .about__content {
+    margin-bottom: 2.5rem;
   }
 
   /* Metrics — 2x2 grid, compact */
