@@ -361,7 +361,7 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .hero__portrait img {
-  width: 380px;
+  width: clamp(320px, 28vw, 480px);
   height: auto;
   border-radius: var(--radius-lg);
   object-fit: cover;
@@ -491,8 +491,9 @@ h3 { font-size: var(--fs-h3); }
 
 .about__figure {
   float: right;
-  width: 48%;
+  width: 40%;
   margin: 0.25rem 0 1rem 2rem;
+  clear: right;
 }
 
 .about__figure img {
