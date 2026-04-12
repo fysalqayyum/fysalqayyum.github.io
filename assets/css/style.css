@@ -347,6 +347,9 @@ h3 { font-size: var(--fs-h3); }
   display: flex;
   align-items: center;
   gap: 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero__content {
@@ -684,6 +687,25 @@ h3 { font-size: var(--fs-h3); }
 
 .service-card[role="button"] {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: "Click to send a quick email \2709";
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-1);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  max-height: 2rem;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -981,12 +1003,13 @@ h3 { font-size: var(--fs-h3); }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 2.5rem 1.5rem;
+  padding: 0 0 1.5rem;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
@@ -1005,17 +1028,37 @@ h3 { font-size: var(--fs-h3); }
   transform: scale(1.15);
 }
 
+.playlist-card__thumb {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.playlist-card__thumb svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.playlist-card:hover .playlist-card__thumb {
+  transform: scale(1.03);
+}
+
 .playlist-card__title {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  padding: 0 1rem;
 }
 
 .playlist-card__desc {
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.5;
+  padding: 0 1rem;
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1601,7 +1644,7 @@ h3 { font-size: var(--fs-h3); }
 
   /* Playlists — 2x2 grid stays, but smaller */
   .playlist-card {
-    padding: 1.5rem 1rem;
+    padding: 0 0 1rem;
   }
 
   .playlist-card__title {
@@ -1615,6 +1658,10 @@ h3 { font-size: var(--fs-h3); }
   .playlist-card__icon svg {
     width: 36px;
     height: 36px;
+  }
+
+  .playlist-card__thumb {
+    margin-bottom: 0.75rem;
   }
 
   /* Blog cards */
