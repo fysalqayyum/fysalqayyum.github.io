@@ -3,3 +3,5 @@
 push-to-live.bat
 DEPLOYMENT.md
 *.bat
+*.command
+push-to-live.*
