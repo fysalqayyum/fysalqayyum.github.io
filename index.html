@@ -693,27 +693,24 @@
             <div class="playlist-card__thumb">
               <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
                 <rect width="320" height="180" rx="8" fill="#0B1220"/>
-                <!-- Polycrystalline grain map — EBSD-style -->
-                <polygon points="80,30 140,25 155,70 120,85 75,65" fill="#E07B2818" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="140,25 210,20 225,55 200,80 155,70" fill="#E07B2828" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="210,20 270,35 260,75 225,55" fill="#E07B2812" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="75,65 120,85 105,125 60,110" fill="#E07B2825" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="120,85 155,70 200,80 195,120 150,130 105,125" fill="#E07B2835" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="200,80 225,55 260,75 255,115 195,120" fill="#E07B2820" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="60,110 105,125 95,160 55,150" fill="#E07B2815" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="105,125 150,130 145,165 95,160" fill="#E07B2830" stroke="#E07B28" stroke-width="1.5"/>
-                <polygon points="150,130 195,120 255,115 250,155 145,165" fill="#E07B2822" stroke="#E07B28" stroke-width="1.5"/>
-                <!-- Slip direction arrows inside grains -->
-                <line x1="105" y1="48" x2="125" y2="58" stroke="#5B9BD5" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
-                <polygon points="125,58 121,54 123,59" fill="#5B9BD5" opacity="0.6"/>
-                <line x1="170" y1="38" x2="195" y2="50" stroke="#5B9BD5" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
-                <polygon points="195,50 190,47 192,52" fill="#5B9BD5" opacity="0.5"/>
-                <line x1="150" y1="95" x2="170" y2="108" stroke="#5B9BD5" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
-                <polygon points="170,108 166,104 168,109" fill="#5B9BD5" opacity="0.7"/>
-                <line x1="220" y1="85" x2="235" y2="100" stroke="#5B9BD5" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
-                <polygon points="235,100 232,95 234,101" fill="#5B9BD5" opacity="0.45"/>
-                <line x1="85" y1="95" x2="95" y2="110" stroke="#5B9BD5" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
-                <polygon points="95,110 93,105 96,110" fill="#5B9BD5" opacity="0.55"/>
+                <!-- Polycrystalline grain map — EBSD-style, compact centered -->
+                <g transform="translate(80,30) scale(0.5)">
+                  <polygon points="80,30 140,25 155,70 120,85 75,65" fill="#E07B2818" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="140,25 210,20 225,55 200,80 155,70" fill="#E07B2828" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="210,20 270,35 260,75 225,55" fill="#E07B2812" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="75,65 120,85 105,125 60,110" fill="#E07B2825" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="120,85 155,70 200,80 195,120 150,130 105,125" fill="#E07B2835" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="200,80 225,55 260,75 255,115 195,120" fill="#E07B2820" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="60,110 105,125 95,160 55,150" fill="#E07B2815" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="105,125 150,130 145,165 95,160" fill="#E07B2830" stroke="#E07B28" stroke-width="2"/>
+                  <polygon points="150,130 195,120 255,115 250,155 145,165" fill="#E07B2822" stroke="#E07B28" stroke-width="2"/>
+                  <!-- Slip direction arrows -->
+                  <line x1="105" y1="48" x2="125" y2="58" stroke="#5B9BD5" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+                  <line x1="170" y1="38" x2="195" y2="50" stroke="#5B9BD5" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+                  <line x1="150" y1="95" x2="170" y2="108" stroke="#5B9BD5" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+                  <line x1="220" y1="85" x2="235" y2="100" stroke="#5B9BD5" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+                  <line x1="85" y1="95" x2="95" y2="110" stroke="#5B9BD5" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+                </g>
               </svg>
             </div>
             <h3 class="playlist-card__title">Research &amp; DAMASK</h3>
