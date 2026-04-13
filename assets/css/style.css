@@ -347,6 +347,9 @@ h3 { font-size: var(--fs-h3); }
   display: flex;
   align-items: center;
   gap: 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero__content {
@@ -684,6 +687,29 @@ h3 { font-size: var(--fs-h3); }
 
 .service-card[role="button"] {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card[role="button"]::after {
+  content: "\2709  Click to send an inquiry";
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-1);
+  letter-spacing: 0.04em;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.service-card[role="button"]:hover::after {
+  opacity: 1;
+  max-height: 3rem;
 }
 
 /* ═══════════════════════════════════════════════════
