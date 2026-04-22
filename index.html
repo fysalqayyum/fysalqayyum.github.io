@@ -35,6 +35,95 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css?v=20260413a">
 
+  <style>
+    /* Contact reason picker modal */
+    .contact-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6, 12, 24, 0.85);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .contact-modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .contact-modal {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 420px;
+      width: 100%;
+      transform: translateY(12px);
+      transition: transform 0.2s;
+    }
+    .contact-modal-overlay.open .contact-modal {
+      transform: translateY(0);
+    }
+    .contact-modal__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+    .contact-modal__sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .contact-modal__options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .contact-modal__option {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.15s, background 0.15s;
+      width: 100%;
+    }
+    .contact-modal__option:hover {
+      border-color: var(--accent-1);
+      background: var(--bg-card-hover);
+    }
+    .contact-modal__option-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .contact-modal__option-text strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+    .contact-modal__option-text span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .contact-modal__close {
+      margin-top: 1.25rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .contact-modal__close:hover { color: var(--text-secondary); }
+  </style>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFMZMDW2NV"></script>
   <script>
@@ -925,6 +1014,52 @@
     </section>
   </main>
 
+  <!-- Contact reason picker modal -->
+  <div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="contact-modal">
+      <div class="contact-modal__title" id="contactModalTitle">What's this about?</div>
+      <div class="contact-modal__sub">Choose the option that best describes your message.</div>
+      <div class="contact-modal__options">
+        <button class="contact-modal__option" data-subject="Consulting inquiry" data-body="Hello Dr. Qayyum,%0A%0AI would like to discuss a consulting engagement.%0A%0A[Please describe your project here]%0A%0ABest regards,%0A[Your Name]">
+          <span class="contact-modal__option-icon">🔬</span>
+          <div class="contact-modal__option-text">
+            <strong>Consulting or research project</strong>
+            <span>Simulation, EBSD analysis, materials modeling</span>
+          </div>
+        </button>
+        <button class="contact-modal__option" data-subject="Mentoring / PhD guidance" data-body="Hello Dr. Qayyum,%0A%0AI am looking for mentoring support.%0A%0A[Please describe your situation]%0A%0ABest regards,%0A[Your Name]">
+          <span class="contact-modal__option-icon">🎓</span>
+          <div class="contact-modal__option-text">
+            <strong>Mentoring or PhD guidance</strong>
+            <span>Thesis support, scientific writing, career advice</span>
+          </div>
+        </button>
+        <button class="contact-modal__option" data-subject="Collaboration or joint research" data-body="Hello Dr. Qayyum,%0A%0AI would like to explore a research collaboration.%0A%0A[Please describe your proposal]%0A%0ABest regards,%0A[Your Name]">
+          <span class="contact-modal__option-icon">🤝</span>
+          <div class="contact-modal__option-text">
+            <strong>Collaboration or joint research</strong>
+            <span>Co-authorship, grants, institutional partnerships</span>
+          </div>
+        </button>
+        <button class="contact-modal__option" data-href="/write-for-us.html">
+          <span class="contact-modal__option-icon">✍️</span>
+          <div class="contact-modal__option-text">
+            <strong>Publish a guest post</strong>
+            <span>See rates and guidelines &rarr;</span>
+          </div>
+        </button>
+        <button class="contact-modal__option" data-subject="Press / media inquiry" data-body="Hello Dr. Qayyum,%0A%0AI am reaching out regarding a press or media opportunity.%0A%0A[Please describe]%0A%0ABest regards,%0A[Your Name]">
+          <span class="contact-modal__option-icon">📰</span>
+          <div class="contact-modal__option-text">
+            <strong>Press or media</strong>
+            <span>Interview, quote, expert comment</span>
+          </div>
+        </button>
+      </div>
+      <div class="contact-modal__close" id="contactModalClose">Cancel</div>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════════════════════
        FOOTER
        ═══════════════════════════════════════════════════ -->
@@ -960,7 +1095,7 @@
         </a>
       </div>
       <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
-      <p class="footer__meta">faisalqayyum.com</p>
+      <p class="footer__meta">faisalqayyum.com &middot; <a href="/write-for-us.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Write for Us</a></p>
     </div>
   </footer>
 
