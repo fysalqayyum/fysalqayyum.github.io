@@ -173,11 +173,52 @@
   }
 
   var emailBtn = document.getElementById('emailBtn');
+  var contactModalOverlay = document.getElementById('contactModalOverlay');
+  var contactModalClose = document.getElementById('contactModalClose');
+
+  function openContactModal() {
+    if (contactModalOverlay) contactModalOverlay.classList.add('open');
+  }
+  function closeContactModal() {
+    if (contactModalOverlay) contactModalOverlay.classList.remove('open');
+  }
+
   if (emailBtn) {
     emailBtn.addEventListener('click', function () {
-      buildMailto();
+      if (contactModalOverlay) {
+        openContactModal();
+      } else {
+        buildMailto();
+      }
     });
   }
+
+  if (contactModalOverlay) {
+    contactModalOverlay.addEventListener('click', function (e) {
+      if (e.target === contactModalOverlay) closeContactModal();
+    });
+  }
+  if (contactModalClose) {
+    contactModalClose.addEventListener('click', closeContactModal);
+  }
+
+  document.querySelectorAll('.contact-modal__option').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var href = this.getAttribute('data-href');
+      if (href) {
+        window.location.href = href;
+        return;
+      }
+      var subject = this.getAttribute('data-subject') || '';
+      var body = this.getAttribute('data-body') || '';
+      closeContactModal();
+      var u = 'fysalqayyum', d = 'yahoo.com';
+      var mailHref = 'mailto:' + u + '@' + d;
+      if (subject) mailHref += '?subject=' + encodeURIComponent(subject);
+      if (body) mailHref += (subject ? '&' : '?') + 'body=' + body;
+      window.location.href = mailHref;
+    });
+  });
 
   // ─── 9. SERVICE CARD CLICK (whole card) ──────────
   document.querySelectorAll('.service-card[data-service]').forEach(function (card) {
