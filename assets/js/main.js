@@ -20,6 +20,7 @@
   // ─── 2. NAV SCROLL BEHAVIOR ───────────────────────
   var nav = document.getElementById('nav');
   function handleNavScroll() {
+    if (!nav) return;
     if (window.scrollY > 50) {
       nav.classList.add('scrolled');
     } else {
@@ -147,13 +148,15 @@
   }
 
   // Close mobile menu on link click
-  mobileMenu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (mobileMenu.classList.contains('open')) {
-        toggleMenu();
-      }
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('open')) {
+          toggleMenu();
+        }
+      });
     });
-  });
+  }
 
   // Close on ESC
   document.addEventListener('keydown', function (e) {
@@ -319,6 +322,16 @@
       });
     });
 
+    // Card click — navigate to clicked card
+    cards.forEach(function (card, i) {
+      card.addEventListener('click', function () {
+        if (i !== current) {
+          goTo(i);
+          resetAuto();
+        }
+      });
+    });
+
     // Auto-advance
     function startAuto() {
       autoInterval = setInterval(function () {
@@ -409,6 +422,27 @@
   var yearEl = document.getElementById('footerYear');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
+  }
+
+  // ─── 15. STICKY MOBILE CTA ───────────────────────
+  var stickyCta = document.getElementById('stickyCta');
+  if (stickyCta) {
+    window.addEventListener('scroll', function () {
+      stickyCta.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+  }
+
+  // ─── 16. READING PROGRESS BAR ────────────────────
+  var readingProgress = document.getElementById('readingProgress');
+  if (readingProgress) {
+    var article = document.querySelector('.post-content');
+    window.addEventListener('scroll', function () {
+      var top = article.offsetTop;
+      var height = article.offsetHeight - window.innerHeight;
+      var scrolled = window.scrollY - top;
+      var pct = Math.min(Math.max((scrolled / height) * 100, 0), 100);
+      readingProgress.style.width = pct + '%';
+    }, { passive: true });
   }
 
 })();
