@@ -435,7 +435,7 @@ h3 { font-size: var(--fs-h3); }
 
 .btn--primary {
   background: var(--accent-1);
-  color: var(--bg-primary);
+  color: #fff;
 }
 
 .btn--primary:hover {
@@ -1824,6 +1824,22 @@ h3 { font-size: var(--fs-h3); }
 }
 
 .post-content a:hover {
+  color: var(--accent-1);
+}
+
+.post-content a.btn {
+  text-decoration: none;
+}
+.post-content a.btn--primary {
+  color: #fff;
+}
+.post-content a.btn--primary:hover {
+  color: #fff;
+}
+.post-content a.btn--outline {
+  color: var(--text-primary);
+}
+.post-content a.btn--outline:hover {
   color: var(--accent-1);
 }
 
