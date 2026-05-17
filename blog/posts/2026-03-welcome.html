@@ -22,6 +22,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <style>
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 {
+      color: var(--accent-1);
+      margin-bottom: 0.75rem;
+    }
+    .post-content .cta-box p {
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+    }
+    .post-content .cta-box .btn {
+      display: inline-block;
+      margin: 0.25rem;
+    }
+    .post-content .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .post-content .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1rem;
+      text-align: center;
+    }
+    .post-content .stat-card .stat-num {
+      display: block;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--accent-1);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .post-content .stat-card .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.3;
+    }
+  </style>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFMZMDW2NV"></script>
   <script>
@@ -58,6 +107,8 @@
   </script>
 </head>
 <body>
+
+  <div class="reading-progress-bar" id="readingProgress"></div>
 
   <nav class="nav scrolled">
     <div class="nav__inner">
@@ -98,15 +149,24 @@
     <article class="section post-content">
       <a href="/blog/" class="back-link">&larr; Back to all posts</a>
       <h1>Why I Built This Website and What You Can Expect</h1>
-      <p class="post-meta">March 14, 2026 &middot; General</p>
+      <p class="post-meta">March 14, 2026 &middot; General &middot; 3 min read</p>
 
-      <p>For over a decade, my work has lived inside journal papers, conference proceedings, and simulation result files. Researchers who needed crystal plasticity expertise found me through ResearchGate or a colleague's recommendation. Students who wanted mentoring discovered me through institutional contacts. But the world of knowledge dissemination is changing, and I believe it is time to build a proper digital home for everything I do.</p>
+      <p>In 2019, a PhD student from Southeast Asia emailed me about a crystal plasticity simulation problem he had been stuck on for three months. We fixed it in two email exchanges. He submitted his thesis eleven months later and cited our conversation in the acknowledgements. That exchange stayed with me &mdash; how much was sitting silently in my head that others were circling around for months, unable to find.</p>
+
+      <p>For over a decade, my work lived inside journal papers, conference proceedings, and simulation result files. Researchers who needed crystal plasticity expertise found me through ResearchGate or a colleague&rsquo;s recommendation. Students discovered me through institutional contacts. That is a slow and opaque distribution for knowledge that should be openly accessible. This website changes that.</p>
 
       <h2>Why Now?</h2>
 
-      <p>The answer is simple: impact requires visibility. My research in crystal plasticity simulation, metal forming, and microstructure characterization has produced over 39 publications and 1,230 citations. I have mentored PhD students across three continents and secured grants from some of the most competitive funding bodies in Europe and Asia, including DFG, Alexander von Humboldt, JSPS, DAAD, and Joachim Herz Foundation.</p>
+      <p>Impact requires visibility. My research in crystal plasticity simulation, metal forming, and microstructure characterisation has produced over 39 publications and 1,230 citations across institutions in Germany, Japan, South Korea, and Saudi Arabia. I have mentored PhD students across three continents and secured grants from some of the most competitive funding bodies in Europe and Asia, including DFG, Alexander von Humboldt, JSPS, DAAD, and the Joachim Herz Foundation.</p>
 
-      <p>Yet most of this work is locked behind academic paywalls or buried in institutional profiles. This website changes that. It is my central platform for sharing expertise, attracting consulting inquiries, and building a community around computational materials science.</p>
+      <div class="stat-row">
+        <div class="stat-card"><span class="stat-num">39+</span><span class="stat-label">Peer-reviewed publications</span></div>
+        <div class="stat-card"><span class="stat-num">1,230+</span><span class="stat-label">Citations</span></div>
+        <div class="stat-card"><span class="stat-num">15+</span><span class="stat-label">Years in research</span></div>
+        <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Continents of collaboration</span></div>
+      </div>
+
+      <p>Most of this work is locked behind academic paywalls or buried in institutional profiles. This website is my central platform for sharing expertise, attracting consulting inquiries, and writing directly for the researchers and engineers who can use it.</p>
 
       <h2>What I Bring to the Table</h2>
 
@@ -122,11 +182,12 @@
 
       <p>Third, I will write about multiscale modeling philosophy, the process-structure-property chain, and how emerging methods like phase field simulation and machine learning are reshaping materials science. These are the conversations happening at conferences, and I want to bring them here.</p>
 
-      <h2>An Invitation</h2>
-
-      <p>If you are a researcher struggling with a simulation setup, a PhD student looking for direction, an industry engineer facing a materials failure, or simply someone curious about how metals behave at the grain level, this site is for you. Browse the services section, explore the FAQ, and do not hesitate to reach out. Every serious inquiry gets a personal response.</p>
-
-      <p>Welcome to my digital workspace. Let us build something together.</p>
+      <div class="cta-box">
+        <h3>This Site Is for You</h3>
+        <p>If you are a researcher stuck on a simulation setup, a PhD student looking for direction, an industry engineer facing a materials failure, or an academic exploring the Saudi or Gulf university system &mdash; every serious inquiry gets a personal response. Let&rsquo;s start with fifteen minutes.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a Free 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Browse Services</a>
+      </div>
     </article>
   </main>
 
@@ -138,6 +199,6 @@
     </div>
   </footer>
 
-  <script defer src="../../assets/js/main.js"></script>
+  <script defer src="../../assets/js/main.js?v=20260517"></script>
 </body>
 </html>
