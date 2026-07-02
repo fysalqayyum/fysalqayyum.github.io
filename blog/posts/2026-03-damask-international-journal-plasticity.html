@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Combining DAMASK with International Journal of Plasticity Frameworks — Bridging Crystal Plasticity Theory and Publication | Dr.-Ing. Faisal Qayyum</title>
-  <meta name="description" content="How DAMASK crystal plasticity simulations align with the research standards of the International Journal of Plasticity. A practical guide for researchers targeting high-impact publications in computational plasticity.">
-  <meta name="keywords" content="DAMASK crystal plasticity, International Journal of Plasticity, CPFEM publication, crystal plasticity finite element method, DAMASK simulation workflow, IJP paper, computational plasticity, polycrystal modeling, constitutive modeling, Dr Faisal Qayyum">
+  <title>How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="What gets DAMASK crystal plasticity studies through International Journal of Plasticity review: model justification, hierarchical calibration, and RVE proof.">
+  <meta name="keywords" content="DAMASK crystal plasticity, International Journal of Plasticity, CPFEM publication, crystal plasticity finite element method, DAMASK simulation workflow, RVE convergence, constitutive model calibration, dislocation density model, spectral solver, polycrystal modeling, Dr Faisal Qayyum">
   <meta name="author" content="Dr.-Ing. Faisal Qayyum">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html">
-  <meta property="og:title" content="Combining DAMASK with International Journal of Plasticity Frameworks">
-  <meta property="og:description" content="How DAMASK crystal plasticity simulations align with IJP research standards. A practical guide for researchers targeting high-impact computational plasticity publications.">
+  <meta property="og:title" content="How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity">
+  <meta property="og:description" content="The solver is never the problem. What separates DAMASK studies that survive top-tier review: model justification, hierarchical calibration, and RVE proof.">
   <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <meta property="article:published_time" content="2026-03-15">
-  <meta property="article:modified_time" content="2026-05-18">
+  <meta property="article:modified_time" content="2026-07-02">
   <meta property="article:author" content="https://faisalqayyum.com/">
-  <meta name="twitter:title" content="Combining DAMASK with International Journal of Plasticity Frameworks">
-  <meta name="twitter:description" content="Bridging DAMASK crystal plasticity simulations with IJP publication standards for high-impact computational materials science research.">
+  <meta name="twitter:title" content="How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity">
+  <meta name="twitter:description" content="The solver is never the problem. Model justification, hierarchical calibration, RVE proof, and framing — from someone who has published there.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,24 +50,24 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Combining DAMASK with International Journal of Plasticity Frameworks — Bridging Crystal Plasticity Theory and Publication",
+    "headline": "How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity",
     "author": {
       "@type": "Person",
       "name": "Dr.-Ing. Faisal Qayyum",
       "url": "https://faisalqayyum.com"
     },
     "datePublished": "2026-03-15",
-    "dateModified": "2026-05-18",
+    "dateModified": "2026-07-02",
     "image": "https://faisalqayyum.com/assets/img/og-image.jpg",
     "publisher": {
       "@type": "Person",
       "name": "Dr.-Ing. Faisal Qayyum",
       "url": "https://faisalqayyum.com"
     },
-    "description": "How DAMASK crystal plasticity simulations align with the research standards of the International Journal of Plasticity. A practical guide for researchers targeting high-impact publications.",
+    "description": "What gets DAMASK crystal plasticity studies through International Journal of Plasticity review: model justification, hierarchical calibration, and RVE proof.",
     "url": "https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html",
     "mainEntityOfPage": "https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html",
-    "keywords": ["DAMASK", "International Journal of Plasticity", "crystal plasticity", "CPFEM", "constitutive modeling"]
+    "keywords": ["DAMASK", "International Journal of Plasticity", "crystal plasticity", "CPFEM", "constitutive modeling", "RVE convergence", "model calibration"]
   }
   </script>
 
@@ -92,11 +92,139 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Combining DAMASK with International Journal of Plasticity Frameworks — Bridging Crystal Plasticity Theory and Publication"
+        "name": "How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity"
       }
     ]
   }
   </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DAMASK in crystal plasticity simulation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DAMASK (the Düsseldorf Advanced Material Simulation Kit) is an open-source multi-physics crystal plasticity simulation package developed at the Max-Planck-Institut in Düsseldorf. Its spectral solver runs full-field simulations on representative volume elements, resolving grain-level stress and strain fields that arise from crystallographic anisotropy. It supports phenomenological power-law models, dislocation-density-based formulations, and coupled damage and thermal frameworks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is fitting a stress-strain curve enough to calibrate a crystal plasticity model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Inverse fitting against a macroscopic stress-strain curve is a non-unique problem: several very different parameter sets can reproduce the same curve while predicting different local behavior. Reviewers at top journals expect hierarchical calibration — single-crystal or literature-anchored parameters first, then polycrystal macroscopic response, then validation of local fields against EBSD orientation data, DIC strain maps, or in-situ measurements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I prove my RVE is representative?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Show convergence in two directions and fidelity in one. Convergence: demonstrate that your quantities of interest stop changing when you increase the number of grains and refine the grid resolution. Fidelity: show that the synthetic microstructure statistically matches the measured one — grain size distribution, morphology, and crystallographic texture compared against measured EBSD/ODF data. State the boundary conditions explicitly. If doubling the grain count would change your conclusions, the RVE is not representative yet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a phenomenological or dislocation-density-based crystal plasticity model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The choice must follow from the physics your study makes claims about. A phenomenological power-law model is defensible when the contribution concerns texture evolution or micromechanical fields under monotonic loading at a fixed condition. If the paper makes claims about temperature dependence, strain-rate sensitivity, or evolving dislocation structures, reviewers will expect a dislocation-density-based formulation, because the phenomenological parameters have no physical meaning to carry those claims."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes a crystal plasticity paper suitable for the International Journal of Plasticity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A contribution to the understanding of plastic deformation, not a demonstration of software. Strong submissions justify the constitutive formulation physically, calibrate transparently and hierarchically, validate simulated local fields against experimental observables at the grain scale, document RVE convergence and solver numerics, and frame the paper around a materials question whose answer would matter even if a different code had produced it."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-content .info-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .info-box p { margin-bottom: 0.25rem; }
+    .post-content .info-box p:last-child { margin-bottom: 0; }
+    .post-content .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .warning-box p { margin-bottom: 0.25rem; }
+    .post-content .warning-box p:last-child { margin-bottom: 0; }
+    .post-content .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .post-content .doc-table th,
+    .post-content .doc-table td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+    }
+    .post-content .doc-table th {
+      background: var(--bg-card);
+      color: var(--accent-1);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .post-content .doc-table td { color: var(--text-secondary); }
+    .post-content .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 { color: var(--accent-1); margin-bottom: 0.75rem; }
+    .post-content .cta-box p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .post-content .cta-box .btn { display: inline-block; margin: 0.25rem; }
+    .post-content .story-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.06), rgba(224,123,40,0.02));
+      border: 1px solid rgba(224,123,40,0.2);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+    .post-content .story-box p { margin-bottom: 0.4rem; color: var(--text-secondary); }
+    .post-content .story-box p:last-child { margin-bottom: 0; }
+    .post-content .story-box::before {
+      content: "From my published work";
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      margin-bottom: 0.6rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -140,41 +268,165 @@
   <main>
     <article class="section post-content">
       <a href="/blog/" class="back-link">&larr; Back to all posts</a>
-      <h1>Combining DAMASK with International Journal of Plasticity Frameworks &mdash; Bridging Crystal Plasticity Theory and Publication</h1>
-      <p class="post-meta">March 15, 2026 &middot; Crystal Plasticity &amp; Publishing</p>
+      <h1>How to Publish DAMASK Crystal Plasticity Research in the International Journal of Plasticity</h1>
+      <p class="post-meta">March 15, 2026 &middot; Crystal Plasticity &middot; 8 min read</p>
 
-      <p>The International Journal of Plasticity (IJP) is widely regarded as one of the most prestigious venues for publishing research in constitutive modeling, crystal plasticity, and advanced continuum mechanics. For researchers using DAMASK &mdash; the open-source D&uuml;sseldorf Advanced Material Simulation Kit &mdash; there is a natural alignment between the capabilities of the solver and the expectations of IJP reviewers. Yet turning a DAMASK simulation campaign into an IJP-caliber manuscript requires deliberate choices in model formulation, validation strategy, and scientific storytelling.</p>
+      <p><em>In 2024, a study I co-authored on temperature-dependent deformation and texture evolution in AA6082 aluminum appeared in the <a href="https://doi.org/10.1016/j.ijplas.2024.103942" target="_blank" rel="noopener">International Journal of Plasticity</a>. The DAMASK simulations behind it were the easy part.</em></p>
 
-      <h2>Why DAMASK and IJP Are a Natural Fit</h2>
+      <p>I have spent years running DAMASK, teaching it through <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wlNpC8KkQx9Y4WnKz3Koxmq" target="_blank" rel="noopener">tutorials and case studies</a>, and reviewing manuscripts built on it. The pattern in rejected drafts barely varies. The solver is never the problem. What fails review is everything the solver cannot do for you: justifying the model, proving the calibration, defending the microstructure, and framing a question worth answering.</p>
 
-      <p>DAMASK implements physics-based crystal plasticity constitutive models that resolve deformation at the grain level. Its spectral solver enables full-field simulations on representative volume elements (RVEs), capturing the heterogeneous stress and strain fields that arise from crystallographic anisotropy. IJP, on the other hand, publishes research that advances the fundamental understanding of plastic deformation, damage, and constitutive behavior. The journal expects physically motivated models, rigorous parameter identification, and meaningful experimental validation &mdash; all areas where DAMASK excels when used correctly.</p>
+      <p>This post is for the researcher who already has DAMASK results and is deciding whether they can survive review at the top of the field &mdash; or trying to understand why the last submission did not.</p>
 
-      <p>The overlap is clear: DAMASK provides the computational machinery to explore constitutive behavior at scales that matter, and IJP provides the audience that values exactly that kind of contribution. However, the gap between running a simulation and publishing a high-impact paper is where many researchers struggle.</p>
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__title">In this article</p>
+        <ul class="toc__list">
+          <li><a href="#shortcuts">Reviewers Do Not Reject the Solver. They Reject the Shortcuts.</a></li>
+          <li><a href="#model">Your Constitutive Model Is a Claim, Not a Setting</a></li>
+          <li><a href="#calibration">Calibration Is Where Most Manuscripts Die</a></li>
+          <li><a href="#rve">An RVE Is Representative Only If You Prove It</a></li>
+          <li><a href="#numerics">The Numerics Are Part of the Science</a></li>
+          <li><a href="#framing">Frame a Question, Not a Capability</a></li>
+          <li><a href="#filter">The Pre-Submission Filter</a></li>
+          <li><a href="#final">Final Thought</a></li>
+        </ul>
+      </nav>
 
-      <h2>Key Elements for an IJP-Quality DAMASK Study</h2>
+      <!-- ═══ SECTION 1 ═══ -->
+      <h2 id="shortcuts">Reviewers Do Not Reject the Solver. They Reject the Shortcuts.</h2>
 
-      <p>From my experience publishing and reviewing in this space, there are several non-negotiable elements that separate a strong submission from a weak one. First, the constitutive model selection must be justified physically, not merely by convenience. DAMASK supports phenomenological power-law models, dislocation-density-based formulations, and coupled damage frameworks. An IJP paper must explain why a particular formulation was chosen and how it connects to the underlying deformation physics of the material system.</p>
+      <p>Ten years ago, running a full-field crystal plasticity simulation was itself an achievement. That era is over. <a href="https://damask-multiphysics.org" target="_blank" rel="noopener">DAMASK</a> is open source, well documented, and taught in university courses and free tutorials. A capable student can have a spectral-solver simulation producing beautiful stress and strain maps within weeks.</p>
 
-      <p>Second, parameter calibration must be transparent and reproducible. IJP reviewers will scrutinize how slip system parameters, hardening coefficients, and damage thresholds were identified. Inverse calibration against macroscopic stress-strain curves alone is insufficient &mdash; the strongest papers combine macroscopic response with local validation data such as EBSD-measured orientation gradients, DIC strain fields, or in-situ diffraction data.</p>
+      <p>The <em>International Journal of Plasticity</em> knows this. Its reviewers run these tools themselves. So a manuscript whose implicit contribution is "we simulated it" starts the review already behind. What the journal publishes is understanding of plastic deformation. The simulation is admissible evidence, and evidence gets cross-examined.</p>
 
-      <p>Third, the RVE must be representative. This means demonstrating convergence with respect to both mesh resolution and the number of grains. Periodic boundary conditions, grain morphology statistics, and texture fidelity all need to be discussed. DAMASK makes this straightforward through its built-in tools for generating synthetic microstructures, but the researcher must show that the virtual microstructure faithfully represents the real one.</p>
+      <p>In the drafts I review and the projects I consult on, the cross-examination fails at one of four points: the constitutive model was chosen by convenience, the calibration is opaque, the RVE is asserted rather than proven, or the paper is framed around the tool instead of a question. The next four sections take these one at a time, in the order a reviewer meets them.</p>
 
-      <h2>Common Pitfalls to Avoid</h2>
+      <!-- ═══ SECTION 2 ═══ -->
+      <h2 id="model">Your Constitutive Model Is a Claim, Not a Setting</h2>
 
-      <p>One of the most frequent mistakes I see in draft manuscripts is treating DAMASK as a black box. Reviewers at IJP-level journals expect you to understand the solver internals &mdash; the spectral method, convergence behavior, and the stiffness tetrad formulation. Presenting results without discussing numerical aspects such as grid resolution sensitivity, convergence tolerance, or the choice of homogenization scheme will weaken the manuscript.</p>
+      <p>DAMASK offers phenomenological power-law plasticity, dislocation-density-based formulations, and coupled damage, thermal, and transformation frameworks. In the input file, switching between them is a few lines. In a manuscript, each one is a scientific claim about which physics matters in your material, and reviewers read it exactly that way.</p>
 
-      <p>Another common issue is neglecting the connection between simulation predictions and experimental observables. A paper that shows beautiful full-field strain maps but never compares them to DIC or EBSD data misses the opportunity to validate the model at the scale where crystal plasticity operates. The strongest IJP contributions establish a clear chain from microstructural input through simulation to experimentally verifiable output.</p>
+      <p>The failure mode is choosing the phenomenological model because it has fewer parameters and converges faster, then writing a paper that makes claims those parameters cannot carry. Phenomenological hardening coefficients have no physical meaning. That is acceptable when your contribution is about texture evolution or local field heterogeneity under one loading condition. It collapses the moment your abstract says anything about temperature dependence, strain-rate sensitivity, or microstructural evolution &mdash; claims that need dislocation densities, not fitted exponents.</p>
 
-      <h2>Building a Publication Workflow</h2>
+      <div class="info-box">
+        <p><strong>A defensible model choice answers three questions in the paper itself:</strong></p>
+        <p>1. Which deformation mechanisms are active in this material under this loading, and how do you know?</p>
+        <p>2. Which of those mechanisms does the chosen formulation actually represent?</p>
+        <p>3. What would the simpler formulation get wrong for this specific study &mdash; or why is the simpler one sufficient?</p>
+      </div>
 
-      <p>For researchers looking to target IJP with their DAMASK work, I recommend a structured workflow. Start with thorough material characterization: EBSD maps for grain morphology and texture, mechanical testing for calibration targets, and if possible, in-situ data for local validation. Next, build your RVE with statistical fidelity to the measured microstructure. Then calibrate your constitutive model using a hierarchical approach &mdash; first matching single-crystal behavior, then polycrystal response, and finally local field quantities.</p>
+      <p>If those three answers are in your manuscript before submission, you have removed the first standard reviewer objection. If you cannot write them, you have found your real problem early, and cheaply.</p>
 
-      <p>Finally, frame your contribution around a scientific question rather than a tool demonstration. IJP editors are interested in new insights about plastic deformation, not in showcasing software capabilities. The simulation is the method; the contribution must be the understanding it generates.</p>
+      <!-- ═══ SECTION 3 ═══ -->
+      <h2 id="calibration">Calibration Is Where Most Manuscripts Die</h2>
 
-      <h2>How I Can Help</h2>
+      <p>Here is the uncomfortable truth about inverse calibration: fitting slip system parameters against a macroscopic stress&ndash;strain curve is a non-unique problem. Several very different parameter sets will reproduce the same curve. Each of those sets predicts different local fields, different texture evolution, different damage initiation sites. A reviewer who has lived this will not accept the curve match as proof of anything.</p>
 
-      <p>I offer consulting services for researchers preparing DAMASK-based manuscripts for high-impact journals. This includes model setup review, calibration strategy, RVE construction guidance, and manuscript feedback with a focus on the narrative structure that IJP reviewers expect. If you are working on a crystal plasticity study and want expert input before submission, <a href="/#contact">get in touch</a> or <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener">book a 15-minute call</a>.</p>
-    
+      <p>The calibration that survives review is hierarchical. Anchor what you can independently: single-crystal parameters from literature or dedicated experiments, elastic constants from measurement, initial dislocation densities from characterization. Then fit the remaining parameters against the macroscopic response. Then &mdash; and this is the step most manuscripts skip &mdash; validate what you did not fit: compare the simulated local fields against an experimental observable at the scale where crystal plasticity actually operates.</p>
+
+      <div class="story-box">
+        <p>In our work on zirconia-reinforced TRIP steel composites, the calibrated model reproducing the tensile curve was the starting point, not the result. The result came when we put the same composite under an in-situ tensile stage, tracked local strain evolution with digital image processing, and compared the measured strain heterogeneity with the simulated fields &mdash; grain by grain, feature by feature. The places where they agreed made the model credible. The places where they disagreed became the damage-mechanism findings the papers are actually about.</p>
+      </div>
+
+      <p>Local validation data does not need to be exotic. EBSD-measured orientation changes before and after deformation, DIC strain maps at modest magnification, hardness maps across phases &mdash; each one turns "we fitted a curve" into "we predicted something we did not fit." That sentence is the difference between a methods paper and an IJP paper.</p>
+
+      <p><em>If you are mid-study and unsure whether your calibration chain will hold up, this is exactly what a <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener">15-minute call</a> can settle before you spend three more months simulating.</em></p>
+
+      <!-- ═══ SECTION 4 ═══ -->
+      <h2 id="rve">An RVE Is Representative Only If You Prove It</h2>
+
+      <p>Every DAMASK paper contains the phrase "representative volume element." Few contain the evidence. Representativeness is a testable property, and reviewers increasingly test for it.</p>
+
+      <p>The proof has two convergence directions and one fidelity requirement. Convergence: show that your quantities of interest &mdash; not just the average stress, but the local field statistics your conclusions rest on &mdash; stop changing as you increase the number of grains and refine the grid. Fidelity: show that the synthetic microstructure statistically matches the measured one. Grain size distribution against EBSD statistics. Texture against the measured ODF. Phase fractions and morphology against micrographs. And state the boundary conditions explicitly, because periodic boundary conditions on a non-periodic microstructure are a choice with consequences, not a default to hide.</p>
+
+      <div class="warning-box">
+        <p><strong>The reviewer's test is simple:</strong> would your conclusions change if the RVE had twice the grains or twice the resolution? If your manuscript does not answer that, the reviewer assumes the answer is "we don't know" &mdash; and one "we don't know" at the foundation puts every result above it in doubt.</p>
+      </div>
+
+      <!-- ═══ SECTION 5 ═══ -->
+      <h2 id="numerics">The Numerics Are Part of the Science</h2>
+
+      <p>DAMASK's spectral solver is fast and elegant, and it has numerical behavior that a top-tier reviewer expects you to understand: sensitivity to grid resolution at phase and grain boundaries, convergence tolerance effects on local fields, and the influence of the chosen homogenization scheme. Treating the solver as a black box shows, even when nothing is technically wrong.</p>
+
+      <p>The fix costs half a page. Report the grid convergence study. State the tolerances and why they are sufficient for your quantities of interest. Name the solver scheme and version, and cite the <a href="https://doi.org/10.1016/j.commatsci.2018.04.030" target="_blank" rel="noopener">DAMASK reference paper</a> so your setup is reproducible. Reviewers rarely praise these paragraphs. They reliably punish their absence.</p>
+
+      <!-- ═══ SECTION 6 ═══ -->
+      <h2 id="framing">Frame a Question, Not a Capability</h2>
+
+      <p>The single most common framing mistake: the paper is about the simulation. The title says "crystal plasticity simulation of X," the abstract lists what was modeled, and the conclusions summarize what the model can do. Editors at IJP desk-reject this shape of paper regardless of technical quality, because the journal publishes insight about materials, not demonstrations of software.</p>
+
+      <div class="story-box">
+        <p>The AA6082 study that reached the International Journal of Plasticity was never framed as a DAMASK paper. The question was about the material: how deformation behavior and texture evolution change with temperature, and whether an integrated experimental and simulation approach could explain the mechanism. DAMASK lives in the methods section. The title does not mention it. That framing was not modesty &mdash; it is what made the work belong in that journal.</p>
+      </div>
+
+      <p>A useful test: write your main conclusion as one sentence, then delete the name of the software. If the sentence still says something a materials scientist would want to know, the framing is right. If nothing is left, you have a capability demonstration, and no amount of polishing will make it an IJP paper.</p>
+
+      <p>It also cuts the other way. Some questions do not need crystal plasticity at all. If the question lives at component scale &mdash; springback, forming loads, die design &mdash; grain-level simulation is the wrong tool dressed as rigor, and macro-scale FEM is the honest choice. I wrote about that boundary in <a href="2026-03-sheet-metal-forming-simulation.html">what sheet metal forming simulation gets right</a>.</p>
+
+      <!-- ═══ SECTION 7 ═══ -->
+      <h2 id="filter">The Pre-Submission Filter</h2>
+
+      <p>Before you write the cover letter, answer six questions honestly. Each "no" is not a rejection sentence &mdash; it is the specific work item standing between your study and the journal you want.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Question</th>
+            <th>If the answer is no</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Can you defend the constitutive formulation from the deformation physics of your material?</td>
+            <td>Either justify it in the text or switch formulations before running more simulations</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Are your parameters anchored hierarchically, not just inverse-fitted to one curve?</td>
+            <td>Anchor what you can from literature and measurement; re-fit only the remainder</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Do you validate a local field you did not fit (EBSD, DIC, in-situ)?</td>
+            <td>This is the highest-value missing experiment &mdash; plan it before submission, not after rejection</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Is RVE convergence shown for the quantities your conclusions use?</td>
+            <td>Run the grain-count and grid study; it is cheap compared to a review cycle</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Are solver scheme, tolerances, and grid sensitivity reported?</td>
+            <td>Add the half page of numerics; cite the DAMASK reference paper</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Does your main conclusion survive with the software name deleted?</td>
+            <td>Reframe around the materials question &mdash; or accept that this is a methods paper for a different venue</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Six yes answers: submit, and aim high. Four or five: the gaps are specific and usually weeks of work, not months. Three or fewer: you have a solid study for a good specialist journal right now, or an IJP-tier paper after one more experimental campaign. Both are legitimate outcomes. Choosing between them consciously beats discovering the answer through a rejection letter six months from now.</p>
+
+      <!-- ═══ FINAL ═══ -->
+      <h2 id="final">Final Thought</h2>
+
+      <p>The gap between a DAMASK study that gets published and one that gets published <em>where it changes your career</em> is rarely more simulation. It is justification, validation, and framing &mdash; work that feels like overhead when the maps already look convincing on your screen.</p>
+
+      <p>It is not overhead. A thin paper and a rigorous paper report the same simulations, but only one of them becomes the reference other groups calibrate against, cite, and build on. If you have spent a year building the model, the extra months that make it reviewer-proof return more than any other months of the project. And if you have built something that works and are unsure what it should become next, that decision has its own logic, which I wrote about in <a href="2026-06-what-to-do-after-you-build-something-that-works.html">What to Do After You Build Something That Works</a>.</p>
+
+      <p>Run the six-question filter on your current study today. Whatever it tells you, you will know more about your paper's real position than most authors know at submission.</p>
+
+      <div class="cta-box">
+        <h3>Preparing a Crystal Plasticity Manuscript?</h3>
+        <p>Book a 15-minute call. We will walk through your study against the six-question filter &mdash; model choice, calibration chain, RVE evidence, and framing &mdash; and I will tell you honestly whether it is ready for the journal you are targeting, or what specifically is missing.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
       <div class="subscribe-box">
         <p class="subscribe-box__title">Get the next post by email</p>
         <p class="subscribe-box__text">A few posts a month on research careers, simulation consulting, and building a life abroad. No spam, and you can unsubscribe with a single reply.</p>
