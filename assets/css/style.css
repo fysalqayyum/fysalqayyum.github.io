@@ -1951,3 +1951,38 @@ h3 { font-size: var(--fs-h3); }
 @media (max-width: 600px) {
   .toc__list { columns: 1; }
 }
+
+/* ═══════════════════════════════════════════════════
+   SUBSCRIBE BOX (blog posts + blog index)
+   ═══════════════════════════════════════════════════ */
+.subscribe-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin: 2.5rem auto;
+  max-width: 640px;
+  text-align: center;
+}
+.subscribe-box__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.subscribe-box__text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 1.25rem;
+}
+.subscribe-box__alt {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+.subscribe-box__alt a {
+  color: var(--accent-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
