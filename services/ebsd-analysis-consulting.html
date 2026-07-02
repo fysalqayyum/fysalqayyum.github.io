@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EBSD Data Analysis &amp; MTEX Consulting | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="EBSD analysis consulting: MTEX texture analysis, grain statistics, publication-quality pole figures and ODFs, and EBSD-to-crystal-plasticity simulation inputs.">
+  <meta name="keywords" content="EBSD analysis consulting, MTEX consultant, EBSD data analysis help, texture analysis ODF, pole figure analysis, EBSD to crystal plasticity, grain size analysis EBSD, KAM GND analysis, microstructure characterization consulting, Dr Faisal Qayyum">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/services/ebsd-analysis-consulting.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faisalqayyum.com/services/ebsd-analysis-consulting.html">
+  <meta property="og:title" content="EBSD Data Analysis &amp; MTEX Consulting">
+  <meta property="og:description" content="MTEX texture analysis, quantitative grain statistics, and EBSD-to-CPFEM simulation inputs — delivered as reproducible scripts, from a published practitioner.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EBSD Data Analysis &amp; MTEX Consulting">
+  <meta name="twitter:description" content="MTEX texture analysis, quantitative grain statistics, and EBSD-to-CPFEM simulation inputs — delivered as reproducible scripts, from a published practitioner.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260703a">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFMZMDW2NV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FFMZMDW2NV');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wan2qj09um");
+  </script>
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "EBSD Data Analysis & MTEX Consulting",
+    "serviceType": "EBSD Data Analysis and Microstructure Characterisation Consulting",
+    "description": "Quantitative EBSD analysis: MTEX-based texture analysis (pole figures, IPFs, ODFs), grain and boundary statistics, defensible data cleanup, correlative analysis with DIC and in-situ data, and conversion of measured microstructures into crystal plasticity simulation inputs.",
+    "url": "https://faisalqayyum.com/services/ebsd-analysis-consulting.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engagement Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "15-Minute Discovery Call",
+            "url": "https://cal.eu/fysalqayyum/15min"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://faisalqayyum.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "EBSD Data Analysis & MTEX Consulting"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is EBSD analysis used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Electron Backscatter Diffraction maps the crystallographic orientation of every grain in a scanned area. From that single dataset you get grain size and morphology statistics, crystallographic texture (pole figures, inverse pole figures, ODFs), grain boundary character, phase distribution, and local misorientation measures that indicate stored deformation. It is the bridge between processing history and mechanical behaviour."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is MTEX and why use it for EBSD analysis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MTEX is the open-source MATLAB toolbox that has become the de facto research standard for quantitative texture analysis. Unlike vendor software, it is scriptable and reproducible: every cleanup step, every ODF calculation, every plot is code you can rerun, audit, and put in a methods section. It also handles the analyses vendor packages do poorly — proper ODF estimation, grain reconstruction control, and custom misorientation metrics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I turn EBSD data into a crystal plasticity simulation input?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The EBSD map defines the real microstructure: grain geometries, orientations, and phases. Converted properly — cleaned, reconstructed into grains, and either meshed directly or matched statistically by a synthetic volume element — it becomes the geometry and initial condition for a DAMASK or similar CPFEM model. The conversion choices (cleanup thresholds, grain reconstruction parameters, 2D-to-3D assumptions) materially affect simulation results, which is why this step deserves more care than it usually gets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My EBSD indexing quality is poor. Can the data still be used?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often, yes. Low band contrast and unindexed points have recoverable and unrecoverable causes: preparation artifacts and pseudosymmetry misindexing can usually be handled in post-processing with defensible cleanup; heavily deformed or fine-grained regions may genuinely need re-measurement with different parameters. A short review of your raw data tells you which case you have before you pay for new microscope time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deliverables come out of an EBSD consulting engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depending on scope: cleaned and grain-reconstructed datasets, publication-quality texture plots (pole figures, IPF maps, ODF sections) with the MTEX scripts that generated them, quantitative statistics (grain size distributions, phase fractions, boundary character), simulation-ready microstructure inputs, and interpretation connecting the microstructure to your processing history or mechanical results. All scripts are yours — the analysis is rerunnable without me."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .service-hero {
+      padding: 9rem 2rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .service-hero .lede {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+    }
+    .service-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .service-body h2 {
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin: 2.5rem 0 1rem;
+    }
+    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
+    .service-body li { margin-bottom: 0.5rem; }
+    .service-body a { color: var(--accent-1); }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scope-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .proof-item {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+    }
+    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
+    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .service-quote {
+      border-left: 3px solid var(--accent-1);
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .service-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
+    .process-steps li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-1);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .process-steps strong { color: var(--text-primary); }
+    .faq-plain details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    .faq-plain summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .faq-plain details p {
+      padding: 0 1.25rem 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
+    .cta-box p { margin-bottom: 1.25rem; }
+    .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link active">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+    <main>
+    <header class="service-hero">
+      <p class="section__label">Consulting Service</p>
+      <h1>EBSD Data Analysis &amp; MTEX Consulting</h1>
+      <p class="lede">Your EBSD maps hold quantitative answers about texture, grain structure, and deformation &mdash; if the analysis is done right. Scripted, reproducible MTEX and Python pipelines, from measurement review to publication figures to simulation inputs.</p>
+    </header>
+
+    <div class="service-body">
+
+      <h2>Who this is for</h2>
+      <p>The PhD student with gigabytes of EBSD maps and a vendor software licence that answers none of their actual questions. The group that measured beautiful data and now needs publication-quality pole figures and ODFs with a methods section that survives review. The simulation team that needs real microstructures turned into CPFEM inputs without the conversion quietly corrupting the physics.</p>
+      <p>EBSD data is expensive to measure and easy to analyse badly. The gap between "we have maps" and "we have quantitative, defensible microstructure results" is exactly what this service closes.</p>
+
+      <h2>What an engagement covers</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Data cleanup &amp; grain reconstruction</strong>
+          <span>Defensible post-processing in MTEX: noise handling, pseudosymmetry correction, and grain reconstruction with parameters you can report, not defaults you cannot explain.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Texture analysis</strong>
+          <span>Pole figures, inverse pole figures, and proper ODF estimation &mdash; with the fibre and component analysis that connects texture to your forming or heat-treatment history.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Quantitative microstructure statistics</strong>
+          <span>Grain size distributions, phase fractions, boundary character, and local misorientation (KAM/GND) &mdash; numbers, not just coloured maps.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Simulation input preparation</strong>
+          <span>EBSD maps converted to DAMASK-ready volume elements &mdash; directly meshed or statistically matched &mdash; with the conversion assumptions documented.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Correlative analysis</strong>
+          <span>EBSD registered against DIC strain fields, hardness maps, or in-situ test data &mdash; the microstructure-to-behaviour link that makes a study publishable.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Pipeline handover &amp; training</strong>
+          <span>Every analysis delivered as commented MTEX/Python scripts, plus workshops for groups that want the capability in-house.</span>
+        </div>
+      </div>
+
+      <h2>Why me</h2>
+      <div class="proof-strip">
+        <div class="proof-item"><strong>10+ yrs</strong><span>EBSD &amp; microstructure characterisation</span></div>
+        <div class="proof-item"><strong>MTEX</strong><span>+ Python pipelines, scripted &amp; reproducible</span></div>
+        <div class="proof-item"><strong>39+</strong><span>publications built on this workflow</span></div>
+        <div class="proof-item"><strong>IJP</strong><span>EBSD-to-CPFEM chain published at top tier (2024)</span></div>
+      </div>
+      <p>EBSD-to-simulation is my published workflow, not a service-page claim: the <a href="https://doi.org/10.1016/j.ijplas.2024.103942" target="_blank" rel="noopener">2024 International Journal of Plasticity study</a> I co-authored ran on exactly this chain &mdash; measured EBSD, MTEX texture analysis, and crystal plasticity models built on the real microstructure. My TRIP-steel composite work correlated EBSD with in-situ tensile testing and digital image processing to track where damage actually initiates. The analysis you get is the one my own papers depend on.</p>
+
+      <blockquote class="service-quote">
+        Dr. Qayyum is a true brainstorming guru with an incredible depth of experience. He helped me develop a sophisticated analytical approach and a compelling visualization for a complex project that ultimately received high praise from my management team.
+        <cite>&mdash; Abdelrahman Baraka, MSc Steel Technology, TU Bergakademie Freiberg, Germany</cite>
+      </blockquote>
+
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li><strong>15-minute call.</strong> You describe the material, the measurement, and the question. If your data has a problem &mdash; indexing quality, coverage, resolution &mdash; I will tell you before you spend on analysis.</li>
+        <li><strong>Scoped engagement.</strong> A dataset review runs about a week; full analysis campaigns with texture, statistics, and simulation inputs typically 2&ndash;6 weeks. Agreed in writing first.</li>
+        <li><strong>Reproducible delivery.</strong> Results plus the scripts that made them &mdash; your group reruns and extends the analysis without me.</li>
+      </ol>
+
+      <h2>Common questions</h2>
+      <div class="faq-plain">
+        <details>
+          <summary>Do you do the microscopy or just the analysis?</summary>
+          <p>The analysis. You measure (or your facility does), I take the raw data from there. Where measurement strategy is the problem &mdash; step size, coverage, preparation &mdash; I advise before your next session so the new data answers the question.</p>
+        </details>
+        <details>
+          <summary>My indexing quality is poor. Wasted measurement?</summary>
+          <p>Often not. Preparation artifacts and pseudosymmetry are recoverable in post-processing; genuinely deformed fine-grained regions may need re-measurement. A short review of the raw data tells you which case you have &mdash; before you pay for microscope time.</p>
+        </details>
+        <details>
+          <summary>Which software do you deliver in?</summary>
+          <p>MTEX (MATLAB) for texture and grain analysis, Python for statistics and custom pipelines, and DAMASK-format outputs for simulation inputs. Everything scripted and commented &mdash; no black-box results.</p>
+        </details>
+        <details>
+          <summary>Can you make the figures publication-ready?</summary>
+          <p>Yes &mdash; pole figures, IPF maps, and ODF sections at journal quality, with the processing chain documented for your methods section. Reviewers increasingly ask how EBSD data was cleaned; you will have the answer in writing.</p>
+        </details>
+        <details>
+          <summary>We want this capability in-house. Do you train teams?</summary>
+          <p>Yes &mdash; MTEX workshops for research groups are a standard format, built around your own data rather than toy examples.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h2>Start With 15 Minutes</h2>
+        <p>Book a call and describe your data and your question. I will tell you honestly what the analysis can and cannot answer &mdash; and whether your measurement needs to be repeated before any analysis is worth paying for.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <p><em>Related: <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a> &middot; <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research at the top of the field</a></em></p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/main.js?v=20260703a"></script>
+</body>
+</html>
