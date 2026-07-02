@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiscale Materials Modeling Strategy Consulting | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="Multiscale modeling strategy consulting: scale selection, tool and workflow design, and validation strategy connecting nano, micro, meso, and macro scale models.">
+  <meta name="keywords" content="multiscale modeling strategy, multiscale materials modeling consultant, computational campaign design, crystal plasticity phase field workflow, materials modeling method selection, Dr Faisal Qayyum">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/services/multiscale-modeling-strategy.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faisalqayyum.com/services/multiscale-modeling-strategy.html">
+  <meta property="og:title" content="Multiscale Materials Modeling Strategy Consulting">
+  <meta property="og:description" content="Scale selection, tool matching, and validation strategy for multiscale computational campaigns — from a researcher who builds models at every scale personally.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Multiscale Materials Modeling Strategy Consulting">
+  <meta name="twitter:description" content="Scale selection, tool matching, and validation strategy for multiscale computational campaigns — from a researcher who builds models at every scale personally.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260703b">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../assets/js/analytics.js?v=20260703b"></script>
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Multiscale Modeling Strategy",
+    "serviceType": "Multiscale Materials Modeling Strategy Consulting",
+    "description": "Strategic consulting for multiscale materials modeling campaigns: scale selection, software workflow design connecting nano/micro/meso/macro models, data handoff design between scales, and validation strategy.",
+    "url": "https://faisalqayyum.com/services/multiscale-modeling-strategy.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engagement Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "15-Minute Discovery Call",
+            "url": "https://cal.eu/fysalqayyum/15min"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://faisalqayyum.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Multiscale Modeling Strategy"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is multiscale materials modeling strategy consulting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Advisory work on how to design a computational campaign that connects nano, micro, meso, and macro scale models — method selection, software workflow design, and validation strategy — rather than building a single model. It answers the question most teams skip: which scales actually need to be modeled, and how should their outputs pass between them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do I need a strategy before starting the modeling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because the most expensive multiscale mistake is building models at scales that do not connect properly, or investing in a scale that was never the bottleneck. A strategy session up front — deciding which scales matter, what data passes between them, and where to validate — typically saves months compared to discovering the gap after the models are built."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tools does a multiscale strategy typically combine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Commonly DAMASK or similar for crystal plasticity (micro/meso), phase field for microstructure evolution, ABAQUS for macro-scale continuum response, and MTEX/Python for connecting measured microstructure data into the chain. The right combination depends entirely on which physical phenomena the project needs to capture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a one-time consultation or an ongoing engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both formats exist. A strategy session (1-2 weeks) produces a workflow design and method selection your team then executes. An ongoing advisory role reviews progress at each scale as the campaign runs, catching connection problems before they compound."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help choose between commercial and open-source tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — the choice depends on what your team needs long-term: reproducibility and cost favor open-source tools like DAMASK; established industrial workflows and support contracts favor commercial codes. I have used both extensively and will recommend based on your actual constraints, not a default preference."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .service-hero {
+      padding: 9rem 2rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .service-hero .lede {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+    }
+    .service-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .service-body h2 {
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin: 2.5rem 0 1rem;
+    }
+    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
+    .service-body li { margin-bottom: 0.5rem; }
+    .service-body a { color: var(--accent-1); }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scope-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .proof-item {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+    }
+    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
+    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .service-quote {
+      border-left: 3px solid var(--accent-1);
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .service-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
+    .process-steps li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-1);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .process-steps strong { color: var(--text-primary); }
+    .faq-plain details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    .faq-plain summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .faq-plain details p {
+      padding: 0 1.25rem 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
+    .cta-box p { margin-bottom: 1.25rem; }
+    .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link active">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+    <main>
+    <header class="service-hero">
+      <p class="section__label">Consulting Service</p>
+      <h1>Multiscale Modeling Strategy</h1>
+      <p class="lede">The most expensive multiscale mistake is building models at scales that never connect properly. Strategy consulting on scale selection, tool matching, and validation design, from someone who builds the models at every scale personally.</p>
+    </header>
+
+    <div class="service-body">
+
+      <h2>Who this is for</h2>
+      <p>Research groups planning a multi-year computational campaign who want the scale-connection strategy right before committing resources. Industrial R&amp;D teams evaluating whether a multiscale approach is worth the investment for their specific problem. PI teams writing a grant proposal that needs a defensible, reviewer-proof multiscale workflow described in the methods section.</p>
+      <p>This is advisory work, not model-building &mdash; though it is delivered by someone who builds the models at every scale personally, which is what makes the strategy realistic rather than aspirational.</p>
+
+      <h2>What the consulting covers</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Scale selection</strong>
+          <span>Which of nano, micro, meso, and macro actually need dedicated models for your specific question &mdash; and which can be simplified or skipped.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Workflow &amp; tool selection</strong>
+          <span>Matching DAMASK, phase field, ABAQUS, and characterisation pipelines to the physics your project needs to capture.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Data handoff design</strong>
+          <span>Defining exactly what passes between scales &mdash; microstructure statistics, yield surfaces, hardening parameters &mdash; before any model is built.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Validation strategy</strong>
+          <span>Where and how to validate each scale against experiment, so the chain is defensible end to end, not just internally consistent.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Grant &amp; proposal methods sections</strong>
+          <span>Multiscale workflow descriptions structured to survive reviewer scrutiny on feasibility and connection logic.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Ongoing campaign review</strong>
+          <span>Checkpoint reviews as the campaign runs, catching scale-connection problems before they propagate through months of work.</span>
+        </div>
+      </div>
+
+      <h2>Why me</h2>
+      <div class="proof-strip">
+        <div class="proof-item"><strong>4</strong><span>scales worked personally: phase field, CPFEM, forming FEM, EBSD</span></div>
+        <div class="proof-item"><strong>39+</strong><span>publications spanning the full modeling stack</span></div>
+        <div class="proof-item"><strong>DFG-funded</strong><span>multiscale research (phase field &rarr; crystal plasticity)</span></div>
+        <div class="proof-item"><strong>Elsevier</strong><span>co-edited book on new-generation metal mechanics</span></div>
+      </div>
+      <p>Most multiscale strategy advice comes from people who are strong at one scale and theorize about the rest. I build models at every scale in the chain myself &mdash; phase field, crystal plasticity, and macro FEM &mdash; which means the strategy I recommend accounts for what each scale's models actually need as input and what they realistically produce as output, not an idealized handoff that looks clean on a diagram and breaks in practice.</p>
+
+      <blockquote class="service-quote">
+        Dr. Qayyum is a true brainstorming guru with an incredible depth of experience. He helped me develop a sophisticated analytical approach and a compelling visualization for a complex project that ultimately received high praise from my management team.
+        <cite>&mdash; Abdelrahman Baraka, MSc Steel Technology, TU Bergakademie Freiberg, Germany</cite>
+      </blockquote>
+
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li><strong>15-minute call.</strong> Describe the material system and the property or process question the campaign needs to answer.</li>
+        <li><strong>Strategy session.</strong> Typically 1&ndash;2 weeks: scale selection, tool matching, and a data-handoff design your team can execute against.</li>
+        <li><strong>Optional ongoing review.</strong> Checkpoint sessions as the campaign runs, or a one-time strategy document if that is all you need.</li>
+      </ol>
+
+      <h2>Common questions</h2>
+      <div class="faq-plain">
+        <details>
+          <summary>Do you build the models too, or only the strategy?</summary>
+          <p>Both are available. Many clients want the strategy to execute with their own team; others want the strategy plus hands-on modeling at specific scales, covered under <a href="/services/crystal-plasticity-simulation-consulting.html">crystal plasticity</a> or <a href="/services/phase-field-simulation-consulting.html">phase field</a> consulting.</p>
+        </details>
+        <details>
+          <summary>Is this useful before a grant proposal is written?</summary>
+          <p>Very much so &mdash; a defensible multiscale workflow in the methods section is exactly what reviewers scrutinize. See also <a href="/services/grant-proposal-consulting.html">grant proposal consulting</a> for the writing side.</p>
+        </details>
+        <details>
+          <summary>How do you decide which scales actually matter?</summary>
+          <p>By working backward from the property or failure mode in question: which physical mechanism controls it, and at what length scale does that mechanism operate. Scales that do not touch that mechanism can usually be simplified.</p>
+        </details>
+        <details>
+          <summary>Can you review a multiscale campaign already in progress?</summary>
+          <p>Yes &mdash; a checkpoint review is often the fastest way to catch a scale-connection problem before it compounds across months of remaining work.</p>
+        </details>
+        <details>
+          <summary>What does a strategy session actually produce?</summary>
+          <p>A written workflow document: which scales are modeled, with which tools, what data passes between them, and where validation happens &mdash; something your team can execute against or a reviewer can evaluate.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h2>Start With 15 Minutes</h2>
+        <p>Book a call and describe the material system and question. I will tell you honestly which scales actually need modeling &mdash; and which do not.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <p><em>Related: <a href="/services/process-structure-property-analysis.html">Process&ndash;structure&ndash;property analysis</a> &middot; <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a></em></p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/main.js?v=20260703a"></script>
+</body>
+</html>

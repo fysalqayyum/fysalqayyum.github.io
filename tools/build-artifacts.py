@@ -74,6 +74,18 @@ static = [
      git_date("services/materials-failure-analysis.html"), "monthly", "0.9"),
     (f"{SITE}/services/ebsd-analysis-consulting.html",
      git_date("services/ebsd-analysis-consulting.html"), "monthly", "0.9"),
+    (f"{SITE}/services/metal-forming-fem-consulting.html",
+     git_date("services/metal-forming-fem-consulting.html"), "monthly", "0.9"),
+    (f"{SITE}/services/phase-field-simulation-consulting.html",
+     git_date("services/phase-field-simulation-consulting.html"), "monthly", "0.9"),
+    (f"{SITE}/services/mechanical-test-data-analysis.html",
+     git_date("services/mechanical-test-data-analysis.html"), "monthly", "0.9"),
+    (f"{SITE}/services/process-structure-property-analysis.html",
+     git_date("services/process-structure-property-analysis.html"), "monthly", "0.9"),
+    (f"{SITE}/services/multiscale-modeling-strategy.html",
+     git_date("services/multiscale-modeling-strategy.html"), "monthly", "0.9"),
+    (f"{SITE}/services/custom-digital-courses-workshops.html",
+     git_date("services/custom-digital-courses-workshops.html"), "monthly", "0.9"),
     (f"{SITE}/write-for-us.html", git_date("write-for-us.html"), "monthly", "0.5"),
 ]
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -136,16 +148,17 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 
 ## Consulting services
 - Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: {SITE}/services/crystal-plasticity-simulation-consulting.html
-- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
-- Phase field simulation: recrystallization, spheroidization, grain growth
-- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
+- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling — details: {SITE}/services/metal-forming-fem-consulting.html
+- Phase field simulation: recrystallization, spheroidization, grain growth — details: {SITE}/services/phase-field-simulation-consulting.html
+- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work) — details: {SITE}/services/mechanical-test-data-analysis.html
 - Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: {SITE}/services/ebsd-analysis-consulting.html
-- Process-structure-property analysis and multiscale modeling strategy
+- Process-structure-property analysis — details: {SITE}/services/process-structure-property-analysis.html
+- Multiscale modeling strategy — details: {SITE}/services/multiscale-modeling-strategy.html
 - Materials failure analysis, incl. expert witness contexts — details: {SITE}/services/materials-failure-analysis.html
 - PhD & research mentoring — details: {SITE}/services/phd-research-mentoring.html
 - Scientific writing coaching — details: {SITE}/services/scientific-writing-coaching.html
 - Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: {SITE}/services/grant-proposal-consulting.html
-- Custom digital courses and workshops for research teams
+- Custom digital courses and workshops for research teams — details: {SITE}/services/custom-digital-courses-workshops.html
 
 ## Blog posts
 {post_lines}

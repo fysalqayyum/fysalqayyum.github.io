@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phase Field Simulation Consulting — Microstructure Evolution | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="Phase field simulation consulting for recrystallization, spheroidization, grain growth, and solidification microstructure — from a DFG-funded research background.">
+  <meta name="keywords" content="phase field simulation consultant, microstructure evolution modeling, recrystallization simulation, spheroidization modeling, grain growth simulation, solidification microstructure modeling, phase field steel alloys, Dr Faisal Qayyum">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/services/phase-field-simulation-consulting.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faisalqayyum.com/services/phase-field-simulation-consulting.html">
+  <meta property="og:title" content="Phase Field Simulation Consulting — Microstructure Evolution">
+  <meta property="og:description" content="Microstructure evolution modeling for recrystallization, spheroidization, and solidification — calibrated against real micrographs, from a DFG-funded phase field research background.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phase Field Simulation Consulting — Microstructure Evolution">
+  <meta name="twitter:description" content="Microstructure evolution modeling for recrystallization, spheroidization, and solidification — calibrated against real micrographs, from a DFG-funded phase field research background.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260703b">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../assets/js/analytics.js?v=20260703b"></script>
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Phase Field Simulation Consulting",
+    "serviceType": "Phase Field Simulation and Microstructure Evolution Consulting",
+    "description": "Phase field modeling of microstructure evolution: recrystallization, spheroidization, grain growth, precipitate coarsening, and solidification structures in steels and alloys, connected to crystal plasticity for mechanical property prediction.",
+    "url": "https://faisalqayyum.com/services/phase-field-simulation-consulting.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engagement Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "15-Minute Discovery Call",
+            "url": "https://cal.eu/fysalqayyum/15min"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://faisalqayyum.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Phase Field Simulation Consulting"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is phase field simulation used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Modeling microstructure evolution during solid-state and solidification processes without tracking interfaces explicitly: recrystallization, spheroidization, grain growth, precipitate coarsening, and phase transformations in steels and alloys. A continuous order parameter field describes the phase boundaries, which naturally handles complex, evolving morphologies that interface-tracking methods struggle with."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does phase field modeling connect to mechanical properties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Phase field predicts the microstructure — grain size, phase fractions, precipitate distribution — that results from a given thermal or thermo-mechanical history. That microstructure is exactly the input a crystal plasticity model needs, so phase field and CPFEM chain together naturally to connect processing parameters to final mechanical behaviour: the process-structure-property link."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What materials systems does phase field simulation apply to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most directly relevant to steels and alloys undergoing heat treatment or thermo-mechanical processing: Cr and Mo alloyed carbon steels (recrystallization, spheroidization), aluminum alloys (precipitate evolution), and generally any system where a diffusional or displacive phase transformation determines the final microstructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is phase field simulation applicable to additive manufacturing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — the same physics governs solidification microstructure in a melt pool as governs solid-state phase transformation elsewhere. Coupled with a thermal model of the AM process, phase field predicts the grain morphology and texture that will form, which is why it is increasingly used alongside AM process simulation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What deliverables come from a phase field consulting engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depending on scope: a calibrated phase field model for your specific alloy and heat treatment, predicted microstructure evolution (grain size, phase fraction, morphology over time), and where relevant, the handoff of that microstructure as an input to a crystal plasticity model for mechanical property prediction."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .service-hero {
+      padding: 9rem 2rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .service-hero .lede {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+    }
+    .service-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .service-body h2 {
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin: 2.5rem 0 1rem;
+    }
+    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
+    .service-body li { margin-bottom: 0.5rem; }
+    .service-body a { color: var(--accent-1); }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scope-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .proof-item {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+    }
+    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
+    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .service-quote {
+      border-left: 3px solid var(--accent-1);
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .service-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
+    .process-steps li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-1);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .process-steps strong { color: var(--text-primary); }
+    .faq-plain details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    .faq-plain summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .faq-plain details p {
+      padding: 0 1.25rem 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
+    .cta-box p { margin-bottom: 1.25rem; }
+    .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link active">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+    <main>
+    <header class="service-hero">
+      <p class="section__label">Consulting Service</p>
+      <h1>Phase Field Simulation</h1>
+      <p class="lede">Predicting the microstructure a heat treatment or solidification process will actually produce &mdash; recrystallization, spheroidization, grain growth &mdash; calibrated against real micrographs, from a DFG-funded research background in this exact method.</p>
+    </header>
+
+    <div class="service-body">
+
+      <h2>Who this is for</h2>
+      <p>Metallurgists optimizing a heat treatment schedule who need to predict the resulting microstructure before running another furnace cycle. Research teams studying recrystallization or spheroidization kinetics who need a model that captures evolving, complex morphologies. Process engineers connecting a thermal history to the mechanical properties it will produce.</p>
+
+      <h2>What the consulting covers</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Model setup &amp; calibration</strong>
+          <span>Phase field formulation for your specific transformation &mdash; recrystallization, spheroidization, grain growth, precipitation &mdash; calibrated against measured micrographs.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Solidification microstructure</strong>
+          <span>Columnar-to-equiaxed transitions, dendrite morphology, and grain refinement studies for casting and additive manufacturing.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Heat treatment optimization</strong>
+          <span>Predicting how a proposed thermal schedule changes grain size, phase fraction, and precipitate distribution before you run the furnace.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Process&ndash;structure link</strong>
+          <span>Coupling to a thermal or thermo-mechanical FEM model so process parameters drive the predicted microstructure directly.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Structure&ndash;property handoff</strong>
+          <span>Predicted microstructures converted into crystal plasticity inputs, closing the process-structure-property chain end to end.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Interpretation &amp; reporting</strong>
+          <span>Results connected to your actual process decisions &mdash; not a simulation for its own sake.</span>
+        </div>
+      </div>
+
+      <h2>Why me</h2>
+      <div class="proof-strip">
+        <div class="proof-item"><strong>DFG</strong><span>funded phase field project: IMPACT</span></div>
+        <div class="proof-item"><strong>Cr &amp; Mo</strong><span>alloyed carbon steels &mdash; direct research focus</span></div>
+        <div class="proof-item"><strong>39+</strong><span>publications across the process-structure-property chain</span></div>
+        <div class="proof-item"><strong>3</strong><span>scales connected: phase field &rarr; CPFEM &rarr; macro FEM</span></div>
+      </div>
+      <p>I applied phase field methods within the DFG-funded IMPACT project studying recrystallization and spheroidization in Cr and Mo alloyed carbon steels. What makes the consulting valuable beyond the phase field model itself is the chain it sits in: I also build the crystal plasticity models that consume the predicted microstructure and the macro-scale simulations that use the resulting properties &mdash; so the phase field work is never delivered in isolation from what it is actually for.</p>
+
+      <blockquote class="service-quote">
+        Anyone who has the opportunity to have Dr. Qayyum as a professor, mentor, leader, colleague, or even just a friend is exceptionally fortunate. He embodies each of these roles with integrity, passion, and excellence.
+        <cite>&mdash; Teqwa Khelifa, MSc Student, Institute of Metal Forming, TU Bergakademie Freiberg</cite>
+      </blockquote>
+
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li><strong>15-minute call.</strong> Describe the transformation, the alloy system, and what you need to predict or optimize.</li>
+        <li><strong>Scoped engagement.</strong> Model setup and calibration typically 4&ndash;10 weeks depending on the transformation's complexity and available characterisation data.</li>
+        <li><strong>Delivery.</strong> A calibrated model plus documentation, and where relevant, the microstructure output packaged for a downstream crystal plasticity model.</li>
+      </ol>
+
+      <h2>Common questions</h2>
+      <div class="faq-plain">
+        <details>
+          <summary>What do I need to provide to start?</summary>
+          <p>The alloy composition, the thermal history or process of interest, and ideally micrographs at one or more stages for calibration. Gaps in characterisation are normal and can often be identified as part of the first call.</p>
+        </details>
+        <details>
+          <summary>Can this connect to a mechanical property prediction?</summary>
+          <p>Yes &mdash; the predicted microstructure becomes the input to a crystal plasticity model, which is exactly how I use this chain in my own research. See <a href="/services/crystal-plasticity-simulation-consulting.html">crystal plasticity simulation consulting</a> for that half of the chain.</p>
+        </details>
+        <details>
+          <summary>Does this apply to additive manufacturing?</summary>
+          <p>Yes &mdash; solidification microstructure in a melt pool follows the same physics, coupled to a thermal model of the AM process. See <a href="/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html">using simulation to improve AM of aluminum alloys</a> for that application.</p>
+        </details>
+        <details>
+          <summary>What software do you use?</summary>
+          <p>Custom and open-source phase field implementations depending on the transformation, coupled where needed to thermal FEM in ABAQUS. The right tool follows the physics, not a fixed toolchain.</p>
+        </details>
+        <details>
+          <summary>How long does calibration take?</summary>
+          <p>Typically the longest step, 4&ndash;10 weeks depending on how much characterisation data already exists. Starting with what you have and identifying the highest-value additional measurement is usually the first output of the engagement.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h2>Start With 15 Minutes</h2>
+        <p>Book a call and describe the transformation you need to predict. I will tell you honestly whether phase field is the right tool, and what it would take to calibrate it for your system.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <p><em>Related: <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a> &middot; <a href="/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html">Using numerical simulations to improve additive manufacturing of aluminum alloys</a></em></p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/main.js?v=20260703a"></script>
+</body>
+</html>
