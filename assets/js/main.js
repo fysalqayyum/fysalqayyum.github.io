@@ -451,8 +451,8 @@
 
   // ─── 16. READING PROGRESS BAR ────────────────────
   var readingProgress = document.getElementById('readingProgress');
-  if (readingProgress) {
-    var article = document.querySelector('.post-content');
+  var article = document.querySelector('.post-content');
+  if (readingProgress && article) {
     window.addEventListener('scroll', function () {
       var top = article.offsetTop;
       var height = article.offsetHeight - window.innerHeight;
@@ -461,5 +461,15 @@
       readingProgress.style.width = pct + '%';
     }, { passive: true });
   }
+
+  // ─── 17. SUBSCRIBE BOX ───────────────────────────
+  document.querySelectorAll('.subscribe-box__btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buildMailto(
+        'Subscribe: new blog posts by email',
+        'Hello Dr. Qayyum,\n\nPlease add me to your mailing list for new blog posts.\n\nBest regards,\n[Your Name]'
+      );
+    });
+  });
 
 })();
