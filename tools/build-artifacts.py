@@ -64,6 +64,10 @@ static = [
     (f"{SITE}/blog/", git_date("blog/index.html"), "weekly", "0.8"),
     (f"{SITE}/services/crystal-plasticity-simulation-consulting.html",
      git_date("services/crystal-plasticity-simulation-consulting.html"), "monthly", "0.9"),
+    (f"{SITE}/services/scientific-writing-coaching.html",
+     git_date("services/scientific-writing-coaching.html"), "monthly", "0.9"),
+    (f"{SITE}/services/phd-research-mentoring.html",
+     git_date("services/phd-research-mentoring.html"), "monthly", "0.9"),
     (f"{SITE}/write-for-us.html", git_date("write-for-us.html"), "monthly", "0.5"),
 ]
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -132,7 +136,9 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 - Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis
 - Process-structure-property analysis and multiscale modeling strategy
 - Materials failure analysis, incl. expert witness contexts
-- PhD & research mentoring, scientific writing coaching, grant proposal consulting (DFG, AvH, DAAD, EU Horizon)
+- PhD & research mentoring — details: {SITE}/services/phd-research-mentoring.html
+- Scientific writing coaching — details: {SITE}/services/scientific-writing-coaching.html
+- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon)
 - Custom digital courses and workshops for research teams
 
 ## Blog posts
