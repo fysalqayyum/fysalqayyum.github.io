@@ -178,12 +178,14 @@
   var emailBtn = document.getElementById('emailBtn');
   var contactModalOverlay = document.getElementById('contactModalOverlay');
   var contactModalClose = document.getElementById('contactModalClose');
+  var pendingService = null;
 
   function openContactModal() {
     if (contactModalOverlay) contactModalOverlay.classList.add('open');
   }
   function closeContactModal() {
     if (contactModalOverlay) contactModalOverlay.classList.remove('open');
+    pendingService = null;
   }
 
   if (emailBtn) {
@@ -209,11 +211,19 @@
     btn.addEventListener('click', function () {
       var href = this.getAttribute('data-href');
       if (href) {
-        window.location.href = href;
+        if (href.indexOf('http') === 0) {
+          window.open(href, '_blank', 'noopener');
+          closeContactModal();
+        } else {
+          window.location.href = href;
+        }
         return;
       }
       var subject = this.getAttribute('data-subject') || '';
       var body = this.getAttribute('data-body') || '';
+      if (pendingService && subject) {
+        subject += ' — ' + pendingService;
+      }
       closeContactModal();
       var u = 'fysalqayyum', d = 'yahoo.com';
       var mailHref = 'mailto:' + u + '@' + d;
@@ -224,12 +234,19 @@
   });
 
   // ─── 9. SERVICE CARD CLICK (whole card) ──────────
+  // Opens the contact picker modal (mailto alone is a dead click for
+  // users without a configured mail client — most mobile in-app browsers).
   document.querySelectorAll('.service-card[data-service]').forEach(function (card) {
     card.addEventListener('click', function () {
       var service = this.getAttribute('data-service');
-      var subject = 'I need assistance related to ' + service;
-      var body = 'Hello Dr. Qayyum,\n\nI am reaching out regarding your ' + service + ' consulting service.\n\n[Please describe your project or question here]\n\nBest regards,\n[Your Name]';
-      buildMailto(subject, body);
+      if (contactModalOverlay) {
+        pendingService = service;
+        openContactModal();
+      } else {
+        var subject = 'I need assistance related to ' + service;
+        var body = 'Hello Dr. Qayyum,\n\nI am reaching out regarding your ' + service + ' consulting service.\n\n[Please describe your project or question here]\n\nBest regards,\n[Your Name]';
+        buildMailto(subject, body);
+      }
     });
     card.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
