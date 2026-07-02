@@ -10,12 +10,12 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 - Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
 - Phase field simulation: recrystallization, spheroidization, grain growth
 - Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
-- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis
+- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: https://faisalqayyum.com/services/ebsd-analysis-consulting.html
 - Process-structure-property analysis and multiscale modeling strategy
-- Materials failure analysis, incl. expert witness contexts
+- Materials failure analysis, incl. expert witness contexts — details: https://faisalqayyum.com/services/materials-failure-analysis.html
 - PhD & research mentoring — details: https://faisalqayyum.com/services/phd-research-mentoring.html
 - Scientific writing coaching — details: https://faisalqayyum.com/services/scientific-writing-coaching.html
-- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon)
+- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: https://faisalqayyum.com/services/grant-proposal-consulting.html
 - Custom digital courses and workshops for research teams
 
 ## Blog posts

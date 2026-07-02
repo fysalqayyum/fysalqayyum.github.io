@@ -68,6 +68,12 @@ static = [
      git_date("services/scientific-writing-coaching.html"), "monthly", "0.9"),
     (f"{SITE}/services/phd-research-mentoring.html",
      git_date("services/phd-research-mentoring.html"), "monthly", "0.9"),
+    (f"{SITE}/services/grant-proposal-consulting.html",
+     git_date("services/grant-proposal-consulting.html"), "monthly", "0.9"),
+    (f"{SITE}/services/materials-failure-analysis.html",
+     git_date("services/materials-failure-analysis.html"), "monthly", "0.9"),
+    (f"{SITE}/services/ebsd-analysis-consulting.html",
+     git_date("services/ebsd-analysis-consulting.html"), "monthly", "0.9"),
     (f"{SITE}/write-for-us.html", git_date("write-for-us.html"), "monthly", "0.5"),
 ]
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -133,12 +139,12 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 - Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
 - Phase field simulation: recrystallization, spheroidization, grain growth
 - Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
-- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis
+- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: {SITE}/services/ebsd-analysis-consulting.html
 - Process-structure-property analysis and multiscale modeling strategy
-- Materials failure analysis, incl. expert witness contexts
+- Materials failure analysis, incl. expert witness contexts — details: {SITE}/services/materials-failure-analysis.html
 - PhD & research mentoring — details: {SITE}/services/phd-research-mentoring.html
 - Scientific writing coaching — details: {SITE}/services/scientific-writing-coaching.html
-- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon)
+- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: {SITE}/services/grant-proposal-consulting.html
 - Custom digital courses and workshops for research teams
 
 ## Blog posts
