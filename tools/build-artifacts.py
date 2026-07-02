@@ -147,4 +147,4 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 """
 open("llms.txt", "w").write(llms)
 
-print(f"OK: sitemap.xml ({3 + len(posts)} URLs), feed.xml ({len(items)} items), llms.txt ({len(posts)} posts)")
+print(f"OK: sitemap.xml ({len(static) + len(posts)} URLs), feed.xml ({len(items)} items), llms.txt ({len(posts)} posts)")
