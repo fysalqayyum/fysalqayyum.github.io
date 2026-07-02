@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metal Forming FEM Consulting (ABAQUS) | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="ABAQUS metal forming simulation consulting: forging, rolling, extrusion, sheet forming, springback prediction, and anisotropic yield function calibration.">
+  <meta name="keywords" content="metal forming FEM consultant, ABAQUS forming simulation, springback prediction consulting, sheet metal forming simulation, forging simulation ABAQUS, anisotropic yield calibration, die design simulation, forming limit diagram consulting, Dr Faisal Qayyum">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/services/metal-forming-fem-consulting.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faisalqayyum.com/services/metal-forming-fem-consulting.html">
+  <meta property="og:title" content="Metal Forming FEM Consulting (ABAQUS)">
+  <meta property="og:description" content="Process simulation, springback-critical calibration, and die design optimization in ABAQUS — from a researcher who also works at the crystal plasticity scale when the failure mode demands it.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Metal Forming FEM Consulting (ABAQUS)">
+  <meta name="twitter:description" content="Process simulation, springback-critical calibration, and die design optimization in ABAQUS — from a researcher who also works at the crystal plasticity scale when the failure mode demands it.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260703b">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../assets/js/analytics.js?v=20260703b"></script>
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Metal Forming FEM Consulting",
+    "serviceType": "Metal Forming Finite Element Method Consulting",
+    "description": "ABAQUS-based consulting for sheet and bulk metal forming: process simulation for deep drawing, stamping, forging, extrusion, and hydroforming; anisotropic yield calibration; springback prediction; thermo-mechanical coupling; and crystal plasticity support for microstructural failure modes.",
+    "url": "https://faisalqayyum.com/services/metal-forming-fem-consulting.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engagement Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "15-Minute Discovery Call",
+            "url": "https://cal.eu/fysalqayyum/15min"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://faisalqayyum.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Metal Forming FEM Consulting"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does metal forming FEM consulting cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ABAQUS-based simulation of forging, rolling, extrusion, sheet forming, and hydroforming: process setup, anisotropic yield function calibration (Hill, Barlat family), springback prediction, forming limit analysis, and thermo-mechanical coupling for hot forming processes. Deliverables range from a calibrated model handed to your team to a full die-design optimization campaign."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can simulation actually reduce physical die tryout costs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when the constitutive model is properly calibrated. A well-calibrated forming simulation commonly eliminates two to four physical die tryout iterations for a complex stamped part — at typical tryout costs of tens of thousands of euros per cycle, the return on getting the simulation right the first time is direct and large."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is crystal plasticity needed instead of standard forming FEM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When the failure mode is microstructural: edge cracking in advanced high-strength steels, texture-sensitive formability, or a new alloy with no calibration data. Standard continuum yield functions cannot resolve phase boundaries or grain-level strain concentration. I work across both scales and will tell you plainly which one your problem actually needs — see the full breakdown in my post on what forming simulation gets right and where it breaks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does springback prediction so often fail in production?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because springback depends on unloading physics most calibrations skip: the Bauschinger effect, the through-thickness stress gradient, and non-linear unloading behaviour. Fitting a model only to the loading curve misses exactly the physics that controls springback. Fixing this is usually a calibration problem, not a meshing problem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with AutoForm or LS-DYNA as well as ABAQUS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ABAQUS is the primary tool and where the deepest expertise sits, including user-material subroutines for custom constitutive behaviour. I can review and advise on AutoForm or LS-DYNA models and results, and translate calibration strategy between platforms, though direct model-building is strongest in ABAQUS."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .service-hero {
+      padding: 9rem 2rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .service-hero .lede {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+    }
+    .service-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .service-body h2 {
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin: 2.5rem 0 1rem;
+    }
+    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
+    .service-body li { margin-bottom: 0.5rem; }
+    .service-body a { color: var(--accent-1); }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scope-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .proof-item {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+    }
+    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
+    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .service-quote {
+      border-left: 3px solid var(--accent-1);
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .service-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
+    .process-steps li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-1);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .process-steps strong { color: var(--text-primary); }
+    .faq-plain details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    .faq-plain summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .faq-plain details p {
+      padding: 0 1.25rem 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
+    .cta-box p { margin-bottom: 1.25rem; }
+    .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link active">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+    <main>
+    <header class="service-hero">
+      <p class="section__label">Consulting Service</p>
+      <h1>Metal Forming FEM Consulting</h1>
+      <p class="lede">Springback that will not converge. A yield function calibrated against the wrong curve. Edge cracking a continuum model never predicted. Consulting on ABAQUS-based forming simulation, from someone who also works at the grain scale when that is what the failure actually needs.</p>
+    </header>
+
+    <div class="service-body">
+
+      <h2>Who this is for</h2>
+      <p>The process engineer whose die compensation loop has run for months without converging. The team calibrating a yield function for a new alloy with no historical data. The group whose AHSS part keeps cracking at the edge despite a forming simulation that predicted no failure at all.</p>
+      <p>Forming simulation is powerful and routinely misused &mdash; not because the solver is wrong, but because the constitutive model is asked to predict physics it was never calibrated against.</p>
+
+      <h2>What the consulting covers</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Process simulation setup</strong>
+          <span>Deep drawing, stamping, forging, extrusion, and hydroforming models in ABAQUS, built around your actual tooling and process parameters.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Anisotropic yield calibration</strong>
+          <span>Hill, Barlat family (incl. Yld2004-18p), and custom yield functions calibrated against your material test data, not defaults.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Springback &amp; unloading physics</strong>
+          <span>Kinematic hardening calibration that captures the Bauschinger effect and through-thickness gradients &mdash; the physics that actually controls springback.</span>
+        </div>
+        <div class="scope-card">
+          <strong>AHSS &amp; edge-cracking analysis</strong>
+          <span>Crystal plasticity brought in where continuum models cannot resolve the microstructural damage mechanism.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Thermo-mechanical coupling</strong>
+          <span>Hot forming and forging processes where temperature history controls flow stress and final properties.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Die design optimization</strong>
+          <span>Blank holder force, draw bead geometry, and lubrication strategy explored virtually before tooling is cut.</span>
+        </div>
+      </div>
+
+      <h2>Why me</h2>
+      <div class="proof-strip">
+        <div class="proof-item"><strong>Elsevier</strong><span>co-edited book: Mechanics of New-Generation Metals and Alloys</span></div>
+        <div class="proof-item"><strong>39+</strong><span>publications spanning forming and deformation</span></div>
+        <div class="proof-item"><strong>2</strong><span>scales covered: macro FEM and grain-level CPFEM</span></div>
+        <div class="proof-item"><strong>10+ yrs</strong><span>ABAQUS-based forming and thermo-mechanical work</span></div>
+      </div>
+      <p>My research spans both sides of the forming problem: large-scale ABAQUS simulation and the crystal plasticity work that explains why continuum models fail at the microstructural scale. That combination is why I can tell a client honestly when their springback issue needs a better calibration, not a finer mesh &mdash; and when it genuinely needs a grain-level model.</p>
+
+      <blockquote class="service-quote">
+        Dr. Qayyum is a true brainstorming guru with an incredible depth of experience. He helped me develop a sophisticated analytical approach and a compelling visualization for a complex project that ultimately received high praise from my management team.
+        <cite>&mdash; Abdelrahman Baraka, MSc Steel Technology, TU Bergakademie Freiberg, Germany</cite>
+      </blockquote>
+
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li><strong>15-minute call.</strong> Describe the part, the failure mode or the target, and what data you have. I tell you whether this is a calibration fix, a modeling-scale problem, or something else.</li>
+        <li><strong>Scoped engagement.</strong> A calibration review runs 1&ndash;2 weeks; a full process simulation and die-design campaign typically 4&ndash;10 weeks. Agreed in writing first.</li>
+        <li><strong>Delivery.</strong> Calibrated model, input files, and a written explanation of what drives your specific failure mode or optimization target.</li>
+      </ol>
+
+      <h2>Common questions</h2>
+      <div class="faq-plain">
+        <details>
+          <summary>Our springback keeps drifting after every die adjustment. Can you help?</summary>
+          <p>Usually, yes &mdash; this is almost always a calibration issue, specifically missing kinematic hardening physics from the unloading curve. A model review can often identify the gap within the first session.</p>
+        </details>
+        <details>
+          <summary>Do we need crystal plasticity for our forming problem?</summary>
+          <p>Only if the failure is microstructural &mdash; edge cracking, texture-sensitive formability, or an uncharacterised new alloy. For thinning, wrinkling, and standard forming-limit questions, a well-calibrated macroscopic model is the right, economical tool. I will tell you which on the first call.</p>
+        </details>
+        <details>
+          <summary>Can you calibrate a yield function for a brand-new alloy with no test history?</summary>
+          <p>Yes &mdash; either from a targeted mechanical test campaign, or via crystal plasticity virtual testing that generates the yield surface computationally when physical test time is limited.</p>
+        </details>
+        <details>
+          <summary>What software do you deliver in?</summary>
+          <p>ABAQUS input decks and user subroutines where needed, DAMASK for any crystal plasticity component, and documentation your team can maintain after the engagement ends.</p>
+        </details>
+        <details>
+          <summary>Can you review a model we already built rather than starting fresh?</summary>
+          <p>Yes &mdash; a model and calibration review is the most common first engagement, and often the cheapest way to find out whether the problem is fixable in your existing setup.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h2>Start With 15 Minutes</h2>
+        <p>Book a call and describe your forming problem. I will tell you honestly whether it is a calibration fix, a modeling-scale issue, or something simulation cannot solve at all.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <p><em>Related reading: <a href="/blog/posts/2026-03-sheet-metal-forming-simulation.html">What sheet metal forming simulation gets right &mdash; and where it breaks</a> &middot; <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a></em></p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/main.js?v=20260703a"></script>
+</body>
+</html>

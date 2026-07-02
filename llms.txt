@@ -7,16 +7,17 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 
 ## Consulting services
 - Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html
-- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
-- Phase field simulation: recrystallization, spheroidization, grain growth
-- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
+- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling — details: https://faisalqayyum.com/services/metal-forming-fem-consulting.html
+- Phase field simulation: recrystallization, spheroidization, grain growth — details: https://faisalqayyum.com/services/phase-field-simulation-consulting.html
+- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work) — details: https://faisalqayyum.com/services/mechanical-test-data-analysis.html
 - Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: https://faisalqayyum.com/services/ebsd-analysis-consulting.html
-- Process-structure-property analysis and multiscale modeling strategy
+- Process-structure-property analysis — details: https://faisalqayyum.com/services/process-structure-property-analysis.html
+- Multiscale modeling strategy — details: https://faisalqayyum.com/services/multiscale-modeling-strategy.html
 - Materials failure analysis, incl. expert witness contexts — details: https://faisalqayyum.com/services/materials-failure-analysis.html
 - PhD & research mentoring — details: https://faisalqayyum.com/services/phd-research-mentoring.html
 - Scientific writing coaching — details: https://faisalqayyum.com/services/scientific-writing-coaching.html
 - Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: https://faisalqayyum.com/services/grant-proposal-consulting.html
-- Custom digital courses and workshops for research teams
+- Custom digital courses and workshops for research teams — details: https://faisalqayyum.com/services/custom-digital-courses-workshops.html
 
 ## Blog posts
 - [How to Build a Postdoc Network in Germany Before You Need One](https://faisalqayyum.com/blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html) (2026-06-07): Most PhD researchers wait until they're finishing to start networking, then find nothing. Here is the system that builds a postdoc pipeline in months.
