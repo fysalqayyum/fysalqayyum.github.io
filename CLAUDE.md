@@ -44,6 +44,15 @@ Blog voice, structure, personas, and audit workflow live in
 `~/.claude/commands/blog-writing.md` (the `/blog-writing` skill). Use it for any
 post writing or post auditing — do not re-derive style rules.
 
+## Publishing a paid guest post (write-for-us)
+
+`write-for-us.html` sells guest post placements. **Any author-bio or in-body link
+back to the guest author's site must carry `rel="sponsored"`** (alongside `noopener`
+if `target="_blank"`) — this is required by Google's paid-link policy and is the
+reason the sales copy on `write-for-us.html` was rewritten 2026-07-03 to drop
+"dofollow" language. Do not add a plain dofollow link for a paid placement; it
+risks a manual action against the whole domain, not just that page.
+
 ## Site architecture notes
 
 - Homepage is one long page with section anchors; blog posts are standalone files
