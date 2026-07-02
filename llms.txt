@@ -1,0 +1,40 @@
+# Dr.-Ing. Faisal Qayyum
+
+> Assistant Professor of Mechanical Engineering at the University of Tabuk, Saudi Arabia. PhD (magna cum laude) from TU Bergakademie Freiberg, Germany. Consultant in crystal plasticity simulation (DAMASK), metal forming FEM (ABAQUS), EBSD/microstructure analysis, PhD mentoring, scientific writing coaching, and grant proposal consulting. 39+ peer-reviewed publications, 1,230+ citations, h-index 22.
+
+Site: https://faisalqayyum.com/ — all consulting engagements are scoped individually.
+Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
+
+## Consulting services
+- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation
+- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
+- Phase field simulation: recrystallization, spheroidization, grain growth
+- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
+- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis
+- Process-structure-property analysis and multiscale modeling strategy
+- Materials failure analysis, incl. expert witness contexts
+- PhD & research mentoring, scientific writing coaching, grant proposal consulting (DFG, AvH, DAAD, EU Horizon)
+- Custom digital courses and workshops for research teams
+
+## Blog posts
+- [How to Build a Postdoc Network in Germany Before You Need One](https://faisalqayyum.com/blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html) (2026-06-07): Most PhD researchers wait until they're finishing to start networking, then find nothing. Here is the system that builds a postdoc pipeline in months.
+- [What to Do After You Build Something That Works](https://faisalqayyum.com/blog/posts/2026-06-what-to-do-after-you-build-something-that-works.html) (2026-06-07): Finishing the technical work is not the finish line. A guide for early-career researchers on owning, patenting, and positioning what they have already built.
+- [The Mid-Career Opportunity You Are Overthinking](https://faisalqayyum.com/blog/posts/2026-06-mid-career-opportunity-overthinking.html) (2026-06-06): Loss aversion, worst-case thinking, and the cost of staying too long. How experienced professionals can cut through the paralysis of a mid-career decision.
+- [Should You Leave Pakistan? An Honest Conversation for Senior Professionals Who Are Thinking About It](https://faisalqayyum.com/blog/posts/2026-05-should-pakistani-professionals-leave-pakistan.html) (2026-05-19): Every myth, every question, and every justification Pakistani professionals use to plan a move abroad — examined honestly, backed with data, with a clear opinion at the end.
+- [How to Build a PhD Profile from Pakistan When You Have No Lab and No International Network](https://faisalqayyum.com/blog/posts/2026-05-phd-abroad-pakistan-no-lab-research-exchange.html) (2026-05-19): No publications, no lab, no overseas contacts — and a PhD abroad feels unreachable. Here is the route that actually works, from someone who has seen it work many times.
+- [PhD or Industry? What Engineering Students in Germany Are Not Asking Themselves](https://faisalqayyum.com/blog/posts/2026-05-phd-vs-industry-engineering-germany.html) (2026-05-18): Master's students in Germany applying in both directions at once: PhD positions and industry roles. The confusion is real, but the question that cuts through it is almost never asked.
+- [The Hidden Cost of Life in Europe — What Ambitious Immigrants Learn After the Honeymoon Ends](https://faisalqayyum.com/blog/posts/2026-05-hidden-cost-life-europe-immigrant-professionals.html) (2026-05-17): Taxes, faith, parents, language, and the career ceiling. An honest, data-backed conversation about what life in Germany and Scandinavia really costs ambitious immigrants from South Asia.
+- [How to Land an Academic Job in Saudi Arabia — A Personal Playbook](https://faisalqayyum.com/blog/posts/2026-05-landing-academic-job-saudi-arabia.html) (2026-05-14): How I spent 2–3 years strategically aligning with the Saudi academic market before landing a faculty position — ground intelligence, profile building, LinkedIn networking, and the informal job market explained.
+- [Your First Two Weeks in Saudi Arabia as a Faculty Member — A Step-by-Step On-Ground Guide for University of Tabuk](https://faisalqayyum.com/blog/posts/2026-05-first-steps-faculty-university-tabuk-saudi-arabia.html) (2026-05-12): A first-hand on-ground guide for new faculty at University of Tabuk: SIM card, Iqama medical, HR contract, Absher, bank account, driving licence, and family Iqama.
+- [Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right and Where It Still Struggles](https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html) (2026-03-15): An expert perspective on sheet metal forming simulation, FEM-based metal forming process optimization, and the role of crystal plasticity in predicting forming behavior.
+- [Combining DAMASK with International Journal of Plasticity Frameworks — Bridging Crystal Plasticity Theory and Publication](https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html) (2026-03-15): How DAMASK crystal plasticity simulations align with the research standards of the International Journal of Plasticity. A practical guide for researchers targeting high-impact publications.
+- [Using Numerical Simulations to Improve Additive Manufacturing of Aluminum Alloys](https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html) (2026-03-15): How numerical simulations are helping researchers and engineers improve the additive manufacturing of aluminum alloys through thermal FEM, crystal plasticity, and process optimization.
+- [Moving from Germany to Saudi Arabia for an Academic Job — A Complete Guide for Families](https://faisalqayyum.com/blog/posts/2026-03-moving-germany-to-saudi-arabia-academic-job.html) (2026-03-15): A first-hand walkthrough of relocating from Germany to Saudi Arabia for a faculty position: visa, Tasheer, Mosadaqa, QVP, medical certificates, apostille, timelines, and costs.
+- [Why I Built This Website and What You Can Expect](https://faisalqayyum.com/blog/posts/2026-03-welcome.html) (2026-03-14): Dr.-Ing. Faisal Qayyum explains his motivation for building a professional digital profile and the consulting services and blog topics to expect.
+
+## Profiles
+- LinkedIn: https://www.linkedin.com/in/fysalqayyum/
+- Google Scholar: https://scholar.google.com/citations?user=lXrpH_AAAAAJ
+- ResearchGate: https://www.researchgate.net/profile/Faisal-Qayyum-2
+- ORCID: https://orcid.org/0000-0001-6393-2858
+- YouTube (tutorials, podcasts): https://www.youtube.com/@FaisalQayyum
