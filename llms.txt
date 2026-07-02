@@ -6,7 +6,7 @@ Site: https://faisalqayyum.com/ — all consulting engagements are scoped indivi
 Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 
 ## Consulting services
-- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation
+- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html
 - Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
 - Phase field simulation: recrystallization, spheroidization, grain growth
 - Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)

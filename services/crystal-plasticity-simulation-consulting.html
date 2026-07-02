@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Plasticity Simulation Consulting (DAMASK) | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="DAMASK crystal plasticity consulting: model setup, hierarchical calibration, RVE construction from EBSD, and publication support. Scoped engagements, worldwide.">
+  <meta name="keywords" content="crystal plasticity simulation consultant, DAMASK consultant, CPFEM consulting, crystal plasticity model calibration, RVE construction EBSD, DAMASK simulation help, polycrystal simulation expert, crystal plasticity finite element method, Dr Faisal Qayyum">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html">
+  <meta property="og:title" content="Crystal Plasticity Simulation Consulting (DAMASK)">
+  <meta property="og:description" content="Model setup, hierarchical calibration, RVE construction from EBSD data, and publication support — from a consultant who has published this work in the International Journal of Plasticity.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crystal Plasticity Simulation Consulting (DAMASK)">
+  <meta name="twitter:description" content="DAMASK model setup, calibration, RVE construction, and publication support. Scoped engagements, worldwide.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260703a">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFMZMDW2NV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FFMZMDW2NV');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wan2qj09um");
+  </script>
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Crystal Plasticity Simulation Consulting (DAMASK)",
+    "serviceType": "Crystal Plasticity Simulation Consulting",
+    "description": "DAMASK-based crystal plasticity consulting: constitutive model selection and setup, hierarchical parameter calibration, RVE construction from EBSD data, result interpretation, and publication support for researchers and industrial R&D teams.",
+    "url": "https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html",
+    "provider": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "areaServed": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Engagement Options",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "15-Minute Discovery Call",
+            "url": "https://cal.eu/fysalqayyum/15min"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://faisalqayyum.com/#services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Crystal Plasticity Simulation Consulting"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a crystal plasticity simulation consultant actually deliver?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depending on scope: a working DAMASK model of your material with the constitutive formulation justified against its deformation physics, a calibrated and documented parameter set, an RVE built from your EBSD data with demonstrated convergence, interpreted results connected to your experimental observations, and where the goal is publication, manuscript-level support on methods and framing. You keep the model, the input files, and the documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I need to provide before a crystal plasticity project can start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At minimum: the material system and the question you need answered. Ideally: EBSD maps for grain morphology and texture, mechanical test data for calibration targets (tensile curves at relevant conditions), and any local measurements available such as DIC strain fields or in-situ data. Missing pieces are normal — identifying which measurements are worth commissioning is usually part of the first conversation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a crystal plasticity consulting project take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A focused review of an existing model or dataset takes 1–2 weeks. A full model setup and calibration campaign typically runs 4–12 weeks depending on material complexity and validation depth. A complete process-structure-property study with publication-ready results spans several months. Every engagement is scoped and agreed before it starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with industry or only academic groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. Academic engagements usually aim at publication-grade models and manuscripts; industrial engagements aim at decisions — whether a material will meet spec, why a component fails where it does, or which processing route to pursue. The modeling standard is the same; the deliverable and reporting format differ."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose DAMASK for crystal plasticity simulation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DAMASK is open source, actively developed at the Max-Planck-Institut in Düsseldorf, and supports phenomenological, dislocation-density-based, and damage-coupled formulations with a fast spectral solver. There are no license costs, results are reproducible by reviewers and colleagues, and models are portable across groups — which matters for both publication and long-term industrial use."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .service-hero {
+      padding: 9rem 2rem 3rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .service-hero .lede {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+    }
+    .service-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 1rem 2rem 4rem;
+    }
+    .service-body h2 {
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin: 2.5rem 0 1rem;
+    }
+    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
+    .service-body li { margin-bottom: 0.5rem; }
+    .service-body a { color: var(--accent-1); }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .scope-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+    }
+    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .proof-item {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      text-align: center;
+    }
+    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
+    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .service-quote {
+      border-left: 3px solid var(--accent-1);
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .service-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
+    .process-steps li {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .process-steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent-1);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .process-steps strong { color: var(--text-primary); }
+    .faq-plain details {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    .faq-plain summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .faq-plain details p {
+      padding: 0 1.25rem 1rem;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
+    .cta-box p { margin-bottom: 1.25rem; }
+    .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link active">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <header class="service-hero">
+      <p class="section__label">Consulting Service</p>
+      <h1>Crystal Plasticity Simulation Consulting</h1>
+      <p class="lede">DAMASK-based modeling of how your material actually deforms &mdash; grain by grain, phase by phase &mdash; from constitutive model selection through calibration to results your reviewers, clients, or certification body will accept.</p>
+    </header>
+
+    <div class="service-body">
+
+      <h2>Who this is for</h2>
+      <p>Research groups whose crystal plasticity study has to survive peer review at journals like the <em>International Journal of Plasticity</em>. PhD researchers whose model runs but whose calibration will not hold up to scrutiny. Industrial R&amp;D teams who need to know why a material fails where it does, or whether a new alloy will meet spec, before committing to a processing route.</p>
+
+      <h2>What an engagement covers</h2>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Model setup &amp; formulation choice</strong>
+          <span>Phenomenological, dislocation-density-based, or damage-coupled &mdash; selected from your material's deformation physics and defensible in a methods section.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Hierarchical calibration</strong>
+          <span>Parameters anchored from literature and measurement where possible, fitted only where necessary, and validated against local fields you did not fit.</span>
+        </div>
+        <div class="scope-card">
+          <strong>RVE construction from EBSD</strong>
+          <span>Synthetic microstructures statistically matched to your measured grain morphology and texture, with convergence demonstrated, not asserted.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Result interpretation</strong>
+          <span>Connecting simulated stress, strain, and damage fields to your experimental observations and to the decision or manuscript they need to support.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Publication support</strong>
+          <span>Methods documentation, reviewer-proofing, and framing &mdash; the difference between a methods paper and a contribution, covered in <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">this guide</a>.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Team training</strong>
+          <span>DAMASK workflow workshops for groups that want to run and extend the models themselves after the engagement ends.</span>
+        </div>
+      </div>
+
+      <h2>Why me</h2>
+      <div class="proof-strip">
+        <div class="proof-item"><strong>39+</strong><span>peer-reviewed publications</span></div>
+        <div class="proof-item"><strong>1,230+</strong><span>citations, h-index 22</span></div>
+        <div class="proof-item"><strong>IJP</strong><span>published in the International Journal of Plasticity (2024)</span></div>
+        <div class="proof-item"><strong>10+ yrs</strong><span>experimental + numerical materials research</span></div>
+      </div>
+      <p>My PhD at TU Bergakademie Freiberg (magna cum laude, best thesis prize) built coupled crystal plasticity models of deformation and damage in multi-phase metals. Since then I have calibrated and validated DAMASK models against in-situ tensile testing, EBSD, and digital image correlation for TRIP steel composites and aluminum alloys, co-edited an Elsevier book on the mechanics of new-generation metals, and taught these workflows publicly in <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wlNpC8KkQx9Y4WnKz3Koxmq" target="_blank" rel="noopener">tutorials and case studies</a>.</p>
+
+      <blockquote class="service-quote">
+        As a process engineer at TSMC, I needed a very specific understanding of how microstructural mechanisms connect to real-world material behavior. Dr. Qayyum bridged that gap between academic rigor and engineering practice in a way I hadn&rsquo;t found anywhere else.
+        <cite>&mdash; Shao-Shen Tseng, Design Engineer, TSMC, Taiwan</cite>
+      </blockquote>
+
+      <h2>How it works</h2>
+      <ol class="process-steps">
+        <li><strong>15-minute call.</strong> You describe the material, the question, and the data you have. I tell you honestly whether crystal plasticity is the right tool for it &mdash; and if it is not, what is.</li>
+        <li><strong>Scoped proposal.</strong> Deliverables, timeline, and cost in writing before anything starts. Focused reviews run 1&ndash;2 weeks; full setup-and-calibration campaigns typically 4&ndash;12 weeks.</li>
+        <li><strong>Delivery.</strong> You get the model, input files, calibration documentation, and interpreted results &mdash; everything your group needs to keep working without me.</li>
+      </ol>
+
+      <h2>Common questions</h2>
+      <div class="faq-plain">
+        <details>
+          <summary>What do you actually deliver?</summary>
+          <p>Depending on scope: a working DAMASK model with the formulation justified, a calibrated and documented parameter set, an RVE built from your EBSD data with demonstrated convergence, interpreted results, and where the goal is publication, manuscript-level methods support. You keep everything.</p>
+        </details>
+        <details>
+          <summary>What do I need to provide to start?</summary>
+          <p>At minimum, the material system and the question. Ideally EBSD maps, tensile data at relevant conditions, and any local measurements (DIC, in-situ). Gaps are normal &mdash; identifying which measurements are worth commissioning is usually part of the first conversation.</p>
+        </details>
+        <details>
+          <summary>How long does a project take?</summary>
+          <p>A focused review of an existing model or dataset: 1&ndash;2 weeks. Full model setup and calibration: typically 4&ndash;12 weeks. A complete process&ndash;structure&ndash;property study with publication-ready results: several months. Scope is agreed before the start.</p>
+        </details>
+        <details>
+          <summary>Do you work with industry or only academia?</summary>
+          <p>Both. Academic engagements aim at publication-grade models and manuscripts. Industrial engagements aim at decisions: will this material meet spec, why does this component fail where it does, which processing route to pursue. Same modeling standard, different deliverable.</p>
+        </details>
+        <details>
+          <summary>Why DAMASK and not a commercial code?</summary>
+          <p>DAMASK is open source, developed at the Max-Planck-Institut in D&uuml;sseldorf, and supports phenomenological, dislocation-density, and damage-coupled formulations on a fast spectral solver. No license costs, reproducible by reviewers, and portable across your group after I am gone.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h2>Start With 15 Minutes</h2>
+        <p>Book a call. We will talk through your material, your data, and your question &mdash; and I will tell you honestly how I can help, or whether you do not need me at all.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <p><em>Related reading: <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research in the International Journal of Plasticity</a> &middot; <a href="/blog/posts/2026-03-sheet-metal-forming-simulation.html">What sheet metal forming simulation gets right</a></em></p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script defer src="../assets/js/main.js?v=20260703a"></script>
+</body>
+</html>

@@ -237,7 +237,9 @@
   // Opens the contact picker modal (mailto alone is a dead click for
   // users without a configured mail client — most mobile in-app browsers).
   document.querySelectorAll('.service-card[data-service]').forEach(function (card) {
-    card.addEventListener('click', function () {
+    card.addEventListener('click', function (e) {
+      // Links inside a card (e.g. "Full service details") navigate on their own
+      if (e.target.closest('a')) return;
       var service = this.getAttribute('data-service');
       if (contactModalOverlay) {
         pendingService = service;

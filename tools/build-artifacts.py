@@ -62,6 +62,8 @@ posts = sorted(
 static = [
     (f"{SITE}/", git_date("index.html"), "weekly", "1.0"),
     (f"{SITE}/blog/", git_date("blog/index.html"), "weekly", "0.8"),
+    (f"{SITE}/services/crystal-plasticity-simulation-consulting.html",
+     git_date("services/crystal-plasticity-simulation-consulting.html"), "monthly", "0.9"),
     (f"{SITE}/write-for-us.html", git_date("write-for-us.html"), "monthly", "0.5"),
 ]
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -123,7 +125,7 @@ Site: {SITE}/ — all consulting engagements are scoped individually.
 Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 
 ## Consulting services
-- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation
+- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: {SITE}/services/crystal-plasticity-simulation-consulting.html
 - Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling
 - Phase field simulation: recrystallization, spheroidization, grain growth
 - Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work)
