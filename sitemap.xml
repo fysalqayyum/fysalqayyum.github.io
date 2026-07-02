@@ -8,13 +8,13 @@
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/write-for-us.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22,7 +22,7 @@
     <loc>https://faisalqayyum.com/blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-06-what-to-do-after-you-build-something-that-works.html</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-05-should-pakistani-professionals-leave-pakistan.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-05-phd-vs-industry-engineering-germany.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -58,16 +58,34 @@
     <loc>https://faisalqayyum.com/blog/posts/2026-05-hidden-cost-life-europe-immigrant-professionals.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-05-landing-academic-job-saudi-arabia.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-05-first-steps-faculty-university-tabuk-saudi-arabia.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -76,30 +94,12 @@
     <loc>https://faisalqayyum.com/blog/posts/2026-03-moving-germany-to-saudi-arabia-academic-job.html</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</loc>
-    <lastmod>2026-05-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-03-welcome.html</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>
