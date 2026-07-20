@@ -22,10 +22,10 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260703b">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260720">
 
   <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
-  <script defer src="../assets/js/analytics.js?v=20260703b"></script>
+  <script defer src="../assets/js/analytics.js?v=20260720"></script>
 
   <!-- Schema: Service -->
   <script type="application/ld+json">
@@ -271,6 +271,16 @@
     .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
     .cta-box p { margin-bottom: 1.25rem; }
     .cta-box .btn { display: inline-block; margin: 0.25rem; }
+    .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.75rem 0;
+      font-size: 0.9rem;
+    }
+    .warning-box p { margin-bottom: 0.5rem; color: var(--text-secondary); }
+    .warning-box p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -313,14 +323,14 @@
     <main>
     <header class="service-hero">
       <p class="section__label">Consulting Service</p>
-      <h1>Materials Failure Analysis</h1>
+      <h1>Materials Failure Analysis &amp; Expert Witness Services</h1>
       <p class="lede">A failed component is a message from the material. I read it &mdash; fracture surface, microstructure, loading history &mdash; and where the case demands it, build the simulation that proves the mechanism. For plant engineers, insurers, and legal teams.</p>
     </header>
 
     <div class="service-body">
 
       <h2>Who this is for</h2>
-      <p>The plant engineer with a fractured shaft and a production line down, who needs the cause established before the replacement fails the same way. The insurance or legal team that needs an independent expert opinion which will survive cross-examination. The design team whose component keeps failing in the field despite passing every qualification test.</p>
+      <p>The plant engineer with a fractured shaft and a production line down, who needs the cause established before the replacement fails the same way. The insurance or legal team that needs an independent technical opinion, reasoned from the physical evidence and documented so that every conclusion can be traced back to something observable. The design team whose component keeps failing in the field despite passing every qualification test.</p>
       <p>A failure is a message from the material. The job is reading it correctly &mdash; because the wrong root cause means the fix does not work and the failure returns.</p>
 
       <h2>What an investigation covers</h2>
@@ -342,13 +352,41 @@
           <span>FEM and crystal plasticity models that test the proposed mechanism quantitatively: does it reproduce the failure where and how it occurred?</span>
         </div>
         <div class="scope-card">
-          <strong>Expert opinion &amp; testimony</strong>
-          <span>Written opinions structured for legal and insurance contexts, and testimony that explains the mechanics without weakening the analysis.</span>
+          <strong>Written technical opinions</strong>
+          <span>Opinions structured for legal and insurance contexts: the evidence chain set out explicitly, observation separated from inference, and the limits of what the evidence supports stated rather than glossed over.</span>
         </div>
         <div class="scope-card">
           <strong>Redesign guidance</strong>
           <span>The engineering consequence: what to change in material, processing, or geometry so the failure does not repeat.</span>
         </div>
+      </div>
+
+      <h2>Expert witness and litigation support</h2>
+      <p>When a component failure becomes a dispute, the technical question and the legal question stop being the same thing. A root-cause report written for a plant engineer will not survive cross-examination. An expert report has to make the evidence chain explicit, separate observation from inference, and state plainly where the evidence stops short of certainty.</p>
+      <p>What a legal or insurance team gets from me:</p>
+      <div class="scope-grid">
+        <div class="scope-card">
+          <strong>Independent technical opinion</strong>
+          <span>An assessment of the failure mechanism reached from the evidence, not from the instructing party's preferred conclusion. If the evidence does not support your case, you hear that at the first call, not in the report.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Reports built for challenge</strong>
+          <span>Every conclusion traced to a specific observation: fracture surface feature, micrograph, hardness result, or simulation output. Assumptions listed openly, with their effect on the conclusion stated.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Review of an opposing expert's report</strong>
+          <span>Where a report has already been produced, an assessment of whether its mechanism is consistent with the physical evidence and whether its methods support the weight placed on them.</span>
+        </div>
+        <div class="scope-card">
+          <strong>Explaining mechanics to non-specialists</strong>
+          <span>Fatigue, creep, hydrogen embrittlement, and stress-corrosion cracking explained so a judge, adjuster, or arbitrator can follow the reasoning without the analysis being diluted.</span>
+        </div>
+      </div>
+      <p>The distinction that matters in these cases is between a plausible explanation and a defensible one. A plausible explanation fits the fracture surface. A defensible one also reproduces the failure quantitatively, at the location and under the loading the service history supports. Simulation is what closes that gap, and it is the part most failure reports leave out.</p>
+
+      <div class="warning-box">
+        <p><strong>Where my experience actually sits, stated plainly.</strong> My background in failure analysis is technical and academic: a decade of experimental and numerical research on how metals deform, crack, and fail, published work on damage and fatigue, and failure-analysis workshops and case studies I have taught and worked through. I have not yet been instructed on a live case or given evidence in court.</p>
+        <p>If you need an expert with a track record of courtroom testimony, I am not that person yet, and you should retain someone who is. If what your case needs is the technical analysis done properly, by someone who will tell you honestly what the evidence does and does not support, that is work I can do now. Ask me on the first call and I will give you a straight answer about whether I am the right fit.</p>
       </div>
 
       <h2>Why me</h2>
@@ -380,7 +418,7 @@
         </details>
         <details>
           <summary>Do you handle legal and insurance work?</summary>
-          <p>Yes &mdash; written expert opinions and testimony. The analysis is the same; the reporting is structured for a non-technical audience and for cross-examination, with the evidence chain explicit.</p>
+          <p>Yes, as written technical opinions. The analysis is the same as for an industrial client; the reporting is structured for a non-technical reader, with the evidence chain explicit and the limits of the evidence stated. To be clear about scope: I have not yet been instructed on a live case or appeared as a testifying expert, so if your matter needs someone with a courtroom record, retain that person instead. Ask on the first call and I will tell you honestly which you need.</p>
         </details>
         <details>
           <summary>What materials are in scope?</summary>
@@ -412,7 +450,7 @@
     <div class="container">
       <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
       <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
-      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
     </div>
   </footer>
 

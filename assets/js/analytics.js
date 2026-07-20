@@ -1,7 +1,14 @@
 /* ═══════════════════════════════════════════════════
    Dr.-Ing. Faisal Qayyum — analytics.js
-   Consent-gated Google Analytics + Microsoft Clarity.
-   No tracking script runs until the visitor accepts.
+   Google Analytics via Consent Mode v2 (advanced) +
+   fully consent-gated Microsoft Clarity.
+
+   GA loads immediately with analytics_storage denied:
+   it sets no cookies and sends only cookieless pings
+   until the visitor accepts, which keeps aggregate
+   traffic measurable without storing anything.
+   Clarity records sessions, so it never loads before
+   an explicit Accept.
    ═══════════════════════════════════════════════════ */
 
 (function () {
@@ -15,10 +22,12 @@
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
 
-  // Deny analytics storage by default until the visitor consents.
+  // Deny all storage by default. Must be pushed before gtag.js loads.
   gtag('consent', 'default', {
     analytics_storage: 'denied',
     ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
     wait_for_update: 500
   });
 
@@ -31,6 +40,9 @@
     gtag('config', GA_ID);
   }
 
+  // GA starts in denied mode on every page load, consent or not.
+  loadGA();
+
   function loadClarity() {
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
@@ -39,9 +51,14 @@
     })(window, document, 'clarity', 'script', CLARITY_ID);
   }
 
+  // GA is already loaded; only flip storage on and start Clarity.
   function grantConsent() {
-    gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'denied' });
-    loadGA();
+    gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
     loadClarity();
   }
 
@@ -60,7 +77,7 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML =
-      '<p class="consent-banner__text">This site uses Google Analytics and Microsoft Clarity to understand how visitors use it. No data is collected until you accept.</p>' +
+      '<p class="consent-banner__text">This site counts anonymous, cookieless page views to know what gets read. Accept to also allow analytics cookies and Microsoft Clarity, which help me see how pages actually get used. Decline and nothing is stored on your device. See the <a href="/privacy.html">privacy policy</a>.</p>' +
       '<div class="consent-banner__actions">' +
       '<button type="button" class="btn btn--outline consent-banner__decline">Decline</button>' +
       '<button type="button" class="btn btn--primary consent-banner__accept">Accept</button>' +
