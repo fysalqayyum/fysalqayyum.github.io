@@ -87,6 +87,7 @@ static = [
     (f"{SITE}/services/custom-digital-courses-workshops.html",
      git_date("services/custom-digital-courses-workshops.html"), "monthly", "0.9"),
     (f"{SITE}/write-for-us.html", git_date("write-for-us.html"), "monthly", "0.5"),
+    (f"{SITE}/privacy.html", git_date("privacy.html"), "yearly", "0.2"),
 ]
 lines = ['<?xml version="1.0" encoding="UTF-8"?>',
          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

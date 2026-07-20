@@ -20,6 +20,7 @@ Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
 - Custom digital courses and workshops for research teams — details: https://faisalqayyum.com/services/custom-digital-courses-workshops.html
 
 ## Blog posts
+- [Dr.-Ing. vs PhD: What the German Engineering Doctorate Actually Means](https://faisalqayyum.com/blog/posts/2026-07-dr-ing-vs-phd-german-doctorate-title.html) (2026-07-20): Is a Dr.-Ing. a real PhD? What the German engineering doctorate means, why Germany labels doctorates by field, and how to write it on an international CV.
 - [How to Build a Postdoc Network in Germany Before You Need One](https://faisalqayyum.com/blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html) (2026-06-07): Most PhD researchers wait until they're finishing to start networking, then find nothing. Here is the system that builds a postdoc pipeline in months.
 - [What to Do After You Build Something That Works](https://faisalqayyum.com/blog/posts/2026-06-what-to-do-after-you-build-something-that-works.html) (2026-06-07): Finishing the technical work is not the finish line. A guide for early-career researchers on owning, patenting, and positioning what they have already built.
 - [The Mid-Career Opportunity You Are Overthinking](https://faisalqayyum.com/blog/posts/2026-06-mid-career-opportunity-overthinking.html) (2026-06-06): Loss aversion, worst-case thinking, and the cost of staying too long. How experienced professionals can cut through the paralysis of a mid-career decision.
