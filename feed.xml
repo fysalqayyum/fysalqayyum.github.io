@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>MicroSim Phase Field Solidification: What We Added to an Open Source Workflow</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>How we used and extended MicroSim for Al-Si phase-field solidification, adding KKS OpenCL fixes, CALPHAD tooling, restart gates, and validation workflows.</description>
+    </item>
     <item>
       <title>Dr.-Ing. vs PhD: What the German Engineering Doctorate Actually Means</title>
       <link>https://faisalqayyum.com/blog/posts/2026-07-dr-ing-vs-phd-german-doctorate-title.html</link>

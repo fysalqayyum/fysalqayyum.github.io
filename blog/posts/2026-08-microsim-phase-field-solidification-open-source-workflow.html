@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroSim Phase Field Solidification: What We Added to an Open Source Workflow | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="How we used and extended MicroSim for Al-Si phase-field solidification, adding KKS OpenCL fixes, CALPHAD tooling, restart gates, and validation workflows.">
+  <meta name="keywords" content="MicroSim phase field simulation, MicroSim KKS OpenCL, open source phase field solidification, Al-Si phase field simulation, CALPHAD MicroSim workflow, KKS phase field model, phase field solidification, microstructure simulation">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html">
+  <meta property="og:title" content="MicroSim Phase Field Solidification: What We Added to an Open Source Workflow">
+  <meta property="og:description" content="A technical reflection on using and extending MicroSim for Al-Si phase-field solidification, from KKS OpenCL fixes to validation tooling.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/microsim-alsi-solidification-runa.gif">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="article:published_time" content="2026-08-24">
+  <meta property="article:modified_time" content="2026-08-24">
+  <meta property="article:author" content="https://faisalqayyum.com/">
+  <meta name="twitter:title" content="MicroSim Phase Field Solidification: What We Added to an Open Source Workflow">
+  <meta name="twitter:description" content="Open-source phase-field work becomes publishable only when the solver, inputs, restarts, thermodynamics, and post-processing are all checked.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260824">
+
+  <script defer src="../../assets/js/analytics.js?v=20260720"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "MicroSim Phase Field Solidification: What We Added to an Open Source Workflow",
+    "author": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "datePublished": "2026-08-24",
+    "dateModified": "2026-08-24",
+    "image": "https://faisalqayyum.com/assets/img/microsim-alsi-solidification-runa.gif",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "description": "How we used and extended MicroSim for Al-Si phase-field solidification, adding KKS OpenCL fixes, CALPHAD tooling, restart gates, and validation workflows.",
+    "url": "https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html",
+    "mainEntityOfPage": "https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html",
+    "keywords": ["MicroSim phase field simulation", "MicroSim KKS OpenCL", "open source phase field solidification", "Al-Si phase field simulation", "CALPHAD MicroSim workflow", "KKS phase field model"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://faisalqayyum.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "MicroSim Phase Field Solidification: What We Added to an Open Source Workflow"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MicroSim used for in phase field simulation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MicroSim is an open-source simulation platform from the ICME community for microstructure evolution problems, including phase-field solidification. In this work we used the KKS OpenCL path for two-phase Al-Si solidification and added repairs, validation gates, and tooling around the workflow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can MicroSim simulate Al-Si solidification?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, MicroSim can be used for Al-Si phase-field solidification when the thermodynamic tables, alloy inputs, solver path, and post-processing are qualified for that case. Our workflow uses COST507-derived Al-Si thermodynamic tables, KKS OpenCL Function_F=4, and explicit checks for restarts, moving windows, finite fields, phase sum, composition, and morphology."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is missing when using open-source phase field software for publishable research?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The missing layer is often not the governing equation. It is the qualification infrastructure around the solver: provenance of thermodynamic data, active-code-path checks, restart equivalence, moving-window audits, finite-field diagnostics, solver commit tracking, and post-processing that refuses invalid measurements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What did we contribute to the MicroSim source code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our maintained fork adds KKS OpenCL repairs for Function_F=4 thermodynamics, temperature-dependent behavior, moving-window refill, restart history, phase-field noise, binary output, input parsing, macOS and build portability, and a pf-toolkit for analysis, CALPHAD table generation, launch guards, and validation diagnostics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you validate a phase field simulation workflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A phase-field workflow should be validated in layers: thermodynamic provenance, active solver path, numerical stability, restart and moving-window equivalence, finite-field diagnostics, morphology metrics, and finally experimental calibration. A completed job is not the same thing as a calibrated simulation."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-content .info-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .info-box p { margin-bottom: 0.25rem; }
+    .post-content .info-box p:last-child { margin-bottom: 0; }
+    .post-content .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .warning-box p { margin-bottom: 0.25rem; }
+    .post-content .warning-box p:last-child { margin-bottom: 0; }
+    .post-content .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .post-content .doc-table th,
+    .post-content .doc-table td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+    }
+    .post-content .doc-table th {
+      background: var(--bg-card);
+      color: var(--accent-1);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .post-content .doc-table td { color: var(--text-secondary); }
+    .post-content .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 { color: var(--accent-1); margin-bottom: 0.75rem; }
+    .post-content .cta-box p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .post-content .cta-box .btn { display: inline-block; margin: 0.25rem; }
+    .post-content .story-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.06), rgba(224,123,40,0.02));
+      border: 1px solid rgba(224,123,40,0.2);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+    .post-content .story-box p { margin-bottom: 0.4rem; color: var(--text-secondary); }
+    .post-content .story-box p:last-child { margin-bottom: 0; }
+    .post-content .story-box::before {
+      content: "Working note";
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      margin-bottom: 0.6rem;
+    }
+    .post-content .post-figure {
+      margin: 2rem 0;
+    }
+    .post-content .post-figure img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #fff;
+    }
+    .post-content .post-figure figcaption {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      margin-top: 0.65rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress-bar" id="readingProgress"></div>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link active">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <article class="section post-content">
+      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+      <h1>MicroSim Phase Field Solidification: What We Added to an Open Source Workflow</h1>
+      <p class="post-meta">August 24, 2026 &middot; Phase Field Simulation &middot; 13 min read</p>
+
+      <p>The first serious lesson from our recent MicroSim work was uncomfortable: the simulation image is the last thing you should trust.</p>
+
+      <p>A beautiful phase-field plot can be produced by a solver path that never used the parameter you thought it used. It can come from a restart that changed the physics at the boundary. It can come from a moving window that refilled rows at the wrong temperature. It can even be numerically finite and still answer the wrong question.</p>
+
+      <p>That is why this post is not only about a result. It is about what we had to add around <a href="https://github.com/ICME-India/MicroSim" target="_blank" rel="noopener">MicroSim</a> before we were willing to treat an Al-Si solidification run as scientific evidence. The public code work lives in our maintained fork: <a href="https://github.com/fysalqayyum/MicroSim" target="_blank" rel="noopener">github.com/fysalqayyum/MicroSim</a>.</p>
+
+      <div class="info-box">
+        <p><strong>Short answer:</strong> MicroSim is an open-source microstructure simulation platform for phase-field and related ICME workflows. Our contribution so far is a maintained fork that repairs and documents the KKS OpenCL path we needed for Al-Si solidification, adds CALPHAD and post-processing tooling, and separates solver qualification from scientific calibration.</p>
+      </div>
+
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__title">In this article</p>
+        <ul class="toc__list">
+          <li><a href="#microsim">MicroSim Is More Than a Demo Solver</a></li>
+          <li><a href="#gap">The Gap Appears When the Question Becomes Publishable</a></li>
+          <li><a href="#missing">What Was Missing When We Started</a></li>
+          <li><a href="#code">The Code Had To Be Repaired Before The Physics Could Be Trusted</a></li>
+          <li><a href="#visual">The Visual Result Is Only Interesting Because The Gates Behind It Passed</a></li>
+          <li><a href="#contributed">What We Have Contributed So Far</a></li>
+          <li><a href="#framework">The Framework: Solver, Workflow, Validation, Then Science</a></li>
+          <li><a href="#open-source">Why This Matters For Open-Source Materials Modeling</a></li>
+          <li><a href="#final">Final Thought</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="microsim">MicroSim Is More Than a Demo Solver</h2>
+
+      <p>MicroSim matters because it sits in a rare space. It is not a closed commercial package, and it is not a single-purpose script attached to one paper. It is an open-source ICME code base that gives researchers a starting point for real microstructure evolution problems.</p>
+
+      <p>For phase-field researchers, that matters. Many groups can write equations. Fewer groups can maintain a code path that reads inputs, handles thermodynamic tables, writes fields, restarts long runs, and can still be examined by another researcher. Open code changes the conversation because the method is not hidden behind a license server.</p>
+
+      <p>That openness is also the reason we chose to work with it. Our target was two-phase Al-Si solidification in a laser-based process window. The scientific question needed the process-structure link that I have written about before in the context of <a href="2026-03-numerical-simulations-additive-manufacturing-aluminum.html">simulation chains for additive manufacturing of aluminum alloys</a>. Thermal conditions alone were not enough. We needed a microstructure model that could carry composition, phase evolution, interface motion, and eventually morphology metrics.</p>
+
+      <p>The right way to say this is simple: MicroSim gave us a serious foundation. It did not give us a finished research campaign. That second part had to be built.</p>
+
+      <h2 id="gap">The Gap Appears When the Question Becomes Publishable</h2>
+
+      <p>Most simulation failures do not announce themselves with a crash. They finish politely. They write files. They produce color maps. They give you exactly enough evidence to be wrong with confidence.</p>
+
+      <p>That is the gap between running software and producing publishable computational materials science. A publishable run needs more than a field image. It needs thermodynamic provenance, active solver-path proof, finite-field diagnostics, restart equivalence, controlled moving-window behavior, and post-processing that refuses invalid measurements.</p>
+
+      <p>This became clear in our MicroSim work very quickly. We were not asking whether MicroSim could draw an interface. We were asking whether a specific KKS OpenCL path, with <code>Function_F = 4</code>, with Al-Si thermodynamics, with a long moving-window directional run, could support claims about phase fraction, tip undercooling, and morphology.</p>
+
+      <div class="warning-box">
+        <p><strong>A completed phase-field job is not a validated phase-field result.</strong> In our workflow, "builds," "finite," "restart-qualified," "window-qualified," "morphology-qualified," and "calibrated" are different statuses. Collapsing them into one word hides the exact layer where the evidence is still weak.</p>
+      </div>
+
+      <p>That language sounds fussy until a long run fails at exactly one of those layers. Then it becomes the difference between a controlled diagnosis and weeks of retuning parameters that were never the cause.</p>
+
+      <h2 id="missing">What Was Missing When We Started</h2>
+
+      <p>The missing pieces were not one thing. They were a chain.</p>
+
+      <p>First, the thermodynamics had to be traceable. For Al-Si, using <code>Function_F = 4</code> means the solver reads equilibrium-composition and Hessian tables. Those tables cannot be a black box. We needed a reproducible route from a redistributable CALPHAD source into the CSV files MicroSim consumes, with checks on eutectic temperature and composition.</p>
+
+      <p>Second, the active code path had to be proven. A value printed from an input file is not proof that the device kernel uses it. In our work, we had to follow parameters from parser to host data to device buffers to the selected OpenCL kernel. That is ordinary software engineering, but it is often missing from scientific simulation notes.</p>
+
+      <p>Third, restarts and moving windows had to be treated as physics, not file handling. Directional solidification runs are long. They need checkpointing. They often need a moving domain. If restart gates use local loop time instead of absolute time, or if refill rows use the wrong cumulative shift, the run can remain finite while silently changing the thermal history.</p>
+
+      <p>Fourth, the post-processing had to stop us from measuring nonsense. A residual-liquid fraction measured on a thresholded cell count is not the same as a phase-field integral on the eutectic isotherm. A front statistic that silently drops columns with no crossing can bias every number downstream. The analysis code has to carry these refusals inside it.</p>
+
+      <div class="story-box">
+        <p>The hardest debugging moments were not dramatic crashes. They were cases where the fields looked calm, the job ended normally, and the only honest conclusion was: this run passed the easy tests and failed the one test that mattered.</p>
+      </div>
+
+      <p>That is why the contribution became larger than a few source patches. We had to build the habits, scripts, and guardrails that make an open-source solver usable in a paper-grade workflow.</p>
+
+      <h2 id="code">The Code Had To Be Repaired Before The Physics Could Be Trusted</h2>
+
+      <p>Some repairs were direct solver fixes. The KKS OpenCL path needed attention around temperature-dependent <code>Function_F = 4</code> behavior, anisotropic gradient calculations, anti-trapping switches, moving-window refill, restart history, binary output, and long-number input parsing.</p>
+
+      <p>Other repairs were about portability and maintainability. We added build improvements, macOS endian compatibility in selected writers, clearer documentation, security and contribution files, and a public record of what the fork maintains and what it does not claim.</p>
+
+      <p>The moving-window and restart fixes were especially important. For our directional solidification runs, the solver needed to refill new rows as liquid at a temperature consistent with absolute time and cumulative window shift. Restarted segments also had to preserve the physics gates that were active before the checkpoint. Otherwise, a segmented run is not the same experiment as a continuous one.</p>
+
+      <p>The noise path also mattered. Noise is not decoration in a phase-field solver. If it is non-conserved, mapped to the wrong global index, time-invariant, or applied to the wrong phase, it can corrupt the conclusion while still looking like a legitimate perturbation. We repaired and gated that path rather than treating noise amplitude as a tuning knob.</p>
+
+      <p>The result is not a claim that every MicroSim module is now qualified. It is a narrower and more useful claim: the maintained fork documents the KKS OpenCL path we are using, records the gates it has passed, and labels the paths that remain rejected or incomplete.</p>
+
+      <h2 id="visual">The Visual Result Is Only Interesting Because The Gates Behind It Passed</h2>
+
+      <p>This is the point in the work where a visual finally earns its place. The image below is not evidence by itself. It is useful because it sits downstream of the thermodynamic, restart, moving-window, and post-processing checks that came before it.</p>
+
+      <figure class="post-figure">
+        <img src="../../assets/img/microsim-alsi-solidification-runa.gif" alt="MicroSim KKS OpenCL phase-field animation for Al-5.5 wt% Si showing alpha-Al phase field and silicon composition during directional solidification" loading="lazy">
+        <figcaption>Al-5.5 wt% Si directional-solidification visualization from the current MicroSim workflow. The left panel shows the alpha-Al phase field, and the right panel shows Si composition. The image is a workflow visual, not a standalone calibration claim.</figcaption>
+      </figure>
+
+      <p>That distinction is important. A LinkedIn-friendly GIF can bring attention to the work, but the real contribution is the boring layer under it: solver revision, input provenance, field diagnostics, restart behavior, window refill, and analysis gates.</p>
+
+      <p>This is also where the consulting lesson sits. If your project is already at the point where the plotted field is less important than whether the chain behind it can survive review, the relevant service is <a href="/services/phase-field-simulation-consulting.html">phase field simulation consulting</a>. If the question is broader, from process parameters to microstructure to final properties, start with <a href="/services/process-structure-property-analysis.html">process-structure-property analysis</a>.</p>
+
+      <h2 id="contributed">What We Have Contributed So Far</h2>
+
+      <p>The public fork is organized as commits on top of upstream MicroSim, not as a disconnected code dump. That matters because open-source scientific work should preserve attribution and history. Our fork tracks the upstream project and keeps the change set reviewable.</p>
+
+      <p>The largest contribution is the maintained KKS OpenCL path for our Al-Si workflow. That includes <code>Function_F = 4</code> thermodynamic lookup behavior, host and device consistency checks, moving-window mechanics, restart restoration, output fixes, and parser hardening. These changes are technical, but the reason for them is simple: a solver path that cannot be audited cannot carry a scientific claim.</p>
+
+      <p>The second contribution is the <code>pf-toolkit</code>. It collects the scripts we needed for post-processing, thermodynamic table generation, restart comparison, interface analysis, morphology checks, rendering, and Slurm launch guards. The point is not that every researcher should use our exact scripts. The point is that these checks should exist somewhere, and they should fail loudly when a run is invalid.</p>
+
+      <p>The third contribution is documentation of boundaries. The fork states what it maintains and what it does not. It does not redistribute private thermodynamic databases. It does not claim the multi-rank OpenCL path is production-ready. It does not treat a smoke test as experimental calibration. That kind of non-claim is not weakness. It is what makes the positive claims credible.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>What we added</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thermodynamics</td>
+            <td>CALPHAD-to-MicroSim table generation and provenance checks</td>
+            <td>The alloy data path is reproducible rather than guessed</td>
+          </tr>
+          <tr>
+            <td>KKS OpenCL solver</td>
+            <td>F4, restart, moving-window, noise, parsing, and output repairs</td>
+            <td>The active solver path can be inspected and qualified</td>
+          </tr>
+          <tr>
+            <td>Run control</td>
+            <td>Slurm templates, executable checks, leg guards, restart rules</td>
+            <td>Long campaigns fail early instead of corrupting later evidence</td>
+          </tr>
+          <tr>
+            <td>Post-processing</td>
+            <td>Field readers, finite checks, interface metrics, restart comparison, GIF rendering</td>
+            <td>The analysis can refuse bad measurements before they enter a paper</td>
+          </tr>
+          <tr>
+            <td>Documentation</td>
+            <td>Fork-change notes, validation status, lessons, and contribution guidance</td>
+            <td>Other researchers can see both the strengths and the limits</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>This is the version of open-source contribution I find most useful in computational materials science. Not a polished claim that everything works. A traceable record of what was fixed, what was tested, what failed, and what still needs work.</p>
+
+      <h2 id="framework">The Framework: Solver, Workflow, Validation, Then Science</h2>
+
+      <p>The mistake in many simulation projects is to jump straight from solver output to scientific interpretation. In phase-field work, that jump is too large. The safer order is solver, workflow, validation, then science.</p>
+
+      <p><strong>Solver</strong> means the code compiles, the intended branch executes, and the relevant parameters are active in the kernel that updates the fields.</p>
+
+      <p><strong>Workflow</strong> means the case can run the way the scientific question requires: with correct inputs, saved frames, restart behavior, moving windows, diagnostics, and reproducible launch scripts.</p>
+
+      <p><strong>Validation</strong> means each layer has a test that asks the right question. Does the thermodynamic table reproduce the known eutectic? Does a restarted run match a continuous run within a declared tolerance? Does the moving-window refill use the same global history as the run it continues?</p>
+
+      <p><strong>Science</strong> comes after that. Only then is it meaningful to discuss eutectic fraction, primary spacing, tip undercooling, morphology, and agreement or disagreement with experiment.</p>
+
+      <p>That order also protects the researcher from self-deception. If the result disagrees with experiment, the response should not be to tune every parameter until the number moves. The first response is to ask which layer passed, which layer failed, and whether the measured quantity in the simulation is actually the quantity in the experiment.</p>
+
+      <h2 id="open-source">Why This Matters For Open-Source Materials Modeling</h2>
+
+      <p>Open-source materials modeling is strongest when it is honest about the work between code release and research result. The community does not only need more solvers. It needs qualified paths through existing solvers.</p>
+
+      <p>A good open-source contribution can be a kernel fix. It can also be a negative control, a validation script, a restart test, a data-conversion tool, or a document that says, plainly, which path is not ready. Those things are less glamorous than a final microstructure figure. They are also what make the figure worth taking seriously.</p>
+
+      <p>This is where I think MicroSim has real value. Its open foundation lets researchers inspect, repair, and extend the exact path they need. That is not a weakness compared with a closed package. It is the condition that makes the work defensible when the question becomes specific enough.</p>
+
+      <p>For my own work, this has also clarified what kind of visibility is worth building. I do not want to be seen only as someone who can run phase-field simulations. I want the field to see the deeper habit: trace the code path, qualify the workflow, state the limits, and only then make the scientific claim.</p>
+
+      <h2 id="final">Final Thought</h2>
+
+      <p>MicroSim gave us the starting point. The recent work taught us what had to be added before that starting point could become a publishable Al-Si solidification workflow.</p>
+
+      <p>The source-code contributions matter because they are not separate from the science. In computational materials research, the solver, the input deck, the thermodynamic tables, the restart chain, and the post-processing script are all part of the method. If one of them is wrong, the paper is wrong.</p>
+
+      <p>That is why I am documenting this work publicly. Not as a final victory lap, and not as a claim that every problem is solved. As a marker that we are doing the slow part properly, in the open, where other researchers can inspect it, use it, challenge it, and improve it.</p>
+
+      <div class="cta-box">
+        <h3>Need a Phase-Field Workflow That Can Survive Review?</h3>
+        <p>Book a 15-minute call. We will talk through your specific situation and I will tell you honestly how I can help, or whether you do not need me at all.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+      </div>
+
+      <h2>If You Are Working Across Scales</h2>
+      <p>Phase field is usually one part of a larger chain. If your question starts with a melt pool, a heat treatment, or a forming process and ends with mechanical properties, the model handoff matters as much as the model itself. The broader framing is covered in <a href="2026-03-numerical-simulations-additive-manufacturing-aluminum.html">using numerical simulations to improve additive manufacturing of aluminum alloys</a> and in the <a href="/services/process-structure-property-analysis.html">process-structure-property analysis</a> service page.</p>
+
+      <div class="subscribe-box">
+        <p class="subscribe-box__title">Get the next post by email</p>
+        <p class="subscribe-box__text">A few posts a month on research careers, simulation consulting, and building a life abroad. No spam, and you can unsubscribe with a single reply.</p>
+        <button class="subscribe-box__btn btn btn--primary" type="button">Subscribe by Email</button>
+        <p class="subscribe-box__alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener">Follow me there</a>, every post is shared on LinkedIn.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script defer src="../../assets/js/main.js?v=20260824"></script>
+</body>
+</html>
