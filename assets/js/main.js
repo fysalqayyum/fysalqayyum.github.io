@@ -175,6 +175,45 @@
     window.location.href = href;
   }
 
+  function trackSiteEvent(name, label) {
+    var eventLabel = label || window.location.pathname;
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', name);
+    }
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, {
+        event_category: 'site_engagement',
+        event_label: eventLabel
+      });
+    }
+  }
+
+  function bookingFallbackEmail() {
+    trackSiteEvent('booking_fallback_message', window.location.pathname);
+    buildMailto(
+      'Booking link problem / appointment request',
+      'Hello Dr. Qayyum,\n\nI tried to book a 15-minute call, but the booking page did not work for me.\n\nMy timezone is: [Your timezone]\nSuitable times for me are:\n1. [Option 1]\n2. [Option 2]\n3. [Option 3]\n\nWhat I would like to discuss:\n[Briefly describe your question]\n\nBest regards,\n[Your Name]'
+    );
+  }
+
+  function enhanceBookingCtas() {
+    document.querySelectorAll('a[href*="cal.eu/fysalqayyum/15min"]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        trackSiteEvent('booking_click', link.textContent.trim() || window.location.pathname);
+      });
+
+      var ctaBox = link.closest('.cta-box');
+      if (!ctaBox || ctaBox.querySelector('.booking-fallback-link')) return;
+
+      var fallback = document.createElement('button');
+      fallback.type = 'button';
+      fallback.className = 'btn btn--outline booking-fallback-link';
+      fallback.textContent = 'Booking not working? Send a message';
+      fallback.addEventListener('click', bookingFallbackEmail);
+      link.insertAdjacentElement('afterend', fallback);
+    });
+  }
+
   var emailBtn = document.getElementById('emailBtn');
   var contactModalOverlay = document.getElementById('contactModalOverlay');
   var contactModalClose = document.getElementById('contactModalClose');
@@ -212,6 +251,9 @@
       var href = this.getAttribute('data-href');
       if (href) {
         if (href.indexOf('http') === 0) {
+          if (href.indexOf('cal.eu/fysalqayyum/15min') !== -1) {
+            trackSiteEvent('booking_click', 'contact_modal');
+          }
           window.open(href, '_blank', 'noopener');
           closeContactModal();
         } else {
@@ -224,6 +266,7 @@
       if (pendingService && subject) {
         subject += ' — ' + pendingService;
       }
+      trackSiteEvent('contact_us', subject || 'contact_modal');
       closeContactModal();
       var u = 'fysalqayyum', d = 'yahoo.com';
       var mailHref = 'mailto:' + u + '@' + d;
@@ -241,6 +284,7 @@
       // Links inside a card (e.g. "Full service details") navigate on their own
       if (e.target.closest('a')) return;
       var service = this.getAttribute('data-service');
+      trackSiteEvent('contact_us', 'service_card_' + service);
       if (contactModalOverlay) {
         pendingService = service;
         openContactModal();
@@ -256,6 +300,40 @@
         this.click();
       }
     });
+  });
+
+  // ─── 9b. FUNNEL EVENT LABELS ──────────────────────
+  enhanceBookingCtas();
+
+  document.addEventListener('click', function (e) {
+    var target = e.target.closest('a, button');
+    if (!target) return;
+
+    var href = target.getAttribute('href') || target.getAttribute('data-href') || '';
+
+    if (target.id === 'emailBtn' || target.classList.contains('subscribe-box__btn')) {
+      trackSiteEvent(target.id === 'emailBtn' ? 'contact_us' : 'subscribe', target.id || 'subscribe_box');
+      return;
+    }
+
+    if (href.indexOf('wa.me/') !== -1) {
+      trackSiteEvent('whatsapp_click', window.location.pathname);
+      return;
+    }
+
+    if (href.indexOf('/services/') !== -1 || href.indexOf('services/') === 0) {
+      trackSiteEvent('service_detail_click', href);
+      return;
+    }
+
+    if (target.closest('.post-content') && (href.indexOf('/blog/posts/') !== -1 || href.indexOf('2026-') === 0)) {
+      trackSiteEvent('internal_related_click', href);
+      return;
+    }
+
+    if (target.closest('.blog-card')) {
+      trackSiteEvent('blog_card_click', href);
+    }
   });
 
   // ─── 11. AWARDS MARQUEE (clone cards for seamless loop) ──

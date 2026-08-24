@@ -1107,6 +1107,52 @@ h3 { font-size: var(--fs-h3); }
   color: var(--accent-1);
 }
 
+.topic-rails {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.topic-rail {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.topic-rail:hover {
+  border-color: var(--accent-1);
+  transform: translateY(-2px);
+}
+
+.topic-rail__label {
+  display: block;
+  color: var(--accent-1);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+  text-transform: uppercase;
+}
+
+.topic-rail__title {
+  display: block;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.topic-rail__desc {
+  color: var(--text-secondary);
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 /* ═══════════════════════════════════════════════════
    14. FAQ ACCORDION
    ═══════════════════════════════════════════════════ */
@@ -1408,6 +1454,10 @@ h3 { font-size: var(--fs-h3); }
   }
 
   .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .topic-rails {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1841,6 +1891,10 @@ h3 { font-size: var(--fs-h3); }
 }
 .post-content a.btn--outline:hover {
   color: var(--accent-1);
+}
+
+.post-content .booking-fallback-link {
+  margin: 0.25rem;
 }
 
 .back-link {

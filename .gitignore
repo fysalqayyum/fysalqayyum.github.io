@@ -1,5 +1,6 @@
 # Internal / local only
 .claude/
+PROJECT_MEMORY.md
 push-to-live.bat
 DEPLOYMENT.md
 *.bat
