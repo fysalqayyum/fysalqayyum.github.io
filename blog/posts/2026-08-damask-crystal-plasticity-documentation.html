@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="A practical guide to DAMASK crystal plasticity documentation: what the official docs cover, what beginners still miss, and how to build EBSD-based workflows.">
+  <meta name="keywords" content="DAMASK crystal plasticity documentation, DAMASK documentation, crystal plasticity DAMASK, DAMASK tutorial, EBSD to DAMASK, CPFEM documentation, DAMASK simulation workflow, crystal plasticity model calibration">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html">
+  <meta property="og:title" content="DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps">
+  <meta property="og:description" content="What the official DAMASK docs explain well, what they cannot teach on their own, and how to build EBSD-based crystal plasticity workflows that survive review.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/damask-al-alloy-stress-field.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DAMASK Crystal Plasticity Documentation: Official Docs and Real Workflows">
+  <meta name="twitter:description" content="A practical guide to DAMASK docs, EBSD-based RVEs, calibration traps, and publication-grade crystal plasticity workflows.">
+
+  <meta property="article:published_time" content="2026-08-24">
+  <meta property="article:modified_time" content="2026-08-24">
+  <meta property="article:author" content="https://faisalqayyum.com/">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260824">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../../assets/js/analytics.js?v=20260720"></script>
+
+  <!-- Schema: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps",
+    "author": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "datePublished": "2026-08-24",
+    "dateModified": "2026-08-24",
+    "image": "https://faisalqayyum.com/assets/img/damask-al-alloy-stress-field.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "description": "A practical guide to DAMASK crystal plasticity documentation: what the official docs cover, what beginners still miss, and how to build EBSD-based workflows.",
+    "url": "https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html",
+    "mainEntityOfPage": "https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html",
+    "keywords": ["DAMASK crystal plasticity documentation", "DAMASK documentation", "EBSD to DAMASK", "crystal plasticity", "CPFEM"]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://faisalqayyum.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "DAMASK Crystal Plasticity Documentation"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is the official DAMASK crystal plasticity documentation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The current DAMASK documentation is published by the DAMASK development team at crystalplasticity.org/documentation. It covers installation, command-line tools, examples, input formats, and solver concepts. For serious use, read it first, then build a project-specific workflow around your material, microstructure data, calibration targets, and validation evidence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DAMASK enough for a publishable crystal plasticity study?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DAMASK is the solver and workflow environment, not the scientific argument. A publishable study still needs a justified constitutive model, measured or statistically defensible microstructure input, calibrated parameters, sensitivity checks, and validation against data that were not simply fitted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can EBSD data be used directly in DAMASK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EBSD data can become a DAMASK input, but not by treating a colorful map as a ready model. The map must be cleaned, reconstructed into grains, checked for representativeness, and converted either into a direct geometry or into a statistically matched 3D RVE with documented assumptions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the biggest beginner mistake in DAMASK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The biggest mistake is fitting a stress-strain curve before deciding what physics the model is supposed to represent. If the material response depends on twinning, phase contrast, sub-grain barriers, temperature, or damage, a neat curve fit can still be scientifically wrong."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a DAMASK workflow document contain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It should state the material system, microstructure source, RVE construction method, boundary conditions, constitutive law, parameter origin, calibration objective, convergence checks, validation targets, post-processing scripts, and limitations. Without that record, a model may run but it is hard to trust."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-content .info-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .info-box p { margin-bottom: 0.25rem; }
+    .post-content .info-box p:last-child { margin-bottom: 0; }
+    .post-content .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .figure-block {
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    .post-content .figure-block img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
+    .post-content .figure-block figcaption {
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+    .post-content .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .post-content .doc-table th,
+    .post-content .doc-table td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .post-content .doc-table th {
+      background: var(--bg-card);
+      color: var(--accent-1);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .post-content .doc-table td { color: var(--text-secondary); }
+    .post-content .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 { color: var(--accent-1); margin-bottom: 0.75rem; }
+    .post-content .cta-box p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .post-content .cta-box .btn { display: inline-block; margin: 0.25rem; }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress-bar" id="readingProgress"></div>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link active">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <article class="section post-content">
+      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+      <h1>DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps</h1>
+      <p class="post-meta">August 24, 2026 &middot; Crystal Plasticity &amp; DAMASK &middot; 9 min read</p>
+
+      <p>When people search for DAMASK crystal plasticity documentation, they are usually not asking only for a URL. They are asking how to get from a clean example in the docs to a model that answers a real materials question: a measured EBSD map, an anisotropic stress-strain response, a suspicious local strain field, or a reviewer asking why the chosen constitutive law is defensible.</p>
+
+      <div class="info-box">
+        <p><strong>Short answer:</strong> the official DAMASK documentation is the right starting point, but it is not a complete research workflow. A serious DAMASK study needs documented microstructure preparation, constitutive-model choice, parameter origin, calibration logic, convergence checks, and validation against independent data.</p>
+        <p>Official docs: <a href="https://crystalplasticity.org/documentation/" target="_blank" rel="noopener">crystalplasticity.org/documentation</a>.</p>
+      </div>
+
+      <p>My own work with DAMASK has moved through several versions of that problem: EBSD-informed aluminum alloy RVEs, dislocation-density based crystal plasticity, phase-resolved deformation in composites, in-situ SEM and EBSD registration, phase-field damage coupling, and recently a published LPBF AlSi10Mg study in <em>Mechanics of Materials</em> where DAMASK helped connect build orientation to local stress-strain partitioning. The lesson is consistent: the solver is powerful, but the model only becomes science when the workflow is auditable.</p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__title">In this post</p>
+        <ul class="toc__list">
+          <li><a href="#official-docs">What the official DAMASK docs do well</a></li>
+          <li><a href="#missing-layer">The missing layer between docs and research</a></li>
+          <li><a href="#ebsd">EBSD-to-DAMASK is not a file conversion</a></li>
+          <li><a href="#calibration">Calibration is where most models become weak</a></li>
+          <li><a href="#publication">What publication-grade documentation looks like</a></li>
+          <li><a href="#use-cases">Recent DAMASK use cases from my work</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="official-docs">What the Official DAMASK Docs Do Well</h2>
+
+      <p>The DAMASK documentation is good at what official documentation should do: explain installation, core concepts, input formats, command-line utilities, examples, and solver usage. It shows the grammar of the tool. If you are new to DAMASK, you should read the official material first rather than relying on copied input files from someone else.</p>
+
+      <p>Where beginners get stuck is not usually syntax. They can often make a model run after enough trial and error. The harder question is whether the model means what they think it means. Does the RVE represent the measured material? Does the constitutive law match the deformation mechanism? Are the parameters inherited from literature, calibrated, guessed, or overfit? Does the boundary condition match the experiment? These are not documentation gaps in the narrow software sense. They are research-design gaps.</p>
+
+      <div class="warning-box">
+        <p><strong>Running is not validation.</strong> A DAMASK simulation that converges has passed a numerical gate. It has not passed a scientific gate until it predicts something you did not simply tune it to reproduce.</p>
+      </div>
+
+      <h2 id="missing-layer">The Missing Layer Between Docs and Research</h2>
+
+      <p>The missing layer is the project notebook: the reasoning record that sits between official documentation and your final paper. In my own work, this is where I write down what the model is allowed to claim, what it is not allowed to claim, and which checks must pass before the results can be used in a figure.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Workflow layer</th>
+            <th>What beginners often document</th>
+            <th>What should be documented</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Microstructure</td>
+            <td>One EBSD map image</td>
+            <td>Step size, cleanup, grain reconstruction, phase handling, 2D-to-3D assumption, representativeness</td>
+          </tr>
+          <tr>
+            <td>RVE</td>
+            <td>Grid size and number of grains</td>
+            <td>Why that size, grain-size distribution, texture match, phase fraction, convergence evidence</td>
+          </tr>
+          <tr>
+            <td>Constitutive law</td>
+            <td>Name of the model</td>
+            <td>Deformation mechanisms it captures, mechanisms it ignores, and why that is acceptable</td>
+          </tr>
+          <tr>
+            <td>Calibration</td>
+            <td>Final fitted parameters</td>
+            <td>Parameter origin, bounds, objective function, fitted data, validation data, sensitivity</td>
+          </tr>
+          <tr>
+            <td>Post-processing</td>
+            <td>Stress and strain screenshots</td>
+            <td>Scripted extraction, units, averaging rules, local-field metrics, uncertainty where possible</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure class="figure-block">
+        <img src="../../assets/img/damask-al-alloy-stress-field.jpg" alt="DAMASK crystal plasticity stress-field visualization for an aluminum alloy microstructure" loading="lazy" width="1400" height="769">
+        <figcaption>A DAMASK stress-field result only becomes useful when the workflow behind it is documented: EBSD source, geometry construction, boundary condition, constitutive law, calibration target, and post-processing rule.</figcaption>
+      </figure>
+
+      <h2 id="ebsd">EBSD-to-DAMASK Is Not a File Conversion</h2>
+
+      <p>EBSD is often treated as the shortcut to a realistic model: measure a map, convert it, run DAMASK, publish a colorful field. That is not enough. EBSD gives orientations, phase labels, spatial resolution, and grain morphology in a measured section. A 3D crystal plasticity simulation needs a volume, phase-aware geometry, grain-resolved orientations, and a defensible statement about representativeness.</p>
+
+      <p>In the 2026 LPBF AlSi10Mg work with Muhammad Muteeb Butt and co-authors, the EBSD evidence did not simply decorate the paper. It drove a statistically representative 3D polycrystalline RVE generated with DREAM.3D, about 590 grains over a 100 x 50 x 100 micrometre volume, then simulated in DAMASK under periodic boundary conditions. The point was not to show that DAMASK can fit a tensile curve. The point was to test how build-orientation dependent microstructure and Si-rich cellular-network spacing affect local stress-strain partitioning.</p>
+
+      <p>That distinction matters. If the EBSD-to-RVE step is weak, every later stress-field map inherits that weakness. If it is documented well, the crystal plasticity result becomes a bridge between measured microstructure and mechanical response.</p>
+
+      <figure class="figure-block">
+        <img src="../../assets/img/ebsd-derived-rve-construction.jpg" alt="EBSD-derived RVE construction for crystal plasticity simulation" loading="lazy" width="1370" height="1400">
+        <figcaption>EBSD-derived model construction: the microstructure route must be explained before local stress, strain, or damage fields can be interpreted.</figcaption>
+      </figure>
+
+      <h2 id="calibration">Calibration Is Where Most Models Become Weak</h2>
+
+      <p>Calibration is not the act of making a curve line up with experimental data. Calibration is deciding which parameters are allowed to move, what physical meaning those parameters have, and which data are reserved to test the model after fitting. This is where many beginner DAMASK studies collapse under review.</p>
+
+      <p>In the LPBF AlSi10Mg study, two constitutive frameworks were compared: a phenomenological slip-based model and a dislocation-density-based physics model. Both were calibrated against experimental tensile data using a Bayesian optimization strategy with an objective function that combined stress-strain and hardening-rate errors. Importantly, the orientation effect was not handled by freely changing every parameter. Only one strength-related parameter varied by orientation, and it was connected to the effective Si-network spacing along the loading direction.</p>
+
+      <p>That is the kind of calibration story that readers can evaluate. The model has parameter economy. The fitted term has a microstructural interpretation. The comparison between formulations becomes meaningful rather than cosmetic.</p>
+
+      <div class="info-box">
+        <p><strong>Practical rule:</strong> before fitting, write one sentence for every adjustable parameter explaining what physical feature it represents and why your dataset can identify it. If you cannot write that sentence, the parameter probably should not be fitted.</p>
+      </div>
+
+      <h2 id="publication">What Publication-Grade Documentation Looks Like</h2>
+
+      <p>A publication-grade DAMASK workflow should let another competent researcher understand what was done without reverse-engineering the folder. At minimum, document the following:</p>
+
+      <ul>
+        <li>Material system, processing route, and the mechanical question.</li>
+        <li>EBSD or synthetic microstructure source, including cleanup and grain reconstruction.</li>
+        <li>RVE dimensions, grain count, phase fraction, texture match, and convergence logic.</li>
+        <li>Boundary conditions and loading path, including periodic assumptions where used.</li>
+        <li>Constitutive law, slip systems, hardening law, and parameter sources.</li>
+        <li>Calibration objective, fitted data, held-out validation data, and sensitivity checks.</li>
+        <li>Post-processing scripts for stress, strain, activity, texture, or damage fields.</li>
+        <li>Limitations, especially where sub-grain features are represented implicitly.</li>
+      </ul>
+
+      <p>This is why I separate "DAMASK help" from "crystal plasticity consulting". DAMASK help gets the model running. Crystal plasticity consulting makes the model scientifically useful. If your work is at that stage, my <a href="/services/crystal-plasticity-simulation-consulting.html">crystal plasticity simulation service</a> is the relevant route. If the bottleneck is measured microstructure data, start with <a href="/services/ebsd-analysis-consulting.html">EBSD and MTEX consulting</a>.</p>
+
+      <h2 id="use-cases">Recent DAMASK Use Cases From My Work</h2>
+
+      <p>The following are representative use cases I have worked through or am actively developing. I am listing them because they show how different DAMASK projects require different documentation standards:</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Use case</th>
+            <th>What DAMASK was used for</th>
+            <th>Documentation emphasis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LPBF AlSi10Mg anisotropy</td>
+            <td>Grain-resolved DAMASK simulations comparing phenomenological and dislocation-density formulations</td>
+            <td>EBSD-to-RVE construction, parameter economy, strength link to Si-network spacing</td>
+          </tr>
+          <tr>
+            <td>AA6082 temperature-dependent deformation</td>
+            <td>EBSD-informed crystal plasticity for texture evolution and deformation behavior</td>
+            <td>Measured texture, temperature-dependent response, validation against experiments</td>
+          </tr>
+          <tr>
+            <td>In-situ SEM and EBSD correlation</td>
+            <td>Connecting simulated local activity fields to observed slip traces and strain localization</td>
+            <td>Registration quality, local-field metrics, honest limits of correlation</td>
+          </tr>
+          <tr>
+            <td>Two-phase composite damage</td>
+            <td>Crystal plasticity fields coupled to phase-field damage interpretation</td>
+            <td>Phase contrast, interface regions, damage partitioning, image-to-model consistency</td>
+          </tr>
+          <tr>
+            <td>HCP dislocation and twinning models</td>
+            <td>Testing model mechanisms before scaling to broader materials claims</td>
+            <td>Mechanism verification first, publication claims later</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The shared pattern is that each project needs more than the official software docs. It needs a traceable scientific workflow: what was measured, what was assumed, what was fitted, what was validated, and what the result is allowed to mean.</p>
+
+      <p>For a deeper publication-focused checklist, read my guide on <a href="2026-03-damask-international-journal-plasticity.html">how to publish DAMASK crystal plasticity research in the International Journal of Plasticity</a>. For the process side, the companion post on <a href="2026-03-sheet-metal-forming-simulation.html">sheet metal forming simulation</a> explains where crystal plasticity belongs inside a multiscale forming workflow.</p>
+
+      <div class="cta-box">
+        <h3>Need a DAMASK Workflow Reviewed?</h3>
+        <p>If your model runs but the calibration, EBSD conversion, or paper framing still feels fragile, I can review the workflow and identify the gates that need to pass before you build claims on it.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/services/crystal-plasticity-simulation-consulting.html" class="btn btn--outline">See Crystal Plasticity Consulting</a>
+      </div>
+
+      <div class="subscribe-box">
+        <p class="subscribe-box__title">Get the next post by email</p>
+        <p class="subscribe-box__text">A few posts a month on research careers, simulation consulting, and building a life abroad. No spam, and you can unsubscribe with a single reply.</p>
+        <button class="subscribe-box__btn btn btn--primary" type="button">Subscribe by Email</button>
+        <p class="subscribe-box__alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener">Follow me there</a> &mdash; every post is shared on LinkedIn.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script defer src="../../assets/js/main.js?v=20260824"></script>
+</body>
+</html>
