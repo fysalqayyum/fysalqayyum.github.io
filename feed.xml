@@ -8,6 +8,13 @@
     <language>en</language>
     <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <description>A practical guide to DAMASK crystal plasticity documentation: what the official docs cover, what beginners still miss, and how to build EBSD-based workflows.</description>
+    </item>
+    <item>
       <title>MicroSim Phase Field Solidification: What We Added to an Open Source Workflow</title>
       <link>https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html</link>
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html</guid>
@@ -15,11 +22,11 @@
       <description>How we used and extended MicroSim for Al-Si phase-field solidification, adding KKS OpenCL fixes, CALPHAD tooling, restart gates, and validation workflows.</description>
     </item>
     <item>
-      <title>Dr.-Ing. vs PhD: What the German Engineering Doctorate Actually Means</title>
+      <title>Dr.-Ing. vs PhD: Is the German Engineering Doctorate Equivalent?</title>
       <link>https://faisalqayyum.com/blog/posts/2026-07-dr-ing-vs-phd-german-doctorate-title.html</link>
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-07-dr-ing-vs-phd-german-doctorate-title.html</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Is a Dr.-Ing. a real PhD? What the German engineering doctorate means, why Germany labels doctorates by field, and how to write it on an international CV.</description>
+      <description>Is a Dr.-Ing. equivalent to a PhD? A clear guide to the German engineering doctorate, international CV wording, and title use.</description>
     </item>
     <item>
       <title>How to Build a Postdoc Network in Germany Before You Need One</title>
@@ -57,11 +64,11 @@
       <description>No publications, no lab, no overseas contacts — and a PhD abroad feels unreachable. Here is the route that actually works, from someone who has seen it work many times.</description>
     </item>
     <item>
-      <title>PhD or Industry? What Engineering Students in Germany Are Not Asking Themselves</title>
+      <title>PhD vs Industry in Germany: Salary, Career Risk, and How Engineers Decide</title>
       <link>https://faisalqayyum.com/blog/posts/2026-05-phd-vs-industry-engineering-germany.html</link>
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-05-phd-vs-industry-engineering-germany.html</guid>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <description>Master's students in Germany applying in both directions at once: PhD positions and industry roles. The confusion is real, but the question that cuts through it is almost never asked.</description>
+      <description>PhD or industry in Germany? Compare salary, career risk, timing, and research fit before spending four to five years on a doctorate.</description>
     </item>
     <item>
       <title>The Hidden Cost of Life in Europe — What Ambitious Immigrants Learn After the Honeymoon Ends</title>
@@ -85,7 +92,7 @@
       <description>A first-hand on-ground guide for new faculty at University of Tabuk: SIM card, Iqama medical, HR contract, Absher, bank account, driving licence, and family Iqama.</description>
     </item>
     <item>
-      <title>Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right and Where It Still Struggles</title>
+      <title>Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity</title>
       <link>https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</link>
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
@@ -99,11 +106,11 @@
       <description>What gets DAMASK crystal plasticity studies through International Journal of Plasticity review: model justification, hierarchical calibration, and RVE proof.</description>
     </item>
     <item>
-      <title>Using Numerical Simulations to Improve Additive Manufacturing of Aluminum Alloys</title>
+      <title>LPBF Aluminum Simulation: Residual Stress, Microstructure, and Crystal Plasticity</title>
       <link>https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</link>
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <description>How numerical simulations are helping researchers and engineers improve the additive manufacturing of aluminum alloys through thermal FEM, crystal plasticity, and process optimization.</description>
+      <description>How LPBF aluminum simulation connects residual stress, microstructure, EBSD, and DAMASK crystal plasticity for AlSi10Mg anisotropy and AM process design.</description>
     </item>
     <item>
       <title>Moving from Germany to Saudi Arabia for an Academic Job — A Complete Guide for Families</title>

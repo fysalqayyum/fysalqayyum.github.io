@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EBSD Data Analysis &amp; MTEX Consulting | Dr.-Ing. Faisal Qayyum</title>
-  <meta name="description" content="Send raw EBSD data, get publication-ready results: MTEX texture analysis, grain statistics, pole figures and ODFs, plus EBSD-to-crystal-plasticity model inputs.">
+  <title>EBSD Data Analysis &amp; MTEX Consulting: Texture, RVEs, and DAMASK Inputs | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="EBSD and MTEX consulting for texture analysis, grain statistics, publication figures, and EBSD-to-DAMASK RVE inputs for crystal plasticity.">
   <meta name="keywords" content="EBSD analysis consulting, MTEX consultant, EBSD data analysis help, texture analysis ODF, pole figure analysis, EBSD to crystal plasticity, grain size analysis EBSD, KAM GND analysis, microstructure characterization consulting, Dr Faisal Qayyum">
   <meta name="author" content="Dr.-Ing. Faisal Qayyum">
   <meta name="robots" content="index, follow">
@@ -12,12 +12,12 @@
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://faisalqayyum.com/services/ebsd-analysis-consulting.html">
-  <meta property="og:title" content="EBSD Data Analysis &amp; MTEX Consulting">
-  <meta property="og:description" content="MTEX texture analysis, quantitative grain statistics, and EBSD-to-CPFEM simulation inputs — delivered as reproducible scripts, from a published practitioner.">
-  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta property="og:title" content="EBSD Data Analysis &amp; MTEX Consulting: Texture, RVEs, and DAMASK Inputs">
+  <meta property="og:description" content="MTEX texture analysis, grain statistics, publication figures, and EBSD-to-DAMASK RVE inputs delivered as reproducible scripts.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/ebsd-derived-rve-construction.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EBSD Data Analysis &amp; MTEX Consulting">
-  <meta name="twitter:description" content="MTEX texture analysis, quantitative grain statistics, and EBSD-to-CPFEM simulation inputs — delivered as reproducible scripts, from a published practitioner.">
+  <meta name="twitter:title" content="EBSD Data Analysis &amp; MTEX Consulting: Texture, RVEs, and DAMASK Inputs">
+  <meta name="twitter:description" content="Texture analysis, grain statistics, publication figures, and EBSD-to-DAMASK RVE inputs.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "EBSD Data Analysis & MTEX Consulting",
+    "name": "EBSD Data Analysis & MTEX Consulting: Texture, RVEs, and DAMASK Inputs",
     "serviceType": "EBSD Data Analysis and Microstructure Characterisation Consulting",
-    "description": "Quantitative EBSD analysis: MTEX-based texture analysis (pole figures, IPFs, ODFs), grain and boundary statistics, defensible data cleanup, correlative analysis with DIC and in-situ data, and conversion of measured microstructures into crystal plasticity simulation inputs.",
+    "description": "Quantitative EBSD analysis: MTEX-based texture analysis, grain and boundary statistics, defensible data cleanup, correlative analysis with DIC and in-situ data, and conversion of measured microstructures into DAMASK crystal plasticity inputs.",
     "url": "https://faisalqayyum.com/services/ebsd-analysis-consulting.html",
     "provider": {
       "@type": "Person",
@@ -131,6 +131,14 @@
           "@type": "Answer",
           "text": "Depending on scope: cleaned and grain-reconstructed datasets, publication-quality texture plots (pole figures, IPF maps, ODF sections) with the MTEX scripts that generated them, quantitative statistics (grain size distributions, phase fractions, boundary character), simulation-ready microstructure inputs, and interpretation connecting the microstructure to your processing history or mechanical results. All scripts are yours — the analysis is rerunnable without me."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Can EBSD data support DAMASK crystal plasticity simulation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if the EBSD map is cleaned, reconstructed, checked for representativeness, and converted into a direct or statistically matched RVE with documented assumptions. EBSD-to-DAMASK work should preserve grain orientation, phase identity, texture, and morphology in a way that matches the simulation question."
+        }
       }
     ]
   }
@@ -198,6 +206,25 @@
     }
     .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
     .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .evidence-figure {
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    .evidence-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
+    .evidence-figure figcaption {
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
     .service-quote {
       border-left: 3px solid var(--accent-1);
       background: var(--bg-card);
@@ -314,7 +341,7 @@
     <header class="service-hero">
       <p class="section__label">Consulting Service</p>
       <h1>EBSD Data Analysis &amp; MTEX Consulting</h1>
-      <p class="lede">Your EBSD maps hold quantitative answers about texture, grain structure, and deformation &mdash; if the analysis is done right. Scripted, reproducible MTEX and Python pipelines, from measurement review to publication figures to simulation inputs.</p>
+      <p class="lede">Your EBSD maps hold quantitative answers about texture, grain structure, and deformation &mdash; if the analysis is done right. Scripted MTEX and Python pipelines, from measurement review to publication figures to DAMASK-ready simulation inputs.</p>
     </header>
 
     <div class="service-body">
@@ -358,7 +385,12 @@
         <div class="proof-item"><strong>39+</strong><span>publications built on this workflow</span></div>
         <div class="proof-item"><strong>IJP</strong><span>EBSD-to-CPFEM chain published at top tier (2024)</span></div>
       </div>
+      <figure class="evidence-figure">
+        <img src="../assets/img/ebsd-derived-rve-construction.jpg" alt="EBSD-derived representative volume element construction for DAMASK crystal plasticity simulation" loading="lazy" width="1370" height="1400">
+        <figcaption>EBSD-to-simulation work must preserve the microstructure evidence: cleaned maps, reconstructed grains, statistically meaningful RVEs, and documented conversion assumptions.</figcaption>
+      </figure>
       <p>EBSD-to-simulation is my published workflow, not a service-page claim: the <a href="https://doi.org/10.1016/j.ijplas.2024.103942" target="_blank" rel="noopener">2024 International Journal of Plasticity study</a> I co-authored ran on exactly this chain &mdash; measured EBSD, MTEX texture analysis, and crystal plasticity models built on the real microstructure. My TRIP-steel composite work correlated EBSD with in-situ tensile testing and digital image processing to track where damage actually initiates. The analysis you get is the one my own papers depend on.</p>
+      <p>The same EBSD-to-model discipline underpins our 2026 <em>Mechanics of Materials</em> paper on <a href="https://doi.org/10.1016/j.mechmat.2026.105846" target="_blank" rel="noopener">LPBF AlSi10Mg tensile anisotropy</a>, where measured orientation-dependent microstructure informed a 3D polycrystalline RVE and DAMASK simulations. That is the standard I apply to consulting work: EBSD is not decoration, it is the evidence chain.</p>
 
       <blockquote class="service-quote">
         Dr. Qayyum is a true brainstorming guru with an incredible depth of experience. He helped me develop a sophisticated analytical approach and a compelling visualization for a complex project that ultimately received high praise from my management team.
@@ -394,6 +426,10 @@
           <summary>We want this capability in-house. Do you train teams?</summary>
           <p>Yes &mdash; MTEX workshops for research groups are a standard format, built around your own data rather than toy examples.</p>
         </details>
+        <details>
+          <summary>Can you prepare EBSD data for DAMASK?</summary>
+          <p>Yes. I can convert cleaned and reconstructed EBSD data into direct or statistically matched inputs for DAMASK, with documented assumptions about grain morphology, texture, phase handling, and 2D-to-3D representation.</p>
+        </details>
       </div>
 
       <div class="cta-box">
@@ -403,7 +439,7 @@
         <a href="/#contact" class="btn btn--outline">Send a Message</a>
       </div>
 
-      <p><em>Related: <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a> &middot; <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research at the top of the field</a></em></p>
+      <p><em>Related: <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a> &middot; <a href="/blog/posts/2026-08-damask-crystal-plasticity-documentation.html">DAMASK crystal plasticity documentation and real workflows</a> &middot; <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research at the top of the field</a></em></p>
 
     </div>
   </main>

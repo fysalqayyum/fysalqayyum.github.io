@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crystal Plasticity Simulation Consulting (DAMASK) | Dr.-Ing. Faisal Qayyum</title>
-  <meta name="description" content="Independent DAMASK crystal plasticity consulting from a published specialist (1,230+ citations): model setup, calibration, RVEs from EBSD, and publication support.">
+  <title>Crystal Plasticity Simulation Consulting: DAMASK, EBSD RVEs, and Calibration | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="DAMASK crystal plasticity consulting for EBSD-based RVEs, calibration, local stress-strain partitioning, and publication-ready CPFEM workflows.">
   <meta name="keywords" content="crystal plasticity simulation consultant, DAMASK consultant, CPFEM consulting, crystal plasticity model calibration, RVE construction EBSD, DAMASK simulation help, polycrystal simulation expert, crystal plasticity finite element method, Dr Faisal Qayyum">
   <meta name="author" content="Dr.-Ing. Faisal Qayyum">
   <meta name="robots" content="index, follow">
@@ -12,12 +12,12 @@
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html">
-  <meta property="og:title" content="Crystal Plasticity Simulation Consulting (DAMASK)">
-  <meta property="og:description" content="Model setup, hierarchical calibration, RVE construction from EBSD data, and publication support — from a consultant who has published this work in the International Journal of Plasticity.">
-  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta property="og:title" content="Crystal Plasticity Simulation Consulting: DAMASK, EBSD RVEs, and Calibration">
+  <meta property="og:description" content="DAMASK model setup, EBSD-based RVE construction, hierarchical calibration, local-field interpretation, and publication support.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/cp-ebsd-damask-workflow.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Crystal Plasticity Simulation Consulting (DAMASK)">
-  <meta name="twitter:description" content="DAMASK model setup, calibration, RVE construction, and publication support. Scoped engagements, worldwide.">
+  <meta name="twitter:title" content="Crystal Plasticity Simulation Consulting: DAMASK, EBSD RVEs, and Calibration">
+  <meta name="twitter:description" content="DAMASK workflows for EBSD RVEs, model calibration, local-field interpretation, and publication support.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Crystal Plasticity Simulation Consulting (DAMASK)",
+    "name": "Crystal Plasticity Simulation Consulting: DAMASK, EBSD RVEs, and Calibration",
     "serviceType": "Crystal Plasticity Simulation Consulting",
-    "description": "DAMASK-based crystal plasticity consulting: constitutive model selection and setup, hierarchical parameter calibration, RVE construction from EBSD data, result interpretation, and publication support for researchers and industrial R&D teams.",
+    "description": "DAMASK crystal plasticity consulting: constitutive model selection, EBSD-based RVE construction, hierarchical calibration, local stress-strain partitioning, result interpretation, and publication support.",
     "url": "https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html",
     "provider": {
       "@type": "Person",
@@ -131,6 +131,14 @@
           "@type": "Answer",
           "text": "DAMASK is open source, actively developed at the Max-Planck-Institut in Düsseldorf, and supports phenomenological, dislocation-density-based, and damage-coupled formulations with a fast spectral solver. There are no license costs, results are reproducible by reviewers and colleagues, and models are portable across groups — which matters for both publication and long-term industrial use."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help with DAMASK documentation and workflow review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A workflow review checks whether the EBSD-to-RVE route, constitutive model, parameter sources, calibration objective, boundary conditions, convergence checks, and post-processing scripts are documented well enough for a paper, thesis, or industrial decision."
+        }
       }
     ]
   }
@@ -198,6 +206,25 @@
     }
     .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
     .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
+    .evidence-figure {
+      margin: 1.75rem 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    .evidence-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
+    .evidence-figure figcaption {
+      padding: 0.85rem 1rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
     .service-quote {
       border-left: 3px solid var(--accent-1);
       background: var(--bg-card);
@@ -314,7 +341,7 @@
     <header class="service-hero">
       <p class="section__label">Consulting Service</p>
       <h1>Crystal Plasticity Simulation Consulting</h1>
-      <p class="lede">DAMASK-based modeling of how your material actually deforms &mdash; grain by grain, phase by phase &mdash; from constitutive model selection through calibration to results your reviewers, clients, or certification body will accept.</p>
+      <p class="lede">DAMASK-based modeling of how your material actually deforms &mdash; grain by grain, phase by phase &mdash; from EBSD-based RVEs and calibration to local stress-strain results your reviewers, clients, or certification body will accept.</p>
     </header>
 
     <div class="service-body">
@@ -357,7 +384,12 @@
         <div class="proof-item"><strong>IJP</strong><span>published in the International Journal of Plasticity (2024)</span></div>
         <div class="proof-item"><strong>10+ yrs</strong><span>experimental + numerical materials research</span></div>
       </div>
+      <figure class="evidence-figure">
+        <img src="../assets/img/cp-ebsd-damask-workflow.jpg" alt="EBSD, crystal plasticity, and phase-field damage workflow for microstructure-informed materials modeling" loading="lazy" width="1372" height="580">
+        <figcaption>Representative microstructure-informed workflow: measured microstructure, crystal plasticity fields, and damage interpretation. The service is about making this chain defensible, not just making a solver run.</figcaption>
+      </figure>
       <p>My PhD at TU Bergakademie Freiberg (magna cum laude, best thesis prize) built coupled crystal plasticity models of deformation and damage in multi-phase metals. Since then I have calibrated and validated DAMASK models against in-situ tensile testing, EBSD, and digital image correlation for TRIP steel composites and aluminum alloys, co-edited an Elsevier book on the mechanics of new-generation metals, and taught these workflows publicly in <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wlNpC8KkQx9Y4WnKz3Koxmq" target="_blank" rel="noopener">tutorials and case studies</a>.</p>
+      <p>Most recently, our 2026 <em>Mechanics of Materials</em> paper on <a href="https://doi.org/10.1016/j.mechmat.2026.105846" target="_blank" rel="noopener">microstructure-informed modeling of LPBF AlSi10Mg components</a> used EBSD-informed 3D RVEs and DAMASK to compare phenomenological and dislocation-density crystal plasticity formulations. The key result was not only curve matching: local stress-strain partitioning explained why build orientations respond differently, and the strength term was linked to Si-rich cellular-network spacing.</p>
 
       <blockquote class="service-quote">
         As a process engineer at TSMC, I needed a very specific understanding of how microstructural mechanisms connect to real-world material behavior. Dr. Qayyum bridged that gap between academic rigor and engineering practice in a way I hadn&rsquo;t found anywhere else.
@@ -393,6 +425,10 @@
           <summary>Why DAMASK and not a commercial code?</summary>
           <p>DAMASK is open source, developed at the Max-Planck-Institut in D&uuml;sseldorf, and supports phenomenological, dislocation-density, and damage-coupled formulations on a fast spectral solver. No license costs, reproducible by reviewers, and portable across your group after I am gone.</p>
         </details>
+        <details>
+          <summary>Can you review an existing DAMASK workflow?</summary>
+          <p>Yes. I can audit EBSD conversion, RVE construction, boundary conditions, calibration targets, parameter sources, convergence checks, and post-processing logic. The output is a clear list of what is publishable, what is fragile, and what must be fixed first.</p>
+        </details>
       </div>
 
       <div class="cta-box">
@@ -402,7 +438,7 @@
         <a href="/#contact" class="btn btn--outline">Send a Message</a>
       </div>
 
-      <p><em>Related reading: <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research in the International Journal of Plasticity</a> &middot; <a href="/blog/posts/2026-03-sheet-metal-forming-simulation.html">What sheet metal forming simulation gets right</a></em></p>
+      <p><em>Related reading: <a href="/blog/posts/2026-08-damask-crystal-plasticity-documentation.html">DAMASK crystal plasticity documentation and real workflows</a> &middot; <a href="/blog/posts/2026-03-damask-international-journal-plasticity.html">How to publish DAMASK crystal plasticity research in the International Journal of Plasticity</a> &middot; <a href="/blog/posts/2026-03-sheet-metal-forming-simulation.html">What sheet metal forming simulation gets right</a></em></p>
 
     </div>
   </main>

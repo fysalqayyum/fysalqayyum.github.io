@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right and Where It Still Struggles | Dr.-Ing. Faisal Qayyum</title>
-  <meta name="description" content="An expert perspective on sheet metal forming simulation, FEM-based metal forming process optimization, and the role of crystal plasticity in predicting forming limits, springback, and anisotropy in automotive and aerospace applications.">
+  <title>Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="When sheet metal forming simulation works, where it fails, and when springback, texture, or edge cracking require better calibration or crystal plasticity.">
   <meta name="keywords" content="sheet metal forming simulation, metal forming process, FEM forming simulation, ABAQUS sheet forming, deep drawing simulation, springback prediction, forming limit diagram, anisotropy metal forming, crystal plasticity forming, automotive sheet metal, Dr Faisal Qayyum">
   <meta name="author" content="Dr.-Ing. Faisal Qayyum">
   <meta name="robots" content="index, follow">
@@ -12,16 +12,16 @@
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html">
-  <meta property="og:title" content="Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right">
-  <meta property="og:description" content="Expert perspective on sheet metal forming simulation, FEM process optimization, and crystal plasticity for predicting forming limits and springback.">
+  <meta property="og:title" content="Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity">
+  <meta property="og:description" content="When classical FEM forming simulation is enough, and when springback, texture evolution, or edge cracking require microstructure-aware modeling.">
   <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <meta property="article:published_time" content="2026-03-15">
-  <meta property="article:modified_time" content="2026-07-02">
+  <meta property="article:modified_time" content="2026-08-24">
   <meta property="article:author" content="https://faisalqayyum.com/">
-  <meta name="twitter:title" content="Sheet Metal Forming and the Metal Forming Process — Simulation Insights">
-  <meta name="twitter:description" content="FEM-based sheet metal forming simulation, springback, forming limits, and crystal plasticity for metal forming process optimization.">
+  <meta name="twitter:title" content="Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity">
+  <meta name="twitter:description" content="Where classical forming FEM works, where it fails, and when crystal plasticity is worth the cost.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,14 +35,14 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right and Where It Still Struggles",
+    "headline": "Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity",
     "author": {
       "@type": "Person",
       "name": "Dr.-Ing. Faisal Qayyum",
       "url": "https://faisalqayyum.com"
     },
     "datePublished": "2026-03-15",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-08-24",
     "image": "https://faisalqayyum.com/assets/img/og-image.jpg",
     "publisher": {
       "@type": "Person",
@@ -77,7 +77,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Sheet Metal Forming and the Metal Forming Process — What Simulation Gets Right and Where It Still Struggles"
+        "name": "Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity"
       }
     ]
   }
@@ -260,8 +260,8 @@
   <main>
     <article class="section post-content">
       <a href="/blog/" class="back-link">&larr; Back to all posts</a>
-      <h1>Sheet Metal Forming and the Metal Forming Process &mdash; What Simulation Gets Right and Where It Still Struggles</h1>
-      <p class="post-meta">March 15, 2026 &middot; Metal Forming &amp; FEM &middot; 6 min read</p>
+      <h1>Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity</h1>
+      <p class="post-meta">March 15, 2026 &middot; Updated August 24, 2026 &middot; Metal Forming &amp; FEM &middot; 7 min read</p>
 
       <p>A batch of stamped automotive door panels comes out 4&thinsp;mm off in springback. You adjust the die compensation. They come out 3.1&thinsp;mm off. You adjust again. This iteration cycle can run for months before someone asks the question that cuts through it: is the constitutive model actually capturing the material&rsquo;s unloading behaviour?</p>
 
@@ -329,7 +329,11 @@
 
       <p>If your project is already at that boundary, the relevant services are <a href="/services/metal-forming-fem-consulting.html">metal forming FEM consulting</a> for component-scale process questions and <a href="/services/crystal-plasticity-simulation-consulting.html">crystal plasticity simulation consulting</a> when the answer depends on grain-scale mechanisms.</p>
 
-      <p>Getting such a study to a standard that survives peer review is its own craft. I wrote a separate guide on <a href="2026-03-damask-international-journal-plasticity.html">what it takes to publish DAMASK crystal plasticity research at the top of the field</a> &mdash; the same rigor applies when the audience is an industrial client instead of a reviewer.</p>
+      <p>Getting such a study to a standard that survives peer review is its own craft. I wrote a separate guide on <a href="2026-08-damask-crystal-plasticity-documentation.html">DAMASK crystal plasticity documentation and real research workflows</a>, and another on <a href="2026-03-damask-international-journal-plasticity.html">what it takes to publish DAMASK crystal plasticity research at the top of the field</a>. The same rigor applies when the audience is an industrial client instead of a reviewer.</p>
+
+      <div class="info-box">
+        <p><strong>2026 update:</strong> The same scale-matching problem appears in additive manufacturing. In our 2026 <em>Mechanics of Materials</em> paper on LPBF AlSi10Mg, a grain-resolved DAMASK RVE linked build-orientation dependent strength to local stress-strain partitioning and Si-rich cellular-network spacing. The manufacturing route changes, but the modeling lesson is the same: macroscopic curves are not enough when the answer lives in the microstructure.</p>
+      </div>
 
       <h2 id="which-scale">Which Scale Does Your Problem Need?</h2>
 
