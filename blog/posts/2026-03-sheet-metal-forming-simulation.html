@@ -26,7 +26,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=20260720">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260824">
 
   <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
   <script defer src="../../assets/js/analytics.js?v=20260720"></script>
@@ -269,6 +269,10 @@
 
       <p>I work on both sides of that gap: macro-scale forming simulation in ABAQUS, and grain-scale crystal plasticity in DAMASK, including co-editing an Elsevier book on the mechanics of new-generation metals. Most forming problems that stall do so exactly at the boundary between those two scales, and this post is about knowing which side of the boundary your problem lives on.</p>
 
+      <div class="info-box">
+        <p><strong>Short answer:</strong> FEM forming simulation is strongest for thinning, wrinkling, forming-limit checks, die design, blank optimisation, residual stress, and process-window studies. It struggles when the missing physics lives in unloading, texture evolution, or microstructural damage. Those cases need better material calibration, crystal plasticity, or both.</p>
+      </div>
+
       <nav class="toc" aria-label="Table of contents">
         <p class="toc__title">In this post</p>
         <ul class="toc__list">
@@ -322,6 +326,8 @@
       <div class="info-box">
         <p><strong>In practice:</strong> in projects I have worked on, a well-executed CPFEM analysis replaces a large share of the uniaxial and biaxial test matrix needed to calibrate a macroscopic yield surface &mdash; while providing a physically grounded explanation for the failure behaviour the macroscopic model cannot predict.</p>
       </div>
+
+      <p>If your project is already at that boundary, the relevant services are <a href="/services/metal-forming-fem-consulting.html">metal forming FEM consulting</a> for component-scale process questions and <a href="/services/crystal-plasticity-simulation-consulting.html">crystal plasticity simulation consulting</a> when the answer depends on grain-scale mechanisms.</p>
 
       <p>Getting such a study to a standard that survives peer review is its own craft. I wrote a separate guide on <a href="2026-03-damask-international-journal-plasticity.html">what it takes to publish DAMASK crystal plasticity research at the top of the field</a> &mdash; the same rigor applies when the audience is an industrial client instead of a reviewer.</p>
 
@@ -378,7 +384,7 @@
         <h3>Need Help With Your Forming Simulation?</h3>
         <p>I consult on FEM-based metal forming simulation using ABAQUS and crystal plasticity modelling with DAMASK. Whether you need help calibrating anisotropic yield functions, improving springback accuracy, or understanding failure mechanisms in AHSS &mdash; I can help you connect the physics to the result.</p>
         <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
-        <a href="/#contact" class="btn btn--outline">Get in Touch</a>
+        <a href="/services/metal-forming-fem-consulting.html" class="btn btn--outline">See the Forming Service</a>
       </div>
 
     
@@ -400,6 +406,6 @@
     </div>
   </footer>
 
-  <script defer src="../../assets/js/main.js?v=20260703a"></script>
+  <script defer src="../../assets/js/main.js?v=20260824"></script>
 </body>
 </html>

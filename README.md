@@ -2,7 +2,7 @@
 
 Personal website of **Dr.-Ing. Faisal Qayyum** — Assistant Professor, crystal plasticity simulation expert, and materials science consultant.
 
-Live at [faisalqayyum.com](https://www.faisalqayyum.com)
+Live at [faisalqayyum.com](https://faisalqayyum.com)
 
 ## About
 

@@ -4,6 +4,11 @@ Public consulting portfolio of Dr.-Ing. Faisal Qayyum (materials science profess
 Static HTML/CSS/vanilla JS, no build step, hosted on GitHub Pages with the custom
 apex domain `faisalqayyum.com`. **This repo is public** — treat every commit accordingly.
 
+**Read `PROJECT_MEMORY.md` first** (project root, git-ignored, local only). It holds
+current state, settled decisions, and next steps. This file holds the conventions.
+Do not duplicate content between the two, and never commit PROJECT_MEMORY.md — it
+contains traffic figures and positioning notes that must not be public.
+
 ## Non-negotiable conventions
 
 - **Canonical domain is the apex with HTTPS: `https://faisalqayyum.com`** (no `www`).
