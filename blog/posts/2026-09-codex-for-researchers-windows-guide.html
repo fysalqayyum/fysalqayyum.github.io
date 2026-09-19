@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex for Researchers: Data to Figures to a Report in Seconds | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="Install OpenAI Codex CLI on a Windows laptop and run a real research workflow end to end: pull World Bank data, build figures, and compile a LaTeX report.">
+  <meta name="keywords" content="Codex CLI for researchers, install Codex CLI Windows, OpenAI Codex research workflow, AI coding agent for academics, World Bank API Python, Codex AGENTS.md, research automation Windows, codex exec automation, scientific figures python matplotlib, latex report automation">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html">
+  <meta property="og:title" content="Codex for Researchers: From Data to Figures to a Written Report in Seconds">
+  <meta property="og:description" content="A setup guide and three real runs for mid-career researchers who want an AI agent working on their own files, not in a chat window.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="article:published_time" content="2026-09-19">
+  <meta property="article:modified_time" content="2026-09-19">
+  <meta property="article:author" content="https://faisalqayyum.com/">
+  <meta name="twitter:title" content="Codex for Researchers: From Data to Figures to a Written Report in Seconds">
+  <meta name="twitter:description" content="Install Codex CLI on Windows, then pull real data, build figures, and compile a LaTeX report on your own laptop.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260919">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../../assets/js/analytics.js?v=20260720"></script>
+
+  <!-- Schema: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Codex for Researchers: From Data to Figures to a Written Report in Seconds",
+    "author": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "datePublished": "2026-09-19",
+    "dateModified": "2026-09-19",
+    "image": "https://faisalqayyum.com/assets/img/og-image.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "description": "Install OpenAI Codex CLI on a Windows laptop and run a real research workflow end to end: pull World Bank data, build figures, and compile a LaTeX report.",
+    "url": "https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html",
+    "mainEntityOfPage": "https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html",
+    "keywords": ["Codex CLI for researchers", "install Codex CLI Windows", "OpenAI Codex research workflow", "AI coding agent for academics", "World Bank API Python", "research automation Windows"]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Codex for Researchers: From Data to Figures to a Written Report in Seconds"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is OpenAI Codex CLI and do I need to know how to code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Codex CLI is a program from OpenAI that runs in your terminal, reads and writes files on your machine, and runs commands. You do not need to write code yourself. You describe the outcome you want in plain language, and Codex writes the script, runs it, reads the error, and fixes it. For a researcher, the practical difference from a chatbot is that the work lands in real files in a real folder that you keep."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it safe to run Codex CLI on my Windows laptop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By default Codex runs inside an operating-system sandbox. In the standard workspace-write mode it can read files and make edits inside the folder you opened, but it cannot write outside that folder and command network access is off until you approve it. You control the two dials separately with the /permissions command. Keep approvals on until you have watched it work on a throwaway folder for a while."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Codex CLI analyse research data and make publication figures?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Codex can fetch data from a public API, save it as CSV, write a pandas and matplotlib script, run it, and save the figures. The important discipline is that every number must trace to a file in your data folder. A prompt that says do not interpolate and print the source turns the agent from a text generator into a reproducible analysis step."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Codex CLI on confidential or unpublished research data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Treat that with care. Codex sends your prompts and the relevant file content to OpenAI to do its work, so unpublished results, embargoed manuscripts, confidential industrial data, student records, and anything covered by a data agreement should not be handed to it without checking your institution and the data owner first. For sensitive work, use it on synthetic or already-published data, or on code that you run locally against files that never leave the machine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Codex CLI cost and do I need an API key?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Codex is included with paid ChatGPT plans, and it can also run on a metered OpenAI API key. You sign in once with either. Long autonomous jobs consume more usage than short questions, so watch the usage view for the first week. Check the current plan and pricing details on the official Codex documentation before you commit a large grant report or a long literature scan to it."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-content .info-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .info-box p { margin-bottom: 0.25rem; }
+    .post-content .info-box p:last-child { margin-bottom: 0; }
+    .post-content .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .warning-box p { margin-bottom: 0.25rem; }
+    .post-content .warning-box p:last-child { margin-bottom: 0; }
+    .post-content .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .post-content .doc-table th,
+    .post-content .doc-table td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .post-content .doc-table th {
+      background: var(--bg-card);
+      color: var(--accent-1);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .post-content .doc-table td { color: var(--text-secondary); }
+    .post-content .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 { color: var(--accent-1); margin-bottom: 0.75rem; }
+    .post-content .cta-box p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .post-content .cta-box .btn { display: inline-block; margin: 0.25rem; }
+    .post-content .story-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.06), rgba(224,123,40,0.02));
+      border: 1px solid rgba(224,123,40,0.2);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+    .post-content .story-box p { margin-bottom: 0.4rem; color: var(--text-secondary); }
+    .post-content .story-box p:last-child { margin-bottom: 0; }
+    .post-content .story-box::before {
+      content: "What the first week looks like";
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      margin-bottom: 0.6rem;
+    }
+    .post-content .code-block {
+      position: relative;
+      background: #14110e;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin: 1.5rem 0;
+      padding: 2.15rem 1rem 0.95rem;
+      overflow: hidden;
+    }
+    .post-content .code-block__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      background: rgba(224,123,40,0.12);
+      padding: 0.4rem 0.75rem;
+      border-bottom-right-radius: var(--radius-sm);
+    }
+    .post-content .copy-btn {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.5rem;
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.2rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .post-content .copy-btn:hover { color: var(--accent-1); border-color: var(--accent-1); }
+    .post-content .copy-btn--done { color: var(--accent-1); border-color: var(--accent-1); }
+    .post-content .code-block pre {
+      margin: 0;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #e9e3da;
+    }
+    .post-content .code-block code { font-family: inherit; }
+    .post-content code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 0.1em 0.3em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress-bar" id="readingProgress"></div>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link active">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <article class="section post-content">
+      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+      <h1>Codex for Researchers: From Data to Figures to a Written Report in Seconds</h1>
+      <p class="post-meta">September 19, 2026 &middot; Research Tools &amp; AI &middot; 17 min read</p>
+
+      <p>The most expensive equipment in my research group is not the cluster. It is the hours I lose to work a script should have done.</p>
+
+      <p>A reviewer asked me to replot one figure in a different colour scale. I had the data. I had done the analysis. I still lost an afternoon, because the plotting lived in a half-finished notebook and my memory. Multiply that by every revision and every resubmission, and you have the quiet tax on a mid-career research life.</p>
+
+      <p>Nobody puts that tax in a job description. You are hired to think. You spend the time on plumbing: pulling numbers out of a portal, cleaning columns, rebuilding figures, recompiling the same document for the fifth time. The thinking gets whatever hours are left.</p>
+
+      <p>I run a research group, teach, supervise, review, and write proposals and papers. I have moved simulation workflows between a German cluster and a laptop in Tabuk. The pattern I see in mid-career researchers is not a lack of skill. It is a backlog of small, repetitive, file-shaped tasks that never quite justify the time they take. So I put an AI agent in a folder on my laptop and pointed it at that backlog. Install it once, and most of what I used to do by hand becomes a paragraph of instructions.</p>
+
+      <p>I have been telling people to put <a href="https://developers.openai.com/codex/cli" target="_blank" rel="noopener">Codex CLI</a> on their Windows laptops for a while. Most never install it. The first ten minutes look like developer work, and the payoff is invisible until you have seen it run on your own files. This post removes that excuse. It gives you the install, one reusable starter kit, and three runs that show the whole shape: pull real data from the web, turn it into figures, then write a short report from it.</p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__title">In this article</p>
+        <ul class="toc__list">
+          <li><a href="#what">What Codex Is, and What It Is Not</a></li>
+          <li><a href="#setup">The One-Time Setup on Your Windows Laptop</a></li>
+          <li><a href="#runs">Three Runs That Show the Whole Shape</a></li>
+          <li><a href="#why">Why This Beats a Chat Window</a></li>
+          <li><a href="#week">Where It Earns Its Place in Your Week</a></li>
+          <li><a href="#rules">The Rules That Keep You Out of Trouble</a></li>
+          <li><a href="#next">Where to Point It Next</a></li>
+          <li><a href="#final">Final Thought</a></li>
+        </ul>
+      </nav>
+
+      <!-- ═══ SECTION 1 ═══ -->
+      <h2 id="what">What Codex Is, and What It Is Not</h2>
+
+      <p>Codex CLI is a program that runs in your terminal, which on Windows means the PowerShell window. It can read files, write files, and run commands on your machine. You talk to it in plain language, the same way you would brief a new research assistant. The difference is that it does not just answer. It acts, then checks its own work.</p>
+
+      <p>That last part matters more than it sounds. When you ask a chat window to write a plotting script, you get text. You then copy it, run it, hit an error, paste the error back, and iterate. Codex runs the script itself, sees the traceback, rewrites the line, and runs it again. By the time it reports back, the figure usually exists on disk.</p>
+
+      <p>It is not a search engine, and it is not a co-author. It is closer to a folder with hands. Everything it produces lands in files you can open, inspect, and keep. If you dislike what it wrote, you delete it like any other file.</p>
+
+      <div class="info-box">
+        <p><strong>Two dials control what it is allowed to do.</strong> The sandbox decides what it can technically touch. The approval policy decides when it must stop and ask you. In the default workspace-write mode it can work inside the folder you opened, but it cannot write outside it, and command network access stays off until you approve it. You change both mid-session with the <code>/permissions</code> command.</p>
+      </div>
+
+      <p>That is the whole safety model in one sentence: a bounded folder, plus a person who says yes or no. You can tighten it to read-only when you just want questions answered, and you should leave it tight until you have watched it work for a week.</p>
+
+      <!-- ═══ SECTION 2 ═══ -->
+      <h2 id="setup">The One-Time Setup on Your Windows Laptop</h2>
+
+      <p>You need a recent Windows 10 or Windows 11 machine, and a paid ChatGPT plan or an OpenAI API key. Everything below is copy and paste. You do not need to understand the commands to run them.</p>
+
+      <h3>If you have never used PowerShell, read this first</h3>
+
+      <p>PowerShell is the plain text window where you type commands. It is already installed on Windows. Three things are worth knowing now, because almost every confusing step later comes from missing one of them.</p>
+
+      <p><strong>How to open it.</strong> Click Start, type <code>PowerShell</code>, and press Enter.</p>
+
+      <p><strong>How to open it as an administrator.</strong> Do the same, but right-click the PowerShell result and choose "Run as administrator", then click Yes. The window title will say "Administrator". Installing software system-wide needs this.</p>
+
+      <p><strong>How to open it already inside a folder.</strong> This is the one that saves the most confusion. In File Explorer, go to the folder you want. Right-click on an empty area inside it and choose "Open in Terminal" (Windows 11) or "Open PowerShell window here" (Windows 10). If you do not see either, hold Shift while you right-click. PowerShell opens pointing at that folder, so you never type a long path.</p>
+
+      <div class="info-box">
+        <p><strong>Two kinds of windows, and it matters.</strong> Codex installs into your own user account, so a normal window is enough for it. Python, Git and LaTeX install system-wide, so that step needs the administrator window. When a heading below says administrator, use the right-click method.</p>
+        <p>To run any command: copy it, click into the PowerShell window, paste with right-click or Ctrl+V, and press Enter.</p>
+      </div>
+
+      <h3>Step 1: make a test folder and open PowerShell in it</h3>
+
+      <p>We will do everything inside one folder, so nothing is scattered across the machine. Right-click an empty part of your Desktop, choose New, then Folder, and name it <code>codex-test</code>.</p>
+
+      <p>Now right-click the <code>codex-test</code> folder itself and choose "Open in Terminal" (Windows 11) or "Open PowerShell window here" (Windows 10). A PowerShell window opens, already inside that folder. Leave it open.</p>
+
+      <h3>Step 2: install Codex CLI in that window</h3>
+
+      <p>A normal window is fine here. No administrator rights are needed. Paste this line and press Enter. It downloads the official installer from OpenAI and runs it.</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"</code></pre>
+      </div>
+
+      <p>If Windows asks whether to allow the app, click Yes. When the command finishes, check that Codex is there:</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>codex --version</code></pre>
+      </div>
+
+      <p>You should see a version number. If it says <code>codex is not recognized</code>, close this window, open a new one in the same folder using the Step 1 method, and run it again. A new window picks up the installation.</p>
+
+      <div class="info-box">
+        <p><strong>Already a Node.js user?</strong> There is a second way to install it, <code>npm install -g @openai/codex</code>, which needs Node 22 LTS or newer. If that sentence means nothing to you, ignore it and use the installer above.</p>
+      </div>
+
+      <h3>Step 3: sign in once</h3>
+
+      <p>In the same window, type this and press Enter:</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>codex</code></pre>
+      </div>
+
+      <p>Codex starts and opens a browser window. Sign in with your ChatGPT account, or paste an API key if you have one. When it is done, you are back at a Codex prompt inside the terminal. Type <code>/quit</code> and press Enter to leave for now.</p>
+
+      <h3>Step 4: let Codex install the research tools</h3>
+
+      <p>I put the dependency installer, the workspace rules, and the three prompts into a small public folder on GitHub. A repository is just a shared folder with a history, and this one is at <a href="https://github.com/fysalqayyum/codex-research-starter" target="_blank" rel="noopener">github.com/fysalqayyum/codex-research-starter</a>. It installs Python, the analysis libraries, and a LaTeX toolchain, then leaves you a folder structure for data, figures, and reports.</p>
+
+      <p>In the same window, start Codex again and paste this prompt.</p>
+
+      <div class="code-block">
+        <span class="code-block__label">Prompt</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Clone https://github.com/fysalqayyum/codex-research-starter into a folder called
+research-starter inside my current directory.
+Read AGENTS.md and README.md there, then run the installer for my platform
+(install/setup-windows.ps1 on Windows, install/setup-mac-linux.sh otherwise).
+Report exactly what was installed, with version numbers for python, git, pdflatex
+and bibtex. If a step needs administrator rights, needs the network, or cannot run
+inside your sandbox, stop and give me the single command to run myself in an
+elevated PowerShell window. Do not skip or silently swallow an error.</code></pre>
+      </div>
+
+      <p>Here is exactly what will happen, so nothing surprises you.</p>
+
+      <ol>
+        <li>Codex asks permission to reach the internet, because copying a repository needs it. Approve it.</li>
+        <li>It copies the starter folder into your <code>codex-test</code> folder and reads the instructions inside.</li>
+        <li>It reaches the part that installs Python, Git and LaTeX. Those install system-wide, so Codex stops and gives you one command to run yourself.</li>
+      </ol>
+
+      <p>When it stops, open a second PowerShell window as administrator: click Start, type <code>PowerShell</code>, right-click the result, choose "Run as administrator", and click Yes. Paste the single command Codex gave you and press Enter. It takes a few minutes, mostly for LaTeX.</p>
+
+      <p>Close the administrator window when it finishes, return to the Codex window, and tell it to continue. It will check the installation and print the version numbers.</p>
+
+      <div class="warning-box">
+        <p><strong>Do not widen the sandbox to full access to avoid that administrator step.</strong> It looks faster. It is how people end up with an agent that can write anywhere on the machine. Run the one administrator command yourself, then let Codex continue in its normal, bounded sandbox.</p>
+      </div>
+
+      <h3>If you would rather not use Codex for the setup</h3>
+
+      <p>You can do the same thing by hand in two short steps. First, open a PowerShell window as administrator (the method above) and paste this one line. It installs Python, Git, MiKTeX and the GitHub CLI, then adds the Python libraries. You do not need Git installed first, because this command uses what Windows already has.</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell (administrator)</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>irm https://raw.githubusercontent.com/fysalqayyum/codex-research-starter/main/install/setup-windows.ps1 | iex</code></pre>
+      </div>
+
+      <p>You can read that script before you run it here: <a href="https://github.com/fysalqayyum/codex-research-starter/blob/main/install/setup-windows.ps1" target="_blank" rel="noopener">setup-windows.ps1 on GitHub</a>. Nothing runs until you press Enter.</p>
+
+      <p>Second, get the starter folder. On that GitHub page, click the green <strong>Code</strong> button and choose <strong>Download ZIP</strong>. Unzip it into your <code>codex-test</code> folder, then open Codex inside the unzipped folder. This route needs no Git commands at all.</p>
+
+      <h3>Step 5: check everything is in place</h3>
+
+      <p>Open a fresh PowerShell window and run these two commands. You want a version number from each.</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>python --version
+pdflatex --version</code></pre>
+      </div>
+
+      <p>If LaTeX reports as not found, close the window and open one more new window. MiKTeX only appears on a window opened after it finished installing.</p>
+
+      <!-- ═══ SECTION 3 ═══ -->
+      <h2 id="runs">Three Runs That Show the Whole Shape</h2>
+
+      <p>The best way to understand an agent is to watch it carry one object through three transformations: raw data, then a figure, then a document. I use World Bank Open Data for this because it needs no key, no account, and no scraping. The prompts below are the ones in the starter kit, so you can copy them as they are.</p>
+
+      <h3>Run 1: pull real data into a folder</h3>
+
+      <p>Open PowerShell in the folder that holds the starter kit (use the Step 1 right-click method), type <code>codex</code>, and press Enter. Then paste this.</p>
+
+      <div class="code-block">
+        <span class="code-block__label">Prompt</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Using the World Bank Open Data API, download two indicators for Germany, Saudi Arabia,
+Pakistan, Japan and South Korea, for the years 2000 to 2023:
+
+1. Research and development expenditure (% of GDP) - indicator GB.XPD.RSDV.GD.ZS
+2. Researchers in R&D (per million people)        - indicator SP.POP.SCIE.RD.P6
+
+Endpoint pattern:
+https://api.worldbank.org/v2/country/{codes}/indicator/{indicator}?format=json&per_page=500&date=2000:2023
+
+Use country codes DEU;SAU;PAK;JPN;KOR in a single request per indicator.
+Save each indicator as data/raw/&lt;indicator&gt;.csv with columns:
+country, country_code, year, value
+
+Then print, for each file: the row count, the number of non-null values, and the
+year range. Do not interpolate, fill forward, or drop missing years. Leave them
+missing. Print the exact URLs you fetched.</code></pre>
+      </div>
+
+      <p>At the time of writing, that pull returns 100 non-null values for R&amp;D spending and 86 for researchers per million, both covering 2000 to 2023. The counts will drift as the World Bank updates its series, which is exactly why the prompt asks for a printed summary. You now have two plain CSV files on your disk, and you can open them and check them by hand.</p>
+
+      <p>This is the moment the exercise stops being a demo. The data is local, in a folder you control, in a format you can cite.</p>
+
+      <h3>Run 2: turn the files into figures</h3>
+
+      <div class="code-block">
+        <span class="code-block__label">Prompt</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Read the two CSV files in data/raw/ and create three figures in figures/ as PNG,
+200 dpi, no wider than 1600 pixels:
+
+1. R&D expenditure (% of GDP) over time, one line per country.
+2. Researchers in R&D (per million people) over time, one line per country.
+3. A bar chart comparing both indicators for the latest year that has data for
+   all five countries, with two panels sharing a country axis.
+
+For every figure: a title, axis labels with units, a legend, and a source note
+naming the World Bank indicator code. Write the plotting code to
+scripts/make_figures.py so I can re-run it.
+
+Print the exact path of each figure, the number of data points actually plotted,
+and the latest year plotted for each country. If a country has no data for the
+comparison year, name it and do not invent a value.</code></pre>
+      </div>
+
+      <p>You should get three PNG files in <code>figures/</code> and a summary that names the year used for the bar chart. Open the files. If an axis has no units, or a line stops early without explanation, say so. Codex edits the script and re-renders.</p>
+
+      <p>The habit worth noticing is that the figure is produced by a script, not by hand. Ask for the Germany line in a different colour. It changes one line in <code>scripts/make_figures.py</code> and re-runs it. That is the difference between a picture and a workflow.</p>
+
+      <h3>Run 3: write the report</h3>
+
+      <div class="code-block">
+        <span class="code-block__label">Prompt</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Write a two-page LaTeX brief in report/ that summarises the three figures for a
+non-specialist research audience.
+
+Requirements:
+- Use report/report-template.tex as the starting point and report/references.bib
+  for citations.
+- Include the three figures from figures/ with captions.
+- Add a short methods paragraph that explains the World Bank API, the indicator
+  codes, the years covered, and how missing values were handled.
+- Cite both World Bank indicator pages as @misc entries in BibTeX.
+- Every number in the prose must match the CSV files in data/raw/. Do not round,
+  invent, or estimate a value. If you cannot trace a number to a file, do not
+  write it.
+- Compile with pdflatex and bibtex (run pdflatex twice after bibtex) and leave
+  the final PDF at reports/rd-capacity-brief.pdf.
+
+Print the page count, the PDF path, and the source of every number you quoted.</code></pre>
+      </div>
+
+      <p>The result is a two-page PDF with the figures, a methods paragraph, and a reference list that cites the two indicator pages. Then do the one thing this workflow exists for. Pick two numbers from the prose and check them against the CSV by hand. If they disagree, you have found the exact failure mode you are trying to avoid, and the prompt already told Codex to prove its numbers rather than assert them.</p>
+
+      <div class="story-box">
+        <p>On the first run, most people are surprised by how ordinary the whole thing feels. No dramatic moment. A folder fills with files, a figure appears, a PDF opens. The surprise arrives a week later, when a reviewer asks for the same comparison with one more country, and the answer is a single sentence and ninety seconds instead of another Saturday.</p>
+      </div>
+
+      <!-- ═══ SECTION 4 ═══ -->
+      <h2 id="why">Why This Beats a Chat Window</h2>
+
+      <p>The obvious objection is that a chatbot can do all of this. It cannot, and the reasons are structural rather than a matter of model quality.</p>
+
+      <p>First, files persist. A chat window forgets your folder between sessions. The agent reads the same <code>data/raw/</code> files you have, yesterday and today, and it reads the same rules every time.</p>
+
+      <p>Second, it executes. It runs the script, reads the error, and fixes it. You are not the loop between the tool and the traceback anymore. For anyone who has spent an afternoon on a single pandas column-name error, that is the entire value proposition.</p>
+
+      <p>Third, it inherits your standards. The starter kit carries an <code>AGENTS.md</code> file, and Codex reads it before every task. Ours says figures need units and a source note, raw files are never edited, missing values stay missing, and derived tables go somewhere else. Correct it once, and the correction persists for every future session. This is the same discipline that makes a computational workflow survive review, and it is the reason I keep pointing people at it.</p>
+
+      <p>If that instinct is new to you, it is the same argument I make in the guide to <a href="2026-08-damask-crystal-plasticity-documentation.html">DAMASK crystal plasticity documentation</a>: a result only becomes evidence when the workflow behind it is written down and repeatable. An agent that reads your rules is one more way to make that routine.</p>
+
+      <p>Fourth, it is scriptable. The interactive view is what you will use most, but the same engine runs non-interactively:</p>
+
+      <div class="code-block">
+        <span class="code-block__label">PowerShell</span>
+        <button class="copy-btn" type="button" aria-label="Copy this command">Copy</button>
+        <pre><code>codex exec --sandbox workspace-write "Regenerate every figure in figures/ from data/raw/ and print the paths."</code></pre>
+      </div>
+
+      <p>That line is what turns a one-off demo into a monthly report. Put it in a scheduled task, and the update happens without you. This is not a theoretical feature. It is how I would keep a funding or output dashboard current across a semester.</p>
+
+      <!-- ═══ SECTION 5 ═══ -->
+      <h2 id="week">Where It Earns Its Place in Your Week</h2>
+
+      <p>The temptation is to point an agent at everything. That is how you get plausible mistakes at scale. A better filter is to sort tasks by how confidently you can check the output. If you can verify it cheaply, delegate it. If you cannot, keep it or narrow it.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Good fit for the agent</th>
+            <th>Your job remains</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pulling public data</td>
+            <td>Fetch, reshape, and save to CSV with a printed row count</td>
+            <td>Confirm the indicator means what you think it means</td>
+          </tr>
+          <tr>
+            <td>Figure regeneration</td>
+            <td>Rewrite the plotting script and re-render every version</td>
+            <td>Decide what the figure is allowed to claim</td>
+          </tr>
+          <tr>
+            <td>Messy instrument data</td>
+            <td>Split columns, flag outliers, and log every change it makes</td>
+            <td>Decide whether an outlier is an error or a result</td>
+          </tr>
+          <tr>
+            <td>Literature triage</td>
+            <td>Build a table of candidates from a defined set of sources</td>
+            <td>Read the papers that matter and judge them</td>
+          </tr>
+          <tr>
+            <td>First drafts</td>
+            <td>Structure a methods paragraph or a response outline from your notes</td>
+            <td>The scientific claims, and the sentence you sign your name to</td>
+          </tr>
+          <tr>
+            <td>Teaching material</td>
+            <td>Turn a lecture outline into worked examples and a problem set</td>
+            <td>Whether the examples are correct and at the right level</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The pattern in the middle column is always the same: transformation, regeneration, and structuring. The pattern in the right column is always judgement. An agent is excellent at the first and dangerous at the second.</p>
+
+      <p>There is a practical consequence for a mid-career workload. The tasks you should hand over are rarely the ones that define your reputation, and they are almost always the ones that eat the hours you would rather spend on the work that does. That trade is worth making deliberately, once, rather than resenting it every week.</p>
+
+      <!-- ═══ SECTION 6 ═══ -->
+      <h2 id="rules">The Rules That Keep You Out of Trouble</h2>
+
+      <p>Every powerful tool for a researcher comes with the same failure mode: it makes a confident mistake in a format that looks finished. A wrong number inside a clean PDF is more dangerous than a wrong number in a scratch file. Five rules keep that from happening.</p>
+
+      <p><strong>Verify anything that leaves your machine.</strong> Open the CSV and check the numbers in the abstract. The prompt in Run 3 orders Codex to print the source of every number it quotes for exactly this reason. Use that habit every time.</p>
+
+      <p><strong>Keep confidential and unpublished data out of it.</strong> Prompts and relevant file content are sent to OpenAI to do the work. Embargoed manuscripts, confidential industrial data, student records, grant material under review, and anything covered by a data agreement should not go in without checking with the data owner and your institution. For sensitive work, keep the agent on published or synthetic data, or on the code alone.</p>
+
+      <p><strong>Leave the approvals on.</strong> Approving a network call or a file write takes a second. Turning approvals off to save that second is how a typo in a folder path becomes an afternoon of recovery. Watch it work for a week before you loosen anything.</p>
+
+      <p><strong>Check what you are allowed to use.</strong> If the agent pulls in a dataset, a figure, or a library with a restrictive license, that restriction travels with your paper. Read the license on anything it downloads, the same way you would if you had downloaded it yourself.</p>
+
+      <p><strong>It is not a co-author.</strong> It does not take responsibility for a claim, cannot consent to authorship, and should not appear in an author list or an acknowledgements section styled as a person. Use it, check it, and own what you publish.</p>
+
+      <div class="warning-box">
+        <p><strong>The one test that matters.</strong> Before you rely on any output, ask yourself whether you could defend it if a reviewer asked where it came from. If the answer is a file path you can open and a source you can cite, you are fine. If the answer is "the agent said so", you are not finished yet.</p>
+      </div>
+
+      <p>One more practical note on cost. Codex is included with paid ChatGPT plans and can also run on a metered API key. Short tasks are cheap. A long autonomous run that reads a hundred files is not, so check the usage view in your first week and learn what your normal workload costs before you schedule anything monthly.</p>
+
+      <!-- ═══ SECTION 7 ═══ -->
+      <h2 id="next">Where to Point It Next</h2>
+
+      <p>Once the three runs feel normal, four uses tend to pay off fastest for a mid-career researcher. Each one is a single prompt away once the workspace exists.</p>
+
+      <p><strong>Turn a folder of PDFs into a reading table.</strong> Point it at a folder of papers and ask for a CSV with columns for year, journal, method, material system, and the one number each paper reports. You still decide which papers matter, but the first sort stops being manual.</p>
+
+      <p><strong>Clean a messy instrument export.</strong> Ask it to split merged columns, flag impossible values, write every change to a log, and leave the original file untouched. The log is the point. You want a record of what was changed, not just a cleaner file.</p>
+
+      <p><strong>Regenerate a figure set for a resubmission.</strong> When a reviewer wants every figure in a different style, that is a script edit, not a week of work. Keep the plotting code in one file and this becomes a ten-minute job.</p>
+
+      <p><strong>Draft outreach and administrative text from your own notes.</strong> A workshop description, a session abstract, a short brief for a collaborator. It is weakest when you ask it to invent, and strongest when you hand it your own bullet points and ask it to structure them.</p>
+
+      <p>For anyone working without a large group or a shared lab, this is also a way to buy back capacity that others get from colleagues. If that is your situation, the argument in <a href="2026-05-phd-abroad-pakistan-no-lab-research-exchange.html">building a research profile with no lab and no network</a> is the same one: use the tools that exist to close the gap instead of waiting for the gap to close itself.</p>
+
+      <!-- ═══ FINAL ═══ -->
+      <h2 id="final">Final Thought</h2>
+
+      <p>The researchers who will get the most from this are not the ones who adopt every new tool. They are the ones who already run a disciplined workflow and are tired of the manual steps around it. If your figures already have units and your data already has a home, an agent slots in without changing how you think.</p>
+
+      <p>The reason I keep telling people to install it is not that it writes well. It is that it removes the friction between an idea and a tested result. You ask, it builds, it runs, it checks, and you decide. The decisions stay yours.</p>
+
+      <p>Start with the World Bank run. It takes one afternoon to install and one evening to see the whole shape. After that, the question stops being whether it is worth it and becomes which of your recurring tasks you hand over first. Pick the one that has quietly annoyed you for a year. That is usually the right one.</p>
+
+      <div class="cta-box">
+        <h3>Want Your Team Working This Way?</h3>
+        <p>Book a 15-minute call. We will look at where the manual steps sit in your research workflow, decide which ones are safe to hand to an agent, and I will tell you honestly whether this is worth your time or whether you do not need it.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/services/custom-digital-courses-workshops.html" class="btn btn--outline">See Courses &amp; Workshops</a>
+      </div>
+
+      <h2>If You Are Still Deciding How to Spend the Time</h2>
+      <p>Saving hours is only useful if you point the hours somewhere. For a mid-career researcher sitting on a good opportunity and unable to commit, <a href="2026-06-mid-career-opportunity-overthinking.html">The Mid-Career Opportunity You Are Overthinking</a> is the companion conversation. And if the work this frees up is a simulation campaign, the workflows in <a href="2026-03-numerical-simulations-additive-manufacturing-aluminum.html">numerical simulations for additive manufacturing of aluminum alloys</a> show where the saved time tends to go.</p>
+
+      <div class="subscribe-box">
+        <p class="subscribe-box__title">Get the next post by email</p>
+        <p class="subscribe-box__text">A few posts a month on research careers, simulation consulting, and building a life abroad. No spam, and you can unsubscribe with a single reply.</p>
+        <button class="subscribe-box__btn btn btn--primary" type="button">Subscribe by Email</button>
+        <p class="subscribe-box__alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener">Follow me there</a> &mdash; every post is shared on LinkedIn.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script defer src="../../assets/js/main.js?v=20260919"></script>
+</body>
+</html>

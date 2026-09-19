@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Codex for Researchers: From Data to Figures to a Written Report in Seconds</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Install OpenAI Codex CLI on a Windows laptop and run a real research workflow end to end: pull World Bank data, build figures, and compile a LaTeX report.</description>
+    </item>
     <item>
       <title>DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps</title>
       <link>https://faisalqayyum.com/blog/posts/2026-08-damask-crystal-plasticity-documentation.html</link>

@@ -552,4 +552,45 @@
     });
   });
 
+  // ─── 18. COPY BUTTONS (code + prompt blocks) ─────
+  function copyFallback(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) { /* no-op */ }
+    document.body.removeChild(ta);
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    var block = btn.closest('.code-block');
+    if (!block) return;
+    var source = block.querySelector('pre');
+    if (!source) return;
+
+    var text = source.innerText;
+    var original = btn.textContent;
+    var done = function () {
+      btn.textContent = 'Copied';
+      btn.classList.add('copy-btn--done');
+      window.setTimeout(function () {
+        btn.textContent = original;
+        btn.classList.remove('copy-btn--done');
+      }, 1600);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () {
+        copyFallback(text, done);
+      });
+    } else {
+      copyFallback(text, done);
+    }
+  });
+
 })();

@@ -339,40 +339,52 @@ h3 { font-size: var(--fs-h3); }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 clamp(24px, 6vw, 80px);
+  padding: 0 clamp(20px, 4vw, 72px);
   position: relative;
 }
 
 .hero__inner {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  justify-content: center;
+  gap: clamp(0.75rem, 1.5vw, 1.75rem);
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
 }
 
+/* Natural width, not flex-grow: a growing column pushes the portrait
+   away from the text and opens a gap. */
 .hero__content {
-  max-width: 800px;
-  flex: 1;
+  max-width: 760px;
+  flex: 0 1 auto;
+  position: relative;
+  z-index: 1;
 }
 
+/* Top-aligned and tucked against the text, not floated to the bottom.
+   The square source is cropped to a tall frame so it sits inside the
+   hero text block, and the mask melts its edges into the dark page. */
 .hero__portrait {
   flex: 0 0 auto;
   display: none;
-  align-self: flex-end;
+  align-self: flex-start;
+  z-index: 0;
+  margin-left: clamp(-1.5rem, -1vw, 0rem);
 }
 
 .hero__portrait img {
-  width: clamp(320px, 28vw, 480px);
+  width: clamp(200px, 19vw, 310px);
   height: auto;
-  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  box-shadow: 0 0 80px rgba(224, 123, 40, 0.12);
-  mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
-              linear-gradient(to right, transparent 0%, black 15%, black 100%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
-                      linear-gradient(to right, transparent 0%, black 15%, black 100%);
+  object-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 70px rgba(224, 123, 40, 0.1);
+  mask-image: linear-gradient(to top, transparent 0%, black 20%, black 90%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 90%, transparent 100%),
+                      linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
 }
@@ -384,6 +396,24 @@ h3 { font-size: var(--fs-h3); }
   text-transform: uppercase;
   color: var(--accent-2);
   margin-bottom: 1.5rem;
+}
+
+/* Keep each half of the hero label whole, so a narrow screen breaks it
+   between "Assistant Professor" and "Metal Forming Simulation Expert"
+   instead of splitting the specialisation mid-phrase. */
+.hero__label-role,
+.hero__label-spec {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .hero__label-sep {
+    display: none;
+  }
+
+  .hero__label-spec {
+    display: block;
+  }
 }
 
 .hero__heading {
@@ -1493,6 +1523,64 @@ h3 { font-size: var(--fs-h3); }
   }
 }
 
+/* Collapse the nav to the hamburger before the links crowd the logo.
+   At 768px the full link row wraps the logo text onto two lines. */
+@media (max-width: 1023px) {
+  .nav__links {
+    display: none;
+  }
+
+  .nav__hamburger {
+    display: flex;
+  }
+
+  .nav__name {
+    white-space: nowrap;
+  }
+}
+
+/* Tablet / small laptop: keep the portrait on the right, but compact the
+   type and spacing so the label and the three CTAs stay on one line.
+   Stacking here pushed the portrait below the buttons. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero__inner {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hero__label {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero__body {
+    font-size: 1rem;
+  }
+
+  .hero__ctas {
+    gap: 0.6rem;
+  }
+
+  .hero__ctas .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .hero__portrait {
+    align-self: center;
+    margin-left: 0;
+  }
+
+  .hero__portrait img {
+    width: clamp(150px, 20vw, 220px);
+  }
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
   .services-grid {
@@ -1503,15 +1591,7 @@ h3 { font-size: var(--fs-h3); }
 /* Mobile only */
 @media (max-width: 767px) {
 
-  /* Nav */
-  .nav__links {
-    display: none;
-  }
-
-  .nav__hamburger {
-    display: flex;
-  }
-
+  /* Nav links/hamburger are handled by the max-width: 1023px block above. */
   .nav {
     padding: 0.75rem 1rem;
   }
