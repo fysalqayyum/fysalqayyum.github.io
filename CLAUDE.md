@@ -17,8 +17,12 @@ contains traffic figures and positioning notes that must not be public.
 - **Commit messages**: `Update site - <date>` style via `push-to-live.command`.
   **Never add "Co-Authored-By: Claude"** or any AI attribution — the owner does not
   want it in the public history.
-- **Before any push**: review staged files for secrets/keys/credentials.
-  `push-to-live.command` has an automated grep, but eyeball `git status` too.
+- **Before any push — hard gate**: run
+  `python3 ~/.claude/lib/leak_scan/leak_scan.py --range origin/main..HEAD` and fix
+  every finding. Commit identities in this repo use
+  `fysalqayyum@users.noreply.github.com`; never commit a private address. An email
+  is a leak both in a commit identity and inside a tracked file, and the gate
+  catches both. Eyeball `git status` too.
 - **Cache busting**: `style.css` and `main.js` are referenced with `?v=YYYYMMDD`
   on every page. When either file changes, bump the version **on all pages**
   (`grep -rl '?v=' --include='*.html' .` then sed). Stale unversioned JS once kept

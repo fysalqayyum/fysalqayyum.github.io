@@ -9,3 +9,7 @@ push-to-live.*
 
 # ShipStudio metadata
 .shipstudio/
+
+# OS cruft
+.DS_Store
+Thumbs.db
