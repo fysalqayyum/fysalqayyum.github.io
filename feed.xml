@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Jahziah Test, Explained: What Saudi Engineering Graduates Face</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-09-jahziah-exam-guide-saudi-engineering-graduates.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-09-jahziah-exam-guide-saudi-engineering-graduates.html</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description>What the ETEC Jahziah readiness test measures, how many questions it carries, how test day works, and how I would prepare final-year Saudi engineering students.</description>
+    </item>
     <item>
       <title>Codex for Researchers: From Data to Figures to a Written Report in Seconds</title>
       <link>https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html</link>
