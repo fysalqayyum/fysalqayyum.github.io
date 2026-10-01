@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Use AI to Write a Paper (Without the Fake Citations) | Dr.-Ing. Faisal Qayyum</title>
+  <meta name="description" content="Agentic AI can take a paper from rough notes to a clean first draft in one pass. Here is the v0 workflow I use, and the checks that keep every citation real.">
+  <meta name="keywords" content="how to use AI to write a paper, AI for thesis writing, agentic AI research workflow, AI first draft paper, v0 workflow, AI literature review researchers, AI fake citations, AI academic writing disclosure, best AI tool for thesis writing, scientific writing with AI">
+  <meta name="author" content="Dr.-Ing. Faisal Qayyum">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html">
+  <meta property="og:title" content="How to Use AI to Write a Paper (Without the Fake Citations)">
+  <meta property="og:description" content="The tool is not the bottleneck. The story is. Here is the v0 workflow that gets a paper to first draft without inventing a single reference.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="article:published_time" content="2026-10-01">
+  <meta property="article:modified_time" content="2026-10-01">
+  <meta property="article:author" content="https://faisalqayyum.com/">
+  <meta name="twitter:title" content="How to Use AI to Write a Paper (Without the Fake Citations)">
+  <meta name="twitter:description" content="The tool is not the bottleneck. The story is. The v0 workflow for researchers, and the checks that keep every citation real.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260919">
+
+  <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
+  <script defer src="../../assets/js/analytics.js?v=20260720"></script>
+
+  <!-- Schema: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Use AI to Write a Paper (Without the Fake Citations)",
+    "author": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "datePublished": "2026-10-01",
+    "dateModified": "2026-10-01",
+    "image": "https://faisalqayyum.com/assets/img/og-image.jpg",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr.-Ing. Faisal Qayyum",
+      "url": "https://faisalqayyum.com"
+    },
+    "description": "Agentic AI can take a paper from rough notes to a clean first draft in one pass. Here is the v0 workflow I use, and the checks that keep every citation real.",
+    "url": "https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html",
+    "mainEntityOfPage": "https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html",
+    "keywords": ["how to use AI to write a paper", "AI for thesis writing", "agentic AI research workflow", "AI first draft paper", "v0 workflow", "AI academic writing disclosure"]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://faisalqayyum.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://faisalqayyum.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Use AI to Write a Paper (Without the Fake Citations)"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: FAQPage (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can AI write my research paper or thesis for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not in the way the adverts suggest. An agentic AI can take your data, your figures, and a decided structure and turn them into a clean first draft very fast, but it cannot decide what the paper argues. The story, the framing, and the interpretation stay with you. Treat AI as the fastest possible way to fill in a structure you have already chosen, not as a way to skip choosing one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will AI invent fake citations in my paper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can, and it will if you let it draw references from memory. The fix is to keep it away from unverified sources. Either constrain it to a folder of PDFs you have actually downloaded, or have it query a real bibliographic database and record the DOI for every reference it adds. Then open the source before you keep the citation. A reference you cannot resolve to a real paper does not go in the manuscript."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I have to disclose that I used AI to write my paper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases yes, and the requirement is tightening. AI cannot be an author under the ICMJE authorship criteria, which require accountability that a model cannot carry. Many publishers now ask you to disclose writing assistance in the acknowledgements and data analysis in the methods. Check your target journal and your institution's policy before you submit, and disclose the tool and the purpose rather than hiding it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best AI tool for writing a thesis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best tool is a workflow, not a single product. A generic chat window with no memory of your sources is the wrong shape for a thesis, because it can neither see your files nor guarantee a real reference. What works is an agent that can read your own folders, run your code, and write to files you keep, wrapped in checks: a transcript or outline as input, a comment file for revisions, and a rule that every number traces to a source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make AI write in my own voice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Give it examples of your own writing first. Feed the model two or three documents you already wrote, a past paper, a proposal, a thesis chapter, and ask it to draft the new text in the same register. Style is learned from samples, not from an instruction like write formally. Drafts written this way come out close to your own sentences instead of the smooth, generic voice that reads as machine-written."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .post-content .info-box {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .info-box p { margin-bottom: 0.25rem; }
+    .post-content .info-box p:last-child { margin-bottom: 0; }
+    .post-content .warning-box {
+      background: rgba(224, 123, 40, 0.08);
+      border-left: 4px solid #e07b28;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .post-content .warning-box p { margin-bottom: 0.25rem; }
+    .post-content .warning-box p:last-child { margin-bottom: 0; }
+    .post-content .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+    .post-content .doc-table th,
+    .post-content .doc-table td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .post-content .doc-table th {
+      background: var(--bg-card);
+      color: var(--accent-1);
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .post-content .doc-table td { color: var(--text-secondary); }
+    .post-content .doc-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .post-content .cta-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
+      border: 1px solid rgba(224,123,40,0.3);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+    .post-content .cta-box h3 { color: var(--accent-1); margin-bottom: 0.75rem; }
+    .post-content .cta-box p { margin-bottom: 1.25rem; color: var(--text-secondary); }
+    .post-content .cta-box .btn { display: inline-block; margin: 0.25rem; }
+    .post-content .story-box {
+      background: linear-gradient(135deg, rgba(224,123,40,0.06), rgba(224,123,40,0.02));
+      border: 1px solid rgba(224,123,40,0.2);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+    .post-content .story-box p { margin-bottom: 0.4rem; color: var(--text-secondary); }
+    .post-content .story-box p:last-child { margin-bottom: 0; }
+    .post-content .story-box::before {
+      content: "From a recent conversation";
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      margin-bottom: 0.6rem;
+    }
+    .post-content .code-block {
+      position: relative;
+      background: #14110e;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin: 1.5rem 0;
+      padding: 2.15rem 1rem 0.95rem;
+      overflow: hidden;
+    }
+    .post-content .code-block__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-1);
+      background: rgba(224,123,40,0.12);
+      padding: 0.4rem 0.75rem;
+      border-bottom-right-radius: var(--radius-sm);
+    }
+    .post-content .copy-btn {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.5rem;
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.2rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .post-content .copy-btn:hover { color: var(--accent-1); border-color: var(--accent-1); }
+    .post-content .copy-btn--done { color: var(--accent-1); border-color: var(--accent-1); }
+    .post-content .code-block pre {
+      margin: 0;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #e9e3da;
+    }
+    .post-content .code-block code { font-family: inherit; }
+    .post-content code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 0.1em 0.3em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reading-progress-bar" id="readingProgress"></div>
+
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Home">
+        <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
+          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
+          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+        </svg>
+        <span class="nav__name">Dr. Faisal Qayyum</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about" class="nav__link">About</a></li>
+        <li><a href="/#services" class="nav__link">Services</a></li>
+        <li><a href="/#publications" class="nav__link">Research</a></li>
+        <li><a href="/#thoughts" class="nav__link active">Thoughts</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#publications">Research</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <article class="section post-content">
+      <a href="/blog/" class="back-link">&larr; Back to all posts</a>
+      <h1>How to Use AI to Write a Paper (Without the Fake Citations)</h1>
+      <p class="post-meta">October 1, 2026 &middot; Research Tools &amp; AI &middot; 13 min read</p>
+
+      <p>Search how to use AI to write a paper and you get a wall of tools that promise to do the writing for you. Type a topic, receive a thesis. I have watched people try it. What arrives is fluent text, in a voice that is not theirs, holding up an argument they never decided to make, decorated with citations that do not exist.</p>
+
+      <p>The tool was never the bottleneck. The story is.</p>
+
+      <p>A colleague came to me not long ago with a problem I hear in different words almost every month. She had the experiments finished. She had the figures. She knew the literature. What she did not have was a first draft, because every time she sat down to write she was rebuilding the structure of the argument from scratch, and then defending it to herself, and then losing the thread. That is not a writing problem. It is a decision problem, and no amount of better prose will fix it.</p>
+
+      <p>I run a research group, teach, supervise, review, and write papers and proposals. Since starting this post I have been running an agentic workflow that handles roughly nine-tenths of the mechanical work in getting a paper to first draft, while I keep the one part that decides whether the paper is any good. This post is that workflow, written down properly, including the checks that stop it from handing you a beautifully formatted lie.</p>
+
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc__title">In this article</p>
+        <ul class="toc__list">
+          <li><a href="#bottleneck">Your Problem Is Not Writing Speed</a></li>
+          <li><a href="#workflow">The v0 Workflow, End to End</a></li>
+          <li><a href="#meeting">Record the Meeting, Don't Write Another Draft</a></li>
+          <li><a href="#commentfile">The Comment File Is the Whole Trick</a></li>
+          <li><a href="#voice">Teach It Your Voice</a></li>
+          <li><a href="#beyond">What Agentic AI Does Beyond Prose</a></li>
+          <li><a href="#notabutton">It Is a Workflow, Not a Button</a></li>
+          <li><a href="#human">Where You Still Have to Be the Researcher</a></li>
+          <li><a href="#final">Final Thought</a></li>
+        </ul>
+      </nav>
+
+      <!-- ═══ SECTION 1 ═══ -->
+      <h2 id="bottleneck">Your Problem Is Not Writing Speed</h2>
+
+      <p>Ask a stuck researcher why the draft is not moving and the answer is almost always time. No time to sit down, no time to think, no time between teaching and meetings and family. The time answer is honest, and it is also incomplete. Time alone does not explain why people with an uninterrupted weekend still produce three paragraphs and a headache.</p>
+
+      <p>The real cost is re-deciding the story on every pass. You write the introduction, then you revise the introduction, then you reorganise the sections, then you move the figures, then you rewrite the introduction to match the sections you moved. Each of those passes forces you to hold the whole argument in your head at once, and the argument is exactly the thing you have not pinned down yet. That is what drains the hours.</p>
+
+      <p>The way out is to split the job cleanly in two. One half is the story: what the paper claims, in what order, with which figures carrying which point. The other half is filling that skeleton with words, which is mechanical once the skeleton exists. The second half is what an agent is now genuinely good at. The first half is the part you cannot and should not hand over.</p>
+
+      <div class="info-box">
+        <p><strong>The one-line version.</strong> You decide what the paper says and in what order. The AI turns that decision into readable text. Everything that goes wrong with AI-written papers comes from someone trying to skip the first sentence and jump straight to the second.</p>
+      </div>
+
+      <p>Once you accept that split, the question stops being which tool writes best and becomes how you hand the machine a decided story with as little manual typing as possible.</p>
+
+      <!-- ═══ SECTION 2 ═══ -->
+      <h2 id="workflow">The v0 Workflow, End to End</h2>
+
+      <p>I call the output of this process a v0. It is the first version that is genuinely readable all the way through: real prose, real structure, real transitions, with your comments and the gaps still bracketed in the margins. It is not finished, and it is not supposed to be. It exists so that you stop staring at a blank page and start reacting to something on it.</p>
+
+      <p>The full loop, in the order it runs:</p>
+
+      <ol>
+        <li><strong>Assemble the raw material.</strong> The data, the figures, the rough direction, and most importantly your headings and subheadings. If the structure is not decided, stop here. There is nothing the machine can do for you yet.</li>
+        <li><strong>Talk the story through in one focused session.</strong> You explain the paper out loud, figure by figure, to a person or to the recorder: here is this figure, this is what we see, this is the claim it supports. One human to another human. No editing, no perfect sentences.</li>
+        <li><strong>Transcribe the session.</strong> The recording becomes text. This runs on your own machine, so the raw conversation does not leave your laptop.</li>
+        <li><strong>Turn the transcript into polished prose.</strong> The agent reads your spoken walkthrough and writes it as continuous text under your existing headings. This is v0.</li>
+        <li><strong>Read v0 and write comments in a separate file.</strong> You do not edit the draft line by line. You write what is wrong: cut this, this claim needs a source, this belongs before that, this figure is not described correctly.</li>
+        <li><strong>Apply the comments.</strong> The agent applies every item to the draft and returns v1.</li>
+        <li><strong>Stop using the AI.</strong> From v1 you work by hand, and you finalise the paper yourself.</li>
+      </ol>
+
+      <p>The ladder is v0, then v1, then the versions you finish yourself. The point of the whole apparatus is to get you to v1 while your energy is still fresh, so that the hours you spend are spent on judgement rather than on generating sentences you are going to delete anyway.</p>
+
+      <div class="story-box">
+        <p>The reason this lands hardest with people who are short on time is that talking is faster than writing, and they already explain their work out loud every week. A recorded explanation to a colleague contains most of an introduction and a results section, in the researcher's own voice, before anyone has opened a word processor.</p>
+      </div>
+
+      <!-- ═══ SECTION 3 ═══ -->
+      <h2 id="meeting">Record the Meeting, Don't Write Another Draft</h2>
+
+      <p>Nobody taught us that explaining our work out loud is drafting. It is. When you describe a figure to a colleague, you say the thing you would spend twenty minutes trying to phrase on paper: here is what we measured, here is what we expected, here is what we got, here is why it matters. The spoken version is rougher, and it is faster and more honest.</p>
+
+      <p>So the input to the whole workflow is not another attempt at the paper. It is a recording of you and someone who understands the work walking through the data one item at a time. Keep it specific. This figure. This is what it shows. This is the claim. This is where it sits in the argument. The entire point of the session is to produce a decided narrative, out loud, so that nothing is left to be invented later.</p>
+
+      <p>For two speakers you want the transcript to know who said what, which is a separate step from the transcription itself. On a Mac this runs locally: Whisper for the words, a diarisation model for the speaker labels, and a merge step that stitches the two together. The raw conversation stays on the machine. Nothing about your unpublished results goes to a server to be summarised.</p>
+
+      <p>A concrete way to open the session is to say the structure out loud before you start:</p>
+
+      <div class="code-block">
+        <span class="code-block__label">How to run the session</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Here is the paper I am writing and the headings I have chosen.
+For each subsection, I will point at one figure and say:
+  - what was measured
+  - what we expected
+  - what we actually see
+  - the single claim this supports
+Record me doing that from start to finish. When I ramble or repeat
+myself, keep going. Do not stop me to tidy the language.</code></pre>
+      </div>
+
+      <p>You will end up with about half an hour of messy, useful speech that contains the actual argument of the paper. That transcript is worth more than three days of staring at a cursor.</p>
+
+      <!-- ═══ SECTION 4 ═══ -->
+      <h2 id="commentfile">The Comment File Is the Whole Trick</h2>
+
+      <p>Here is the part people skip, and it is the part that makes the whole thing work. When you get v0, you do not open the draft and start editing it. You open two documents side by side: the draft, which you only read, and a plain text file, where you write every change you want.</p>
+
+      <p>You write things like: the third paragraph of the introduction overstates the result, cut it back. The claim about temperature dependence needs a source or it comes out. Move the discussion of the second figure before the first. The transition into the methods is missing entirely.</p>
+
+      <p>Then the agent applies all of it at once and hands you v1.</p>
+
+      <p>The reason this is not just a convenience is that it keeps you in the one mode where your judgement is at its best, which is reviewer mode. Editing a draft and criticising a draft are different jobs, and doing them at the same time makes you worse at both. Splitting them means you spend your scarce attention deciding what is wrong, and none of it on where the cursor goes.</p>
+
+      <p>The prompt that does the revision needs one rule more than any other, and it is the rule about sources:</p>
+
+      <div class="code-block">
+        <span class="code-block__label">Apply the comments</span>
+        <button class="copy-btn" type="button" aria-label="Copy this prompt">Copy</button>
+        <pre><code>Read paper-v0.md and comments.txt.
+Apply every item in comments.txt in order.
+Change only what a comment asks for. Do not rewrite paragraphs it
+does not mention.
+If a comment needs a source I have not given you, leave [needs source]
+in the text. Never invent a reference.
+When you are done, print a numbered list of what you changed and what
+is still open.</code></pre>
+      </div>
+
+      <div class="warning-box">
+        <p><strong>The line that matters is "never invent a reference."</strong> A model asked to support a claim will happily produce a citation that reads perfectly and does not exist, down to the journal and the page numbers. Treat any citation it wrote from memory as unverified until you have opened the source yourself.</p>
+      </div>
+
+      <!-- ═══ SECTION 5 ═══ -->
+      <h2 id="voice">Teach It Your Voice</h2>
+
+      <p>The complaint I hear most about AI writing is that it does not sound like the person who is supposed to have written it. That is a fixable input problem, not a permanent property of the technology.</p>
+
+      <p>Before you ask for v0, give the model your own past work: two or three documents you actually wrote, a previous paper, a proposal, a chapter. Ask it to match the register of those documents rather than to write well in the abstract. Style is copied from samples, not summoned by the instruction write formally. Feed it your own sentences and the draft comes back close to your rhythm, your habitual hedges, the length of sentence you actually use.</p>
+
+      <p>This is also where the honest line sits. What you are teaching it is your diction, not your thinking. It can learn how you write. It cannot learn what you have decided to argue, because you are the one deciding that.</p>
+
+      <div class="info-box">
+        <p><strong>Two documents is usually enough.</strong> You are not fine-tuning a model. You are giving it a style reference to hold while it fills in your structure, and a couple of long, representative samples do that better than a page of instructions about tone.</p>
+      </div>
+
+      <!-- ═══ SECTION 6 ═══ -->
+      <h2 id="beyond">What Agentic AI Does Beyond Prose</h2>
+
+      <p>Writing the paragraphs is the visible part of this, and it is not the only part. The same agentic setup, where the model can read your files and run your code, does the surrounding work that used to define a slow research project.</p>
+
+      <p>It can run a literature search against real bibliographic databases and pin each finding to the claim it supports, so that the sources in your review are papers that exist and that you can open. It can digitise a published stress and strain plot into numbers you can actually use, pulling data off a figure that only exists as an image. It can take published micrographs and orientation maps and reconstruct a data set from them when you have no experimental data of your own. It can run the simulations, post-process the output into publication figures, and compile the lot into a draft report.</p>
+
+      <p>I am doing exactly that on a current project on tungsten heavy alloys, where I have no experimental data at all. I am using published SEM images and EBSD maps to rebuild my own data sets, digitising stress and strain curves at different temperatures and strain rates to calibrate my models against, and letting the agent look at each paper, find the figure worth digitising, and apply the extraction methods to capture what is really there. It does a credible job, and the parts where it guesses are the parts I check hardest.</p>
+
+      <p>For the data-to-figures-to-report half of this, I wrote a separate walkthrough with a companion repository: <a href="2026-09-codex-for-researchers-windows-guide.html">Codex for Researchers</a> installs an agent on your own laptop and runs the whole path from a public API to a compiled report. The writing workflow in this post is the layer above it. That one gets numbers and figures into the folder. This one turns them into a manuscript.</p>
+
+      <div class="warning-box">
+        <p><strong>Everything the agent produces is a draft until you have verified it.</strong> A digitised plot has a reading error. A reconstructed data set has assumptions baked into every extraction. A literature claim has a source that may say something subtly different from what your sentence says it does. The workflow saves you the typing. It does not save you the checking, and it must not be allowed to pretend otherwise.</p>
+      </div>
+
+      <!-- ═══ SECTION 7 ═══ -->
+      <h2 id="notabutton">It Is a Workflow, Not a Button</h2>
+
+      <p>I want to be precise about what this is, because the marketing around AI writing is not. This is not a single click that produces a paper. It is a workflow, with steps, and around each step there are checks and gates that stop a mistake travelling further down the line wearing a finished-looking format.</p>
+
+      <p>In practice that means the model is wrapped in rules it does not get to break: constrain it to sources you have downloaded, make it record where every number came from, make it print what it changed rather than just changing it, and make it leave a visible gap when it is unsure instead of filling the gap with something plausible. When those checks are in place, the workflow is close to ninety percent autonomous. Not one hundred. The last ten percent is the part that decides whether the paper is true.</p>
+
+      <p>One more piece of discipline earns its keep: run short, frequent, targeted sessions rather than one enormous one. A thirty-minute meeting with a single clear objective, this figure today, this section today, produces a clean transcript and a clean v0 of that piece. Do that a few times and you notice the jumps getting bigger, because you are getting better at deciding the story in advance, which was the real skill all along.</p>
+
+      <!-- ═══ SECTION 8 ═══ -->
+      <h2 id="human">Where You Still Have to Be the Researcher</h2>
+
+      <p>The workflow removes the typing. It does not touch the parts that make you the author, and it is worth being blunt about where the boundary is, because a lot of people are quietly hoping it is somewhere else.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Hand it to the AI</th>
+            <th>Keep it yourself</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deciding what the paper argues</td>
+            <td>No</td>
+            <td>Always. This is the paper.</td>
+          </tr>
+          <tr>
+            <td>Filling a decided structure with prose</td>
+            <td>Yes, this is the core win</td>
+            <td>Review every paragraph it adds</td>
+          </tr>
+          <tr>
+            <td>Finding literature and pinning sources</td>
+            <td>Yes, with real databases</td>
+            <td>Open the source before you keep the citation</td>
+          </tr>
+          <tr>
+            <td>Cleaning data, building figures, running code</td>
+            <td>Yes</td>
+            <td>Check the numbers against the raw file</td>
+          </tr>
+          <tr>
+            <td>Interpreting what the results mean</td>
+            <td>No</td>
+            <td>Always. The interpretation is the contribution.</td>
+          </tr>
+          <tr>
+            <td>Answering your supervisor or committee</td>
+            <td>No</td>
+            <td>Always. Convincing a person is your job.</td>
+          </tr>
+          <tr>
+            <td>Authorship and disclosure</td>
+            <td>No</td>
+            <td>Always. Disclose the tool and the purpose.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The row people resist is the last one. Under the ICMJE authorship criteria, an AI cannot be an author, because authorship requires accountability that a model cannot carry. Many publishers now expect you to disclose writing assistance in the acknowledgements and to describe AI-assisted analysis in the methods. Check your target journal and your institution's policy before you submit. Disclosure is not a confession. It is part of doing the work cleanly.</p>
+
+      <p>None of that is a reason to avoid the workflow. It is a reason to run it in the open, with your name on the paper and your judgement in the argument, which is the only version of this that was ever worth doing.</p>
+
+      <!-- ═══ FINAL ═══ -->
+      <h2 id="final">Final Thought</h2>
+
+      <p>Every tool in the search results promise to write your paper. The ones that deliver a whole thesis on command are the ones that will hand you a fake citation, because a real one requires a real source and reading it costs the thing the advert is selling you: your time. The honest promise is smaller and more useful. You still decide what the paper says. You no longer spend your evenings typing out what you already decided.</p>
+
+      <p>The version of this that works is not clever. It is a decided structure, one recorded conversation, a cleaned-up transcript turned into a v0, a comment file, and one rule that every reference resolves to a paper you opened. That is the whole thing. The intelligence is yours. The typing is not. Move the typing.</p>
+
+      <p>If you are stuck on a paper right now, the next step is small and specific. Write your headings and subheadings down, pick one figure, and explain it out loud to the recorder the way you would to a colleague. That half hour is the part the machine cannot do, and once it is done, the rest follows quickly.</p>
+
+      <div class="cta-box">
+        <h3>Want Your Group Writing This Way?</h3>
+        <p>Book a 15-minute call. We will look at where your drafts stall, set up the v0 workflow on one real paper, and I will tell you honestly whether it suits your work or whether you should keep writing by hand.</p>
+        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
+        <a href="/services/custom-digital-courses-workshops.html" class="btn btn--outline">See Courses &amp; Workshops</a>
+      </div>
+
+      <h2>If You Want the Data Half of This Workflow</h2>
+      <p>This post covers the writing. If the backlog is not the manuscript but everything feeding it, then the companion walkthrough is where to start: <a href="2026-09-codex-for-researchers-windows-guide.html">Codex for Researchers</a> installs an agent that pulls real data, builds the figures, and compiles a report on your own machine. And if the tooling feels premature because the research itself is not yet reproducible, <a href="2026-08-damask-crystal-plasticity-documentation.html">DAMASK crystal plasticity documentation</a> covers the workflow records that make results defensible in the first place. The two disciplines meet at the same place: every number traceable, every source openable.</p>
+
+      <div class="subscribe-box">
+        <p class="subscribe-box__title">Get the next post by email</p>
+        <p class="subscribe-box__text">A few posts a month on research careers, simulation consulting, and building a life abroad. No spam, and you can unsubscribe with a single reply.</p>
+        <button class="subscribe-box__btn btn btn--primary" type="button">Subscribe by Email</button>
+        <p class="subscribe-box__alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener">Follow me there</a> &mdash; every post is shared on LinkedIn.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
+      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script defer src="../../assets/js/main.js?v=20260919"></script>
+</body>
+</html>

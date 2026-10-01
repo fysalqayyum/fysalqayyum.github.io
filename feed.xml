@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How to Use AI to Write a Paper (Without the Fake Citations)</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Agentic AI can take a paper from rough notes to a clean first draft in one pass. Here is the v0 workflow I use, and the checks that keep every citation real.</description>
+    </item>
     <item>
       <title>The Jahziah Test, Explained: What Saudi Engineering Graduates Face</title>
       <link>https://faisalqayyum.com/blog/posts/2026-09-jahziah-exam-guide-saudi-engineering-graduates.html</link>
