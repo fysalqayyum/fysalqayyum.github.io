@@ -2779,3 +2779,18 @@ section[id], header[id] { scroll-margin-top: 84px; }
 .post-content table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .post-content video, .post-content iframe, .post-content img { max-width: 100%; height: auto; }
 @media (max-width: 600px) { .post-content table th, .post-content table td { font-size: 0.88rem !important; } }
+
+/* ── YouTube click-to-load facade ── */
+.yt-facade { margin: 2rem 0; }
+.yt-facade__frame { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; background: #111827; box-shadow: var(--shadow-md); }
+.yt-facade__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.yt-facade__btn { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; display: block; cursor: pointer; }
+.yt-facade__btn img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.yt-facade__play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 76px; height: 54px; border-radius: 14px; background: rgba(194, 65, 12, 0.92);
+  display: flex; align-items: center; justify-content: center; transition: background 0.15s ease;
+}
+.yt-facade__play::after { content: ""; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
+.yt-facade__btn:hover .yt-facade__play, .yt-facade__btn:focus-visible .yt-facade__play { background: var(--cta-hover); }
+.yt-facade__caption { margin-top: 0.6rem; font-size: 0.92rem; color: var(--text-muted); }

@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How to Write a Master's Thesis in Germany: Outline, V0, Feedback, and How It Is Graded</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-10-how-to-write-master-thesis-germany.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-10-how-to-write-master-thesis-germany.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A Freiberg supervisor's method for a Master's thesis in Germany: outline first, write a rough V0, get feedback early, and know how the thesis is graded.</description>
+    </item>
     <item>
       <title>How to Use AI to Write a Paper (Without the Fake Citations)</title>
       <link>https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-moving-germany-to-saudi-arabia-academic-job.html</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
       <description>A first-hand walkthrough of relocating from Germany to Saudi Arabia for a faculty position: visa, Tasheer, Mosadaqa, QVP, medical certificates, apostille, timelines, and costs.</description>
-    </item>
-    <item>
-      <title>Why I Built This Website and What You Can Expect</title>
-      <link>https://faisalqayyum.com/blog/posts/2026-03-welcome.html</link>
-      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-welcome.html</guid>
-      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
-      <description>Dr.-Ing. Faisal Qayyum explains his motivation for building a professional digital profile and the consulting services and blog topics to expect.</description>
     </item>
   </channel>
 </rss>

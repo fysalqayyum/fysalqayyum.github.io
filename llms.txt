@@ -31,6 +31,7 @@ All services: https://faisalqayyum.com/services/
 - Custom courses and workshops for research groups: https://faisalqayyum.com/services/custom-digital-courses-workshops.html
 
 ## Blog posts
+- [How to Write a Master's Thesis in Germany: Outline, V0, Feedback, and How It Is Graded](https://faisalqayyum.com/blog/posts/2026-10-how-to-write-master-thesis-germany.html) (2026-10-03): A Freiberg supervisor's method for a Master's thesis in Germany: outline first, write a rough V0, get feedback early, and know how the thesis is graded.
 - [How to Use AI to Write a Paper (Without the Fake Citations)](https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html) (2026-10-01): Agentic AI can take a paper from rough notes to a clean first draft in one pass. Here is the v0 workflow I use, and the checks that keep every citation real.
 - [The Jahziah Test, Explained: What Saudi Engineering Graduates Face](https://faisalqayyum.com/blog/posts/2026-09-jahziah-exam-guide-saudi-engineering-graduates.html) (2026-09-23): What the ETEC Jahziah readiness test measures, how many questions it carries, how test day works, and how I would prepare final-year Saudi engineering students.
 - [Codex for Researchers: From Data to Figures to a Written Report in Seconds](https://faisalqayyum.com/blog/posts/2026-09-codex-for-researchers-windows-guide.html) (2026-09-19): Install OpenAI Codex CLI on a Windows laptop and run a real research workflow end to end: pull World Bank data, build figures, and compile a LaTeX report.

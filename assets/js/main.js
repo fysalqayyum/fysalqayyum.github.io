@@ -769,4 +769,24 @@
     });
   });
 
+  // ─── 20. YOUTUBE CLICK-TO-LOAD FACADE ─────────────
+  // Markup: <div class="yt-facade" data-yt="VIDEO_ID" data-title="..."><button ...><picture>…</picture></button></div>
+  // Nothing is requested from YouTube until the reader clicks; then a
+  // youtube-nocookie.com iframe replaces the thumbnail.
+  document.querySelectorAll('.yt-facade[data-yt]').forEach(function (box) {
+    var btn = box.querySelector('.yt-facade__btn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = box.getAttribute('data-yt');
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+      iframe.title = box.getAttribute('data-title') || 'YouTube video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'lazy';
+      box.querySelector('.yt-facade__frame').replaceChildren(iframe);
+      trackSiteEvent('video_play', id);
+    });
+  });
+
 })();
