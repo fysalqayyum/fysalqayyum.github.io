@@ -62,6 +62,14 @@ posts = sorted(
 static = [
     (f"{SITE}/", git_date("index.html"), "weekly", "1.0"),
     (f"{SITE}/blog/", git_date("blog/index.html"), "weekly", "0.8"),
+    (f"{SITE}/services/", git_date("services/index.html"), "monthly", "0.9"),
+    (f"{SITE}/about/", git_date("about/index.html"), "monthly", "0.8"),
+    (f"{SITE}/services/phd-research-rescue.html",
+     git_date("services/phd-research-rescue.html"), "monthly", "0.9"),
+    (f"{SITE}/services/academic-career-germany.html",
+     git_date("services/academic-career-germany.html"), "monthly", "0.9"),
+    (f"{SITE}/services/academic-jobs-saudi-arabia-gulf.html",
+     git_date("services/academic-jobs-saudi-arabia-gulf.html"), "monthly", "0.9"),
     (f"{SITE}/services/crystal-plasticity-simulation-consulting.html",
      git_date("services/crystal-plasticity-simulation-consulting.html"), "monthly", "0.9"),
     (f"{SITE}/services/scientific-writing-coaching.html",
@@ -124,10 +132,10 @@ for p in posts[:20]:
 feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dr.-Ing. Faisal Qayyum — Blog &amp; Thoughts</title>
+    <title>Faisal Qayyum Research Consulting — Blog</title>
     <link>{SITE}/blog/</link>
     <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
+    <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
     <lastBuildDate>{rfc822(posts[0]['published'])}</lastBuildDate>
 {chr(10).join(items)}
@@ -140,26 +148,37 @@ open("feed.xml", "w").write(feed)
 post_lines = "\n".join(
     f"- [{p['title']}]({p['url']}) ({p['published']}): {p['description']}" for p in posts
 )
-llms = f"""# Dr.-Ing. Faisal Qayyum
+llms = f"""# Faisal Qayyum Research Consulting
 
-> Assistant Professor of Mechanical Engineering at the University of Tabuk, Saudi Arabia. PhD (magna cum laude) from TU Bergakademie Freiberg, Germany. Consultant in crystal plasticity simulation (DAMASK), metal forming FEM (ABAQUS), EBSD/microstructure analysis, PhD mentoring, scientific writing coaching, and grant proposal consulting. 39+ peer-reviewed publications, 1,230+ citations, h-index 22.
+> Research consulting by Dr.-Ing. Faisal Qayyum, a materials scientist and mechanical engineer (Dr.-Ing. magna cum laude, TU Bergakademie Freiberg, Germany; nine years at Freiberg; Assistant Professor at the University of Tabuk, Saudi Arabia, since February 2026). Helps researchers who are stuck with a PhD, a paper, a supervisor conflict or a career move to Germany or the Gulf, and consults on crystal plasticity and materials simulation for labs and industry. Google Scholar: 1,371 citations, h-index 23 (September 2026). 150+ manuscripts reviewed; editorial board, Discover Materials (Springer Nature). Works remotely in English, German and Urdu. Services, not outcomes: no guaranteed admissions, acceptances or jobs; no ghostwriting; career coaching is not recruitment.
 
-Site: {SITE}/ — all consulting engagements are scoped individually.
-Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
+Site: {SITE}/
+How to start: describe your situation at {SITE}/#contact or book a free 15-minute call: https://cal.eu/fysalqayyum/15min
+About: {SITE}/about/
+All services: {SITE}/services/
 
-## Consulting services
-- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: {SITE}/services/crystal-plasticity-simulation-consulting.html
-- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling — details: {SITE}/services/metal-forming-fem-consulting.html
-- Phase field simulation: recrystallization, spheroidization, grain growth — details: {SITE}/services/phase-field-simulation-consulting.html
-- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work) — details: {SITE}/services/mechanical-test-data-analysis.html
-- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: {SITE}/services/ebsd-analysis-consulting.html
-- Process-structure-property analysis — details: {SITE}/services/process-structure-property-analysis.html
-- Multiscale modeling strategy — details: {SITE}/services/multiscale-modeling-strategy.html
-- Materials failure analysis, incl. expert witness contexts — details: {SITE}/services/materials-failure-analysis.html
-- PhD & research mentoring — details: {SITE}/services/phd-research-mentoring.html
-- Scientific writing coaching — details: {SITE}/services/scientific-writing-coaching.html
-- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: {SITE}/services/grant-proposal-consulting.html
-- Custom digital courses and workshops for research teams — details: {SITE}/services/custom-digital-courses-workshops.html
+## Finish & Publish
+- PhD & research rescue (stalled PhD, supervisor conflict, authorship dispute, rejected paper): {SITE}/services/phd-research-rescue.html
+- Scientific writing coaching and reviewer responses: {SITE}/services/scientific-writing-coaching.html
+- PhD & research mentoring: {SITE}/services/phd-research-mentoring.html
+- Grant proposal consulting: {SITE}/services/grant-proposal-consulting.html
+
+## Careers & Mobility
+- PhD, postdoc and research careers in Germany (coaching): {SITE}/services/academic-career-germany.html
+- Academic jobs in Saudi Arabia and the Gulf (coaching): {SITE}/services/academic-jobs-saudi-arabia-gulf.html
+
+## Simulation & Materials
+- Crystal plasticity simulation (DAMASK): {SITE}/services/crystal-plasticity-simulation-consulting.html
+- Metal forming FEM (ABAQUS): {SITE}/services/metal-forming-fem-consulting.html
+- Phase field simulation: {SITE}/services/phase-field-simulation-consulting.html
+- EBSD and microstructure analysis: {SITE}/services/ebsd-analysis-consulting.html
+- Materials failure analysis: {SITE}/services/materials-failure-analysis.html
+- Mechanical test data analysis: {SITE}/services/mechanical-test-data-analysis.html
+- Process-structure-property analysis: {SITE}/services/process-structure-property-analysis.html
+- Multiscale modeling strategy: {SITE}/services/multiscale-modeling-strategy.html
+
+## Training
+- Custom courses and workshops for research groups: {SITE}/services/custom-digital-courses-workshops.html
 
 ## Blog posts
 {post_lines}

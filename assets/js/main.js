@@ -203,7 +203,8 @@
       });
 
       var ctaBox = link.closest('.cta-box');
-      if (!ctaBox || ctaBox.querySelector('.booking-fallback-link')) return;
+      // Boxes that already offer a help email don't need the fallback button.
+      if (!ctaBox || ctaBox.querySelector('.booking-fallback-link') || ctaBox.querySelector('[data-help]')) return;
 
       var fallback = document.createElement('button');
       fallback.type = 'button';
@@ -213,6 +214,10 @@
       link.insertAdjacentElement('afterend', fallback);
     });
   }
+
+  // The three qualifying prompts every help request carries (situation,
+  // deadline, what has been tried). Asking for help should take one click.
+  var HELP_PROMPT = 'Hello Dr. Qayyum,\n\nMy situation in a few lines:\n[What is going on]\n\nMy deadline or timeline:\n[e.g. submission in March, contract ends in June]\n\nWhat I have already tried:\n[...]\n\nBest regards,\n[Your name]';
 
   var emailBtn = document.getElementById('emailBtn');
   var contactModalOverlay = document.getElementById('contactModalOverlay');
@@ -268,11 +273,9 @@
       }
       trackSiteEvent('contact_us', subject || 'contact_modal');
       closeContactModal();
-      var u = 'fysalqayyum', d = 'yahoo.com';
-      var mailHref = 'mailto:' + u + '@' + d;
-      if (subject) mailHref += '?subject=' + encodeURIComponent(subject);
-      if (body) mailHref += (subject ? '&' : '?') + 'body=' + body;
-      window.location.href = mailHref;
+      // data-body holds plain text (newlines as &#10; in the HTML);
+      // buildMailto does the encoding, so the body is never double-encoded.
+      buildMailto(subject, body || HELP_PROMPT);
     });
   });
 
@@ -301,6 +304,159 @@
       }
     });
   });
+
+  // ─── 9a. "GET HELP" BUTTONS (data-help="<area>") ──────
+  // Every "get help" action leads to the help form on the homepage with the
+  // matching topic preselected. On other pages it navigates there.
+  var helpForm = document.getElementById('helpForm');
+
+  function helpAreaKey(label) {
+    var t = (label || '').toLowerCase();
+    if (t.indexOf('germany') !== -1) return 'germany';
+    if (t.indexOf('gulf') !== -1 || t.indexOf('saudi') !== -1) return 'gulf';
+    if (/simulation|crystal|forming|phase field|ebsd|failure|mechanical test|process|multiscale/.test(t)) return 'simulation';
+    if (/workshop|course|training/.test(t)) return 'workshop';
+    if (/supervisor|rescue|phd|mentoring/.test(t)) return 'phd';
+    if (/paper|writing|grant|publish/.test(t)) return 'paper';
+    return '';
+  }
+
+  function openHelpForm(key) {
+    if (!helpForm) return;
+    var select = helpForm.querySelector('#hf-area');
+    if (key && select && select.querySelector('option[value="' + key + '"]')) select.value = key;
+    var contact = document.getElementById('contact');
+    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(function () {
+      var first = helpForm.querySelector(select && select.value ? '#hf-name' : '#hf-area');
+      if (first) first.focus({ preventScroll: true });
+    }, 450);
+  }
+
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('[data-help]');
+    if (!trigger) return;
+    e.preventDefault();
+    var key = helpAreaKey(trigger.getAttribute('data-help'));
+    trackSiteEvent('contact_us', 'help_' + (key || 'general'));
+    if (helpForm) {
+      openHelpForm(key);
+    } else {
+      window.location.href = '/' + (key ? '?area=' + key : '') + '#contact';
+    }
+  });
+
+  // Arriving from another page with ?area=... preselects the topic.
+  if (helpForm) {
+    var areaParam = new URLSearchParams(window.location.search).get('area');
+    if (areaParam) {
+      var sel = helpForm.querySelector('#hf-area');
+      if (sel && sel.querySelector('option[value="' + areaParam + '"]')) sel.value = areaParam;
+    }
+  }
+
+  // ─── 9c. HELP FORM SUBMIT (Formspree, AJAX with plain-POST fallback) ──
+  if (helpForm && window.fetch && window.FormData) {
+    var statusEl = document.getElementById('helpFormStatus');
+    helpForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!helpForm.checkValidity()) {
+        helpForm.reportValidity();
+        return;
+      }
+      var btn = helpForm.querySelector('.help-form__submit');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      statusEl.textContent = '';
+      var area = (helpForm.querySelector('#hf-area') || {}).value || 'none';
+      fetch(helpForm.action, {
+        method: 'POST',
+        body: new FormData(helpForm),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (!res.ok) throw new Error('status ' + res.status);
+        trackSiteEvent('form_submit', 'area_' + area);
+        helpForm.innerHTML = '<div class="help-form__done"><h3>Thank you. Your message is on its way.</h3>' +
+          '<p>I will reply within two working days. If it is urgent, <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener">book a 15-minute call</a>.</p></div>';
+      }).catch(function () {
+        trackSiteEvent('form_error', 'area_' + area);
+        btn.disabled = false;
+        btn.textContent = 'Send';
+        statusEl.innerHTML = 'Sorry, that did not go through. Please try again, or <button type="button" class="help-form__mail">send it by email instead</button>.';
+        var mailBtn = statusEl.querySelector('.help-form__mail');
+        if (mailBtn) mailBtn.addEventListener('click', function () {
+          var f = helpForm;
+          buildMailto('Help request: ' + area,
+            'Hello Dr. Qayyum,\n\nMy situation:\n' + f.situation.value +
+            '\n\nMy deadline or timeline:\n' + f.deadline.value +
+            '\n\nWhat I have already tried:\n' + f.tried.value +
+            '\n\nBest regards,\n' + f.name.value);
+        });
+      });
+    });
+  }
+
+  // Mobile sticky help bar on posts and service pages (not the homepage).
+  (function () {
+    if (document.getElementById('stickyCta')) return;
+    var isPost = document.querySelector('.post-content');
+    var isService = document.querySelector('.service-body');
+    if (!isPost && !isService) return;
+    var bar = document.createElement('div');
+    bar.className = 'sticky-cta';
+    bar.id = 'stickyCta';
+    var label = document.createElement('span');
+    label.className = 'sticky-cta__label';
+    label.textContent = 'Stuck with something like this?';
+    var btn = document.createElement('a');
+    btn.className = 'sticky-cta__btn';
+    btn.href = '/#contact';
+    btn.setAttribute('data-help', isService ? (document.title.split('|')[0].trim()) : 'Blog reader');
+    btn.textContent = 'Get help \u2192';
+    var toc = isPost ? document.querySelector('.post-content nav.toc') : null;
+    if (toc) {
+      // Long posts: the sticky bar carries a Contents button instead of the label.
+      var tocBtn = document.createElement('button');
+      tocBtn.type = 'button';
+      tocBtn.className = 'sticky-cta__toc';
+      tocBtn.textContent = 'Contents';
+      tocBtn.setAttribute('aria-expanded', 'false');
+      var sheet = document.createElement('div');
+      sheet.className = 'toc-sheet';
+      sheet.setAttribute('role', 'dialog');
+      sheet.setAttribute('aria-label', 'Contents');
+      var inner = toc.cloneNode(true);
+      inner.removeAttribute('aria-label');
+      sheet.appendChild(inner);
+      document.body.appendChild(sheet);
+      var toggle = function (open) {
+        sheet.classList.toggle('open', open);
+        tocBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+      tocBtn.addEventListener('click', function () { toggle(!sheet.classList.contains('open')); });
+      sheet.addEventListener('click', function (ev) { if (ev.target.closest('a') || ev.target === sheet) toggle(false); });
+      document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') toggle(false); });
+      label = tocBtn;
+    }
+    bar.appendChild(label);
+    bar.appendChild(btn);
+    document.body.appendChild(bar);
+  })();
+
+  // Back-to-top button on long pages (posts and service pages).
+  (function () {
+    if (!document.querySelector('.post-content, .service-body')) return;
+    var top = document.createElement('button');
+    top.type = 'button';
+    top.className = 'to-top';
+    top.setAttribute('aria-label', 'Back to top');
+    top.textContent = '\u2191';
+    document.body.appendChild(top);
+    window.addEventListener('scroll', function () {
+      top.classList.toggle('visible', window.scrollY > 1200);
+    }, { passive: true });
+    top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  })();
 
   // ─── 9b. FUNNEL EVENT LABELS ──────────────────────
   enhanceBookingCtas();
@@ -591,6 +747,26 @@
     } else {
       copyFallback(text, done);
     }
+  });
+
+  // ─── 19. BLOG INDEX FILTER CHIPS ─────────────────
+  document.querySelectorAll('.filter-chips').forEach(function (group) {
+    var grid = group.parentElement.querySelector('.blog-grid');
+    if (!grid) return;
+    group.addEventListener('click', function (e) {
+      var chip = e.target.closest('.chip');
+      if (!chip) return;
+      var f = chip.getAttribute('data-filter');
+      group.querySelectorAll('.chip').forEach(function (c) {
+        var on = c === chip;
+        c.classList.toggle('is-active', on);
+        c.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      grid.querySelectorAll('.blog-card').forEach(function (card) {
+        card.hidden = !(f === 'all' || card.getAttribute('data-group') === f);
+      });
+      trackSiteEvent('blog_filter', f);
+    });
   });
 
 })();

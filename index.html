@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Meta -->
-  <title>Dr.-Ing. Faisal Qayyum | Crystal Plasticity &amp; Materials Simulation Consultant</title>
-  <meta name="description" content="Crystal plasticity (DAMASK) and metal forming (ABAQUS) simulation consultant. EBSD analysis, PhD mentoring, scientific writing coaching. 1,230+ citations.">
-  <meta name="keywords" content="crystal plasticity simulation consultant, DAMASK simulation expert, ABAQUS metal forming consulting, TRIP steel composite modeling, EBSD texture analysis, microstructure characterization analysis, materials science consultant, PhD thesis mentoring, scientific writing coach, grant proposal materials science, expert witness materials failure, multiscale modeling consulting, phase field simulation, Dr Faisal Qayyum, TU Bergakademie Freiberg, University of Tabuk">
+  <title>Faisal Qayyum Research Consulting | PhD, Paper, Career &amp; Simulation Help</title>
+  <meta name="description" content="Moving to Germany or the Gulf, or stuck with a PhD, paper or simulation? Dr.-Ing. Faisal Qayyum coaches researchers through it. Remote, worldwide.">
   <meta name="author" content="Dr.-Ing. Faisal Qayyum">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://faisalqayyum.com/">
@@ -15,333 +14,215 @@
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://faisalqayyum.com/">
-  <meta property="og:title" content="Dr.-Ing. Faisal Qayyum | Materials Simulation &amp; Crystal Plasticity Consultant">
-  <meta property="og:description" content="Senior expert in crystal plasticity, metal forming simulation, and microstructure analysis. Available for research consulting, mentoring, and scientific writing.">
-  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta property="og:title" content="Faisal Qayyum Research Consulting">
+  <meta property="og:description" content="Moving to Germany or the Gulf, or stuck with a PhD, paper or simulation? Dr.-Ing. Faisal Qayyum coaches researchers through it. Remote, worldwide.">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-card-2026.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dr.-Ing. Faisal Qayyum | Materials Science Consultant">
-  <meta name="twitter:description" content="Crystal plasticity simulation expert. DAMASK, ABAQUS, EBSD analysis. PhD mentor. Scientific writing coach.">
-  <meta name="twitter:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta name="twitter:title" content="Faisal Qayyum Research Consulting">
+  <meta name="twitter:description" content="Moving to Germany or the Gulf, or stuck with a PhD, paper or simulation? Dr.-Ing. Faisal Qayyum coaches researchers through it. Remote, worldwide.">
+  <meta name="twitter:image" content="https://faisalqayyum.com/assets/img/og-card-2026.jpg">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="Dr. Faisal Qayyum — Blog & Thoughts" href="https://faisalqayyum.com/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Faisal Qayyum Research Consulting — Blog" href="https://faisalqayyum.com/feed.xml">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
 
-  <!-- Google Fonts -->
+  <!-- Fonts: Source Serif 4 (headings) + Source Sans 3 (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 
   <!-- LCP: hero portrait -->
-  <link rel="preload" as="image" href="assets/img/fq-about.jpg" fetchpriority="high" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/img/fq-portrait-2026.webp" type="image/webp" fetchpriority="high">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=20260919">
+  <link rel="stylesheet" href="assets/css/style.css?v=20261003">
 
-  <style>
-    /* Contact reason picker modal */
-    .contact-modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(6, 12, 24, 0.85);
-      backdrop-filter: blur(4px);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s;
-    }
-    .contact-modal-overlay.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .contact-modal {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 2rem;
-      max-width: 420px;
-      width: 100%;
-      transform: translateY(12px);
-      transition: transform 0.2s;
-    }
-    .contact-modal-overlay.open .contact-modal {
-      transform: translateY(0);
-    }
-    .contact-modal__title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.35rem;
-    }
-    .contact-modal__sub {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .contact-modal__options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .contact-modal__option {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 0.9rem 1rem;
-      cursor: pointer;
-      text-align: left;
-      transition: border-color 0.15s, background 0.15s;
-      width: 100%;
-    }
-    .contact-modal__option:hover {
-      border-color: var(--accent-1);
-      background: var(--bg-card-hover);
-    }
-    .contact-modal__option-icon {
-      font-size: 1.25rem;
-      flex-shrink: 0;
-    }
-    .contact-modal__option-text strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--text-primary);
-    }
-    .contact-modal__option-text span {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-    .contact-modal__close {
-      margin-top: 1.25rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      cursor: pointer;
-    }
-    .contact-modal__close:hover { color: var(--text-secondary); }
-  </style>
 
   <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
   <script defer src="assets/js/analytics.js?v=20260720"></script>
 
-  <!-- Schema.org JSON-LD: WebSite -->
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Dr.-Ing. Faisal Qayyum",
-    "url": "https://faisalqayyum.com/",
-    "description": "Crystal plasticity and materials simulation consulting, research mentoring, and scientific writing coaching by Dr.-Ing. Faisal Qayyum.",
-    "publisher": {
-      "@type": "Person",
-      "name": "Dr.-Ing. Faisal Qayyum"
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Faisal Qayyum Research Consulting",
+  "url": "https://faisalqayyum.com/",
+  "publisher": {
+    "@id": "https://faisalqayyum.com/#person"
   }
+}
   </script>
-
-  <!-- Schema.org JSON-LD: Person + Consultant -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dr.-Ing. Faisal Qayyum",
-    "alternateName": "Faisal Qayyum",
-    "honorificPrefix": "Dr.-Ing.",
-    "jobTitle": "Assistant Professor & Senior Expert in Advanced Metal Forming Simulations",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "University of Tabuk",
-      "url": "https://www.ut.edu.sa"
-    },
-    "alumniOf": [
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://faisalqayyum.com/#consulting",
+  "name": "Faisal Qayyum Research Consulting",
+  "url": "https://faisalqayyum.com/",
+  "image": "https://faisalqayyum.com/assets/img/og-card-2026.jpg",
+  "description": "Research consulting by Dr.-Ing. Faisal Qayyum: help for researchers who are stuck with a PhD, a paper, a supervisor conflict or a career move to Germany or the Gulf, plus crystal plasticity and materials simulation consulting.",
+  "founder": {
+    "@id": "https://faisalqayyum.com/#person"
+  },
+  "areaServed": "Worldwide",
+  "availableLanguage": [
+    "English",
+    "German",
+    "Urdu"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Service areas",
+    "itemListElement": [
       {
-        "@type": "EducationalOrganization",
-        "name": "TU Bergakademie Freiberg",
-        "url": "https://tu-freiberg.de"
-      }
-    ],
-    "url": "https://faisalqayyum.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/fysalqayyum/",
-      "https://www.researchgate.net/profile/Faisal-Qayyum-2",
-      "https://scholar.google.com/citations?user=lXrpH_AAAAAJ",
-      "https://orcid.org/0000-0001-6393-2858",
-      "https://github.com/fysalqayyum"
-    ],
-    "knowsAbout": [
-      "Crystal Plasticity Simulation",
-      "Metal Forming FEM",
-      "DAMASK Software",
-      "ABAQUS Simulation",
-      "EBSD Analysis",
-      "Microstructure Characterization",
-      "Phase Field Simulation",
-      "TRIP Steel Composites",
-      "Multiscale Materials Modeling",
-      "Materials Failure Analysis"
-    ],
-    "award": [
-      "Dr. Rolf-Umbach-Prize for Best PhD Thesis",
-      "Alexander von Humboldt Research Grant 2026/27",
-      "JSPS Postdoctoral Fellowship",
-      "Joachim Herz Foundation Add-on Fellowship 2026–2028"
-    ]
-  }
-  </script>
-
-  <!-- FAQPage Schema for AEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is crystal plasticity simulation and when should I hire a consultant?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Crystal plasticity simulation models how individual grains in a polycrystalline metal deform, rotate, and accumulate damage under mechanical loading. It is used when standard FEM plasticity models cannot capture microstructure-dependent behavior such as texture evolution, slip system activity, or localized strain hotspots. You should hire a consultant when your research requires microstructurally-informed predictions and you need expertise in tools like DAMASK or ABAQUS UMAT."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Careers & Mobility",
+          "description": "Career coaching for academic jobs in Saudi Arabia and the Gulf, and for PhD, postdoc and research careers in Germany.",
+          "url": "https://faisalqayyum.com/services/#careers"
         }
       },
       {
-        "@type": "Question",
-        "name": "What simulation software does Dr. Faisal Qayyum use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dr. Qayyum works primarily with DAMASK for crystal plasticity finite element simulations, ABAQUS for large-scale metal forming, thermo-mechanical fatigue, and crack propagation analysis, and MatCalc for thermodynamic phase transformation calculations. For data processing and visualization he uses MTEX (MATLAB), Python, and ParaView."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Finish & Publish",
+          "description": "Help with stalled PhDs, supervisor conflicts, rejected papers, scientific writing and grant proposals.",
+          "url": "https://faisalqayyum.com/services/#finish-publish"
         }
       },
       {
-        "@type": "Question",
-        "name": "What is the difference between mechanical test analysis consulting and running the tests yourself?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mechanical test analysis consulting focuses on the interpretation, validation, and modeling of existing experimental data — not the physical execution of testing. Dr. Qayyum helps clients understand tensile, fatigue, hardness, and in-situ test results in the context of microstructure, failure mechanisms, and simulation calibration, without requiring a laboratory setup on his end."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Simulation & Materials",
+          "description": "Crystal plasticity (DAMASK), metal forming FEM (ABAQUS), phase field, EBSD and failure analysis consulting for labs and industry.",
+          "url": "https://faisalqayyum.com/services/#simulation"
         }
       },
       {
-        "@type": "Question",
-        "name": "How does phase field simulation work for microstructure evolution?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Phase field simulation uses a continuous order parameter field to describe phase boundaries without tracking interfaces explicitly. It is used to model solidification, recrystallization, spheroidization, and solid-state phase transformations in steels and alloys. Dr. Qayyum has applied phase field methods within the DFG-funded IMPACT project for Cr and Mo alloyed carbon steels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a process-structure-property relationship in materials science?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The process-structure-property chain describes how manufacturing processes (e.g., rolling, heat treatment) determine microstructure (grain size, texture, phase fractions), which in turn controls mechanical and functional properties (strength, ductility, fatigue life). Consulting in this area involves designing or interpreting experiments and simulations that link all three tiers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I improve my scientific writing as a PhD student in engineering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dr. Qayyum offers scientific writing coaching drawing from his experience leading a Writing Club for 3+ years, publishing 39+ peer-reviewed works, and designing a digital course called 'How to Write a Lot.' The approach focuses on consistent writing habits, structured argumentation, and journal-specific language clarity."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does multiscale materials modeling involve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Multiscale modeling connects physical phenomena across different length scales: from atomistic and crystal lattice behavior (nano/micro scale) through grain-level crystal plasticity (mesoscale) to continuum forming simulations (macro scale). It requires integrating computational methods, experimental data, and physical understanding across all scales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I find a qualified expert witness for materials failure analysis?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A qualified materials failure analysis expert witness should have a PhD in materials or mechanical engineering, deep knowledge of fracture mechanics, microstructure characterization, and mechanical testing, plus a verifiable publication record. Dr. Qayyum combines over a decade of experimental and numerical failure analysis research with academic credentials from TU Bergakademie Freiberg."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is TRIP steel and why is it relevant for composite modeling?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "TRIP (Transformation-Induced Plasticity) steel undergoes a martensitic phase transformation during deformation, providing exceptional strength-ductility combinations. When used as a matrix in metal matrix composites (MMCs) with ceramic particles such as zirconia, the interaction between phase transformation, particle-matrix interface damage, and crystal plasticity creates complex multi-mechanism behavior that requires specialized simulation models."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a materials simulation consulting project typically take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Project duration depends on scope. A focused literature review or experimental data analysis session can be completed in 1–2 weeks. A full crystal plasticity model calibration and simulation campaign typically takes 4–12 weeks. A complete process-structure-property analysis with publication-ready results may span several months. All scopes are discussed and agreed upon before project initiation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What makes a strong DFG or Alexander von Humboldt grant proposal?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Strong proposals clearly define an unsolved scientific problem, demonstrate the applicant's unique qualification to address it, and present a realistic, milestone-based work plan. Dr. Qayyum has been awarded DFG, AvH, DAAD, Joachim Herz, JSPS, and SAB grants and offers consulting on proposal structure, narrative, budget planning, and reviewer-targeted language."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I analyze EBSD data and interpret crystallographic texture?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "EBSD (Electron Backscatter Diffraction) data analysis for crystallographic texture involves indexing diffraction patterns, constructing pole figures, inverse pole figures, and ODFs (orientation distribution functions), and correlating grain-level orientation data with mechanical response. Dr. Qayyum uses MTEX in MATLAB for this analysis and offers consulting on data interpretation, visualization, and simulation input preparation."
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Training & Workshops",
+          "description": "Custom workshops for research groups on scientific writing, AI for research, DAMASK and MTEX.",
+          "url": "https://faisalqayyum.com/services/#training"
         }
       }
     ]
   }
+}
   </script>
-
-  <!-- ProfessionalService Schema for AEO -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Dr.-Ing. Faisal Qayyum — Crystal Plasticity & Materials Simulation Consulting",
-    "description": "Expert consulting in crystal plasticity simulation (DAMASK, ABAQUS), EBSD analysis, metal forming FEM, and scientific writing coaching for researchers and industry.",
-    "url": "https://faisalqayyum.com",
-    "provider": {
-      "@type": "Person",
-      "name": "Dr.-Ing. Faisal Qayyum"
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://faisalqayyum.com/#person",
+  "name": "Faisal Qayyum",
+  "honorificPrefix": "Dr.-Ing.",
+  "jobTitle": "Research consultant and Assistant Professor of Mechanical Engineering",
+  "worksFor": {
+    "@id": "https://faisalqayyum.com/#consulting"
+  },
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Tabuk",
+    "url": "https://www.ut.edu.sa"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "TU Bergakademie Freiberg",
+    "url": "https://tu-freiberg.de"
+  },
+  "url": "https://faisalqayyum.com/about/",
+  "image": "https://faisalqayyum.com/assets/img/fq-portrait-2026.jpg",
+  "knowsLanguage": [
+    "en",
+    "de",
+    "ur"
+  ],
+  "knowsAbout": [
+    "PhD supervision and mentoring",
+    "Scientific writing and peer review",
+    "Academic careers in Germany",
+    "Academic careers in Saudi Arabia",
+    "Crystal plasticity simulation",
+    "DAMASK",
+    "ABAQUS metal forming simulation",
+    "EBSD analysis",
+    "Phase field simulation"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/fysalqayyum/",
+    "https://scholar.google.com/citations?user=lXrpH_AAAAAJ",
+    "https://orcid.org/0000-0001-6393-2858",
+    "https://www.scopus.com/authid/detail.uri?authorId=56444292500",
+    "https://www.researchgate.net/profile/Faisal-Qayyum-2",
+    "https://www.youtube.com/@FaisalQayyum",
+    "https://github.com/fysalqayyum"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you guarantee I get the job, the admission or the acceptance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and nobody honest can. Employers, committees and editors make those decisions. What I guarantee is the work we agree on: a careful diagnosis, a written plan or review, and straight answers about what is weak and how to fix it."
+      }
     },
-    "areaServed": "Worldwide",
-    "serviceType": [
-      "Crystal Plasticity Simulation Consulting",
-      "DAMASK Simulation Setup & Calibration",
-      "ABAQUS Metal Forming FEM",
-      "EBSD Data Analysis & MTEX",
-      "Scientific Writing Coaching",
-      "PhD Thesis Mentoring",
-      "Grant Proposal Consulting",
-      "Materials Failure Analysis"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Consulting Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "15-Minute Discovery Call",
-            "url": "https://cal.eu/fysalqayyum/15min"
-          }
-        }
-      ]
+    {
+      "@type": "Question",
+      "name": "Do you place candidates in jobs in Germany or the Gulf?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. I coach you through the process: where to apply, your documents, interviews and the offer. I am not a recruiter, I take no fee tied to being hired, and questions about your own visa case go to a qualified lawyer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My problem is with my supervisor. Is that confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Supervisor conflicts, authorship disputes and unpublished data stay between us. I never contact your supervisor or institution unless you ask me to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you write my thesis or paper for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You stay the author. I review, explain, plan and coach, and you make the changes, which keeps the work yours and within your university's and journal's rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens in a Roadmap session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You fill in a short form, we have a 60-minute video call, and within five working days you receive a written plan for your case: what to do, in which order, and a realistic timeline. Many people carry it out on their own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly do you reply?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Within two working days. Send a few lines about your situation and your deadline, or book a free 15-minute call if you would rather talk first."
+      }
     }
-  }
+  ]
+}
   </script>
 </head>
 <body>
@@ -351,23 +232,22 @@
        ═══════════════════════════════════════════════════ -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo" aria-label="Home">
+      <a href="#hero" class="nav__logo" aria-label="Faisal Qayyum Research Consulting, home">
         <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
           <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
           <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
           <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
         </svg>
-        <span class="nav__name">Dr. Faisal Qayyum</span>
+        <span class="nav__name">Faisal Qayyum<small>Research Consulting</small></span>
       </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#services" class="nav__link">Services</a></li>
-        <li><a href="#publications" class="nav__link">Research</a></li>
-        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
-        <li><a href="#thoughts" class="nav__link">Thoughts</a></li>
-        <li><a href="#faq" class="nav__link">FAQ</a></li>
-        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+        <li><a href="#careers" class="nav__link">Career moves</a></li>
+        <li><a href="#research" class="nav__link">Research help</a></li>
+        <li><a href="#how" class="nav__link">How it works</a></li>
+        <li><a href="/about/" class="nav__link">About</a></li>
+        <li><a href="/blog/" class="nav__link">Blog</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get help</a></li>
       </ul>
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -378,470 +258,165 @@
   <!-- Mobile overlay menu -->
   <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#publications">Research</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#thoughts">Thoughts</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#careers">Career moves</a></li>
+      <li><a href="#research">Research help</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="#contact">Get help</a></li>
     </ul>
   </div>
 
   <main>
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 2 — HERO
-         ═══════════════════════════════════════════════════ -->
+    <!-- ═══════════════ HERO ═══════════════ -->
     <section class="hero" id="hero">
       <div class="hero__inner">
         <div class="hero__content">
-          <p class="hero__label animate-on-scroll"><span class="hero__label-role">Dr.-Ing. &middot; Assistant Professor</span><span class="hero__label-sep"> &middot; </span><span class="hero__label-spec">Metal Forming Simulation Expert</span></p>
-          <h1 class="hero__heading animate-on-scroll" style="transition-delay:.2s"><span class="accent">Faisal</span> Qayyum.</h1>
-          <div class="hero__rule animate-on-scroll" style="transition-delay:.4s"></div>
-          <p class="hero__body animate-on-scroll" style="transition-delay:.6s">I model the invisible &mdash; the crystallographic mechanics, deformation paths, and failure origins inside metals. Available for simulation consulting, research mentoring, and scientific writing.</p>
-          <div class="hero__ctas animate-on-scroll" style="transition-delay:.8s">
-            <a href="#contact" class="btn btn--primary">Work With Me</a>
-            <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--outline btn--discovery">15-min Call</a>
-            <a href="#publications" class="btn btn--outline">View Research</a>
+          <p class="hero__label">Faisal Qayyum Research Consulting</p>
+          <h1 class="hero__heading">Your next academic move, planned with someone who has made it.</h1>
+          <p class="hero__body">I spent nine years in German research and now teach in Saudi Arabia. I coach researchers and engineers moving to Germany or the Gulf, and I help when a PhD, a paper or a simulation is stuck.</p>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary" data-help="">Tell me what&rsquo;s going on</a>
+            <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--outline">Book a free 15-min call</a>
           </div>
+          <p class="hero__note">Dr.-Ing. Faisal Qayyum &middot; remote, worldwide &middot; English, German or Urdu</p>
         </div>
-        <div class="hero__portrait animate-on-scroll" style="transition-delay:.4s">
-          <img src="assets/img/fq-about.jpg" alt="Dr. Faisal Qayyum, crystal plasticity and materials simulation consultant" width="400" height="400" fetchpriority="high" decoding="async">
-        </div>
-      </div>
-      <div class="hero__scroll-indicator" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 3 — ABOUT
-         ═══════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="about">
-      <div class="container">
-        <div class="about__content">
-          <p class="section__label animate-on-scroll">About Me</p>
-          <h2 class="section__heading animate-on-scroll">From Microstructure to Insight</h2>
-          <p class="animate-on-scroll">I am an experienced mechanical and materials engineer currently working as an assistant professor at the University of Tabuk, Saudi Arabia. My PhD &mdash; awarded magna cum laude from TU Bergakademie Freiberg, Germany &mdash; focused on modeling the deformation and damage multi-phase metallic materials using coupled crystal plasticity models. Since then, I have built a research group, secured international grants, and published 39+ papers with 1,230+ citations.</p>
-          <div class="about__figure animate-on-scroll">
-            <img src="assets/img/localDist.webp" alt="Crystal plasticity simulation showing local stress and strain distribution in a multi-phase metallic microstructure" loading="lazy" width="900" height="500">
-          </div>
-          <p class="animate-on-scroll">My expertise spans the full chain from experimental microstructure characterization to large-scale numerical forming simulations. I work fluently across DAMASK, ABAQUS, MatCalc, MTEX, and Python &mdash; bridging experiment and computation at every scale.</p>
-          <p class="animate-on-scroll">Beyond research, I mentor PhD students across continents, coach scientific writers, and share knowledge through tutorials, workshops, and podcasts. If you have a simulation challenge, a materials puzzle, or a proposal to build &mdash; <a href="#contact">I am your consultant</a>.</p>
-        </div>
-
-      </div>
-
-      <!-- Collaborator logos marquee -->
-      <div class="collab-marquee">
-        <p class="collab-marquee__label">Research Collaborations</p>
-        <div class="collab-marquee__slider">
-          <div class="collab-marquee__track" id="collabTrack">
-            <a class="collab-tile" href="https://www.mpie.de" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#006B3F">MP</span>
-              <span class="collab-tile__name">Max Planck Institute<br><small>Sustainable Materials</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.kuleuven.be" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#1D5E9E">KU</span>
-              <span class="collab-tile__name">KU Leuven<br><small>Belgium</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.kit.edu" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#009682">KIT</span>
-              <span class="collab-tile__name">Karlsruhe Institute<br><small>IAM, Germany</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.kyoto-u.ac.jp/en" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#6B1C3A">KU</span>
-              <span class="collab-tile__name">Kyoto University<br><small>Energy Science &amp; Technology</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.uni-stuttgart.de" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#004E8A">US</span>
-              <span class="collab-tile__name">University of Stuttgart<br><small>IMWF, Germany</small></span>
-            </a>
-            <a class="collab-tile" href="https://tu-freiberg.de" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#00457C">TU</span>
-              <span class="collab-tile__name">TU Bergakademie Freiberg<br><small>IMF, Germany</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.abdn.ac.uk" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#5C068C">UA</span>
-              <span class="collab-tile__name">University of Aberdeen<br><small>School of Engineering</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.ntust.edu.tw" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#B22222">NT</span>
-              <span class="collab-tile__name">NTUST<br><small>Mechanical Eng., Taiwan</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.uniroma1.it" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#8B0000">SR</span>
-              <span class="collab-tile__name">Sapienza University<br><small>Rome, Italy</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.itu.edu.tr" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#1E3A5F">IT</span>
-              <span class="collab-tile__name">Istanbul Technical Univ.<br><small>Metallurgical &amp; Materials Eng.</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.plansee.com" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#2E5090">PL</span>
-              <span class="collab-tile__name">Plansee<br><small>Austria</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.haw-landshut.de" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#D4421E">LL</span>
-              <span class="collab-tile__name">LLK Landshut<br><small>Germany</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.gazi.edu.tr" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#8B4513">GU</span>
-              <span class="collab-tile__name">Gazi University<br><small>EKTAM, Ankara, Turkey</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.nust.edu.pk" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#1B5E20">NS</span>
-              <span class="collab-tile__name">NUST<br><small>Islamabad, Pakistan</small></span>
-            </a>
-            <a class="collab-tile" href="https://www.uettaxila.edu.pk" target="_blank" rel="noopener">
-              <span class="collab-tile__mono" style="background:#4A148C">UE</span>
-              <span class="collab-tile__name">UET Taxila<br><small>Mechanical Eng., Pakistan</small></span>
-            </a>
-          </div>
+        <div class="hero__portrait">
+          <picture>
+            <source srcset="assets/img/fq-portrait-2026.webp" type="image/webp">
+            <img src="assets/img/fq-portrait-2026.jpg" alt="Dr.-Ing. Faisal Qayyum in the metal forming lab" width="760" height="950" fetchpriority="high" decoding="async">
+          </picture>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 4 — SERVICES
-         ═══════════════════════════════════════════════════ -->
-    <section class="section" id="services">
+    <!-- ═══════════════ CAREER MOVES ═══════════════ -->
+    <section class="section section--alt" id="careers">
       <div class="container">
-        <p class="section__label animate-on-scroll">Consulting &amp; Expertise</p>
-        <h2 class="section__heading animate-on-scroll">What I Can Do For You</h2>
-        <p class="section__subtext animate-on-scroll">All engagements are scoped individually. Contact me for a quote.</p>
-
-        <div class="services-grid">
-          <div class="service-card animate-on-scroll" data-service="Crystal Plasticity Simulation" role="button" tabindex="0">
-            <div class="service-card__icon">&#9670;</div>
-            <h3 class="service-card__title">Crystal Plasticity Simulation</h3>
-            <p class="service-card__desc">DAMASK-based meso-scale modeling of polycrystalline deformation, texture evolution, and damage. Physics-based CPFEM model setup, calibration, and result interpretation.</p>
-            <p class="service-card__desc"><a href="services/crystal-plasticity-simulation-consulting.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Metal Forming FEM Consulting" role="button" tabindex="0">
-            <div class="service-card__icon">&#9878;</div>
-            <h3 class="service-card__title">Metal Forming FEM Consulting</h3>
-            <p class="service-card__desc">ABAQUS-based large-scale forming simulations: forging, rolling, extrusion, sheet forming. Thermo-mechanical coupling, die design analysis, process optimization.</p>
-            <p class="service-card__desc"><a href="services/metal-forming-fem-consulting.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Phase Field Simulation" role="button" tabindex="0">
-            <div class="service-card__icon">&#10070;</div>
-            <h3 class="service-card__title">Phase Field Simulation</h3>
-            <p class="service-card__desc">Microstructure evolution modeling for solid-state transformations, recrystallization, spheroidization, and grain growth in steels and alloys.</p>
-            <p class="service-card__desc"><a href="services/phase-field-simulation-consulting.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Mechanical Test Data Analysis" role="button" tabindex="0">
-            <div class="service-card__icon">&#9881;</div>
-            <h3 class="service-card__title">Mechanical Test Data Analysis</h3>
-            <p class="service-card__desc">Expert interpretation of tensile, fatigue, hardness, and impact test results in the context of microstructure and failure physics. No lab work &mdash; pure analytical consulting.</p>
-            <p class="service-card__desc"><a href="services/mechanical-test-data-analysis.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Microstructure Characterization" role="button" tabindex="0">
-            <div class="service-card__icon">&#9673;</div>
-            <h3 class="service-card__title">Microstructure Characterization</h3>
-            <p class="service-card__desc">SEM, EBSD, DIC data interpretation and modeling input preparation. Grain size statistics, phase fraction mapping, local strain analysis.</p>
-            <p class="service-card__desc"><a href="services/ebsd-analysis-consulting.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Process-Structure-Property Analysis" role="button" tabindex="0">
-            <div class="service-card__icon">&#8644;</div>
-            <h3 class="service-card__title">Process&ndash;Structure&ndash;Property Analysis</h3>
-            <p class="service-card__desc">Full chain consulting: how processing parameters shape microstructure and how microstructure controls final performance. For alloy design, heat treatment, and forming process optimization.</p>
-            <p class="service-card__desc"><a href="services/process-structure-property-analysis.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Multiscale Modeling Strategy" role="button" tabindex="0">
-            <div class="service-card__icon">&#9638;</div>
-            <h3 class="service-card__title">Multiscale Modeling Strategy</h3>
-            <p class="service-card__desc">Designing computational campaigns that connect nano, micro, meso, and macro scale models. Method selection, software workflow design, and result validation strategy.</p>
-            <p class="service-card__desc"><a href="services/multiscale-modeling-strategy.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Materials Failure Analysis" role="button" tabindex="0">
-            <div class="service-card__icon">&#9888;</div>
-            <h3 class="service-card__title">Materials Failure Analysis</h3>
-            <p class="service-card__desc">Root cause analysis of fracture, fatigue, and wear failures in metallic components. Suitable for industrial clients and legal/expert witness contexts.</p>
-            <p class="service-card__desc"><a href="services/materials-failure-analysis.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="PhD and Research Mentoring" role="button" tabindex="0">
-            <div class="service-card__icon">&#9733;</div>
-            <h3 class="service-card__title">PhD &amp; Research Mentoring</h3>
-            <p class="service-card__desc">Thesis direction, literature strategy, experimental design, and simulation planning for MSc and PhD researchers. Available for remote engagements globally.</p>
-            <p class="service-card__desc"><a href="services/phd-research-mentoring.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Scientific Writing Coaching" role="button" tabindex="0">
-            <div class="service-card__icon">&#9998;</div>
-            <h3 class="service-card__title">Scientific Writing Coaching</h3>
-            <p class="service-card__desc">Journal paper structure, clarity, and argumentation. Based on 39+ publications and 3 years running a research Writing Club across Germany.</p>
-            <p class="service-card__desc"><a href="services/scientific-writing-coaching.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Grant Proposal Consulting" role="button" tabindex="0">
-            <div class="service-card__icon">&#9830;</div>
-            <h3 class="service-card__title">Grant Proposal Consulting</h3>
-            <p class="service-card__desc">Proposal structure, narrative, reviewer-targeting, and budget planning for DFG, AvH, DAAD, EU Horizon, and national funding schemes.</p>
-            <p class="service-card__desc"><a href="services/grant-proposal-consulting.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-          <div class="service-card animate-on-scroll" data-service="Custom Digital Courses and Workshops" role="button" tabindex="0">
-            <div class="service-card__icon">&#9654;</div>
-            <h3 class="service-card__title">Custom Digital Courses &amp; Workshops</h3>
-            <p class="service-card__desc">Bespoke training for research teams: crystal plasticity for beginners, DAMASK workflows, ABAQUS forming, MTEX texture analysis, AI for research, scientific writing.</p>
-            <p class="service-card__desc"><a href="services/custom-digital-courses-workshops.html" style="color:var(--accent-1);">Full service details &rarr;</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 5 — RESEARCH & PUBLICATIONS
-         ═══════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="publications">
-      <div class="container">
-        <p class="section__label animate-on-scroll">Research Impact</p>
-        <h2 class="section__heading animate-on-scroll">Publications &amp; Academic Metrics</h2>
-
-        <!-- Research metrics -->
-        <div class="metrics metrics--research animate-on-scroll">
-          <div class="metric-card">
-            <span class="metric-card__number" data-target="1230">0</span><span class="metric-card__plus">+</span>
-            <span class="metric-card__label">Citations (Google Scholar)</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-card__number" data-target="22">0</span>
-            <span class="metric-card__label">h-index</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-card__number" data-target="39">0</span><span class="metric-card__plus">+</span>
-            <span class="metric-card__label">Peer-reviewed papers</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-card__number" data-target="1330">0</span><span class="metric-card__plus">+</span>
-            <span class="metric-card__label">ResearchGate Score</span>
-          </div>
-        </div>
-
-        <!-- Top Publications -->
-        <div class="publications-list">
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2026</span>
-            <span class="pub-card__tag">Mechanics of Materials</span>
-            <span class="pub-card__type">Journal Article</span>
-            <p class="pub-card__text">Butt, M.M., <strong>Qayyum, F.</strong>, Laieghi, H., et al. &ldquo;Microstructure-informed modeling of LPBF AlSi10Mg components: understanding the origin of tensile anisotropy through local stress-strain partitioning using comparative crystal plasticity material models.&rdquo; <em>Mechanics of Materials</em>, 222, 105846. <a href="https://doi.org/10.1016/j.mechmat.2026.105846" target="_blank" rel="noopener">DOI</a></p>
-          </div>
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2024</span>
-            <span class="pub-card__tag">Composites Part A</span>
-            <span class="pub-card__type">Journal Article</span>
-            <p class="pub-card__text">Chiu, C., Prabhakar, V., Tseng, S., <strong>Qayyum, F.</strong>, et al. &ldquo;Integrating experimental and numerical analyses for microscale tensile behavior of ceramic particle reinforced TRIP steel composites.&rdquo; <em>Composites Part A: Applied Science and Manufacturing</em>, p.108384.</p>
-          </div>
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2024</span>
-            <span class="pub-card__tag">Journal of Materials Science</span>
-            <span class="pub-card__type">Journal Article</span>
-            <p class="pub-card__text"><strong>Qayyum, F.</strong>, Chiu, C., Tseng, S., et al. &ldquo;Local strain heterogeneity and damage mechanisms in zirconia particle-reinforced TRIP steel MMCs: in situ tensile testing with digital image processing.&rdquo; <em>Journal of Materials Science</em>, pp.1&ndash;19.</p>
-          </div>
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2024</span>
-            <span class="pub-card__tag">International Journal of Plasticity</span>
-            <span class="pub-card__type">Journal Article</span>
-            <p class="pub-card__text">Lypchanskyi, O., Chiu, C.C., <strong>Qayyum, F.</strong>, et al. &ldquo;Temperature dependent deformation behavior and texture evolution in AA6082 aluminum alloy: an integrated experimental and crystal plasticity simulation approach.&rdquo; <em>International Journal of Plasticity</em>, 176, p.103942.</p>
-          </div>
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2024</span>
-            <span class="pub-card__tag">Elsevier</span>
-            <span class="pub-card__type">Book</span>
-            <p class="pub-card__text"><strong>Qayyum, F.</strong>, Umar, M., D&ouml;lling, J., Guk, S. and Prahl, U. <em>Mechanics of New-Generation Metals and Alloys.</em> Elsevier.</p>
-          </div>
-          <div class="pub-card animate-on-scroll">
-            <span class="pub-card__year">2021</span>
-            <span class="pub-card__tag">Crystals (MDPI)</span>
-            <span class="pub-card__type">Journal Article</span>
-            <p class="pub-card__text"><strong>Qayyum, F.</strong>, Guk, S. and Prahl, U. &ldquo;Studying the damage evolution and the micro-mechanical response of X8CrMnNi16-6-6 TRIP steel matrix and 10% zirconia particle composite using a calibrated physics and crystal-plasticity-based numerical simulation model.&rdquo; <em>Crystals</em>, 11(7), p.759.</p>
-          </div>
-        </div>
-
-        <div class="text-center animate-on-scroll">
-          <a href="https://scholar.google.com/citations?hl=en&user=lXrpH_AAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="btn btn--outline">View All Publications on Google Scholar &rarr;</a>
-        </div>
-
-        <!-- Awards slider -->
-        <div class="awards-slider">
-          <div class="awards-slider__track" id="awardsTrack">
-            <div class="award-card">
-              <span class="award-card__icon">&#127942;</span>
-              <strong>Dr. Rolf-Umbach-Prize</strong>
-              <span class="award-card__inst">Best PhD Thesis</span>
-            </div>
-            <div class="award-card">
-              <span class="award-card__icon">&#127942;</span>
-              <strong>Alexander von Humboldt</strong>
-              <span class="award-card__inst">Research Grant 2026/27</span>
-            </div>
-            <div class="award-card">
-              <span class="award-card__icon">&#127942;</span>
-              <strong>JSPS Postdoctoral Fellowship</strong>
-              <span class="award-card__inst">Kyoto University</span>
-            </div>
-            <div class="award-card">
-              <span class="award-card__icon">&#127942;</span>
-              <strong>Joachim Herz Foundation</strong>
-              <span class="award-card__inst">Fellowship 2026&ndash;2028</span>
-            </div>
-            <div class="award-card">
-              <span class="award-card__icon">&#127942;</span>
-              <strong>DAAD Short-Term Grant</strong>
-              <span class="award-card__inst">International Research 2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 6 — TESTIMONIALS
-         ═══════════════════════════════════════════════════ -->
-    <section class="section" id="testimonials">
-      <div class="container">
-        <p class="section__label animate-on-scroll">What They Say</p>
-        <h2 class="section__heading animate-on-scroll">From Students &amp; Collaborators</h2>
-
-        <div class="testimonials-slider animate-on-scroll">
-          <div class="testimonials-slider__track" id="testimonialTrack">
-            <div class="testimonial-card">
-              <span class="testimonial-card__quote" aria-hidden="true">&ldquo;</span>
-              <p class="testimonial-card__text">As a mentor and senior, he has been a constant source of wisdom, encouragement, and genuine kindness. His ability to blend technical excellence with empathy makes him an exceptional role model in both engineering and life. I truly learned the essence of real research methodology from him and applied it to achieve many milestones in my scientific career. Throughout the past six years in Germany, Dr. Qayyum guided me with patience and clarity, inspiring me to think beyond conventional approaches, to think outside the box, and to embrace challenges with curiosity and purpose.</p>
-              <div class="testimonial-card__author">
-                <strong>Muhammad Umar</strong>
-                <span>PhD Researcher, Karlsruhe Institute of Technology (KIT), Germany</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <span class="testimonial-card__quote" aria-hidden="true">&ldquo;</span>
-              <p class="testimonial-card__text">Anyone who has the opportunity to have Dr. Qayyum as a professor, mentor, leader, colleague, or even just a friend is exceptionally fortunate. He embodies each of these roles with integrity, passion, and excellence.</p>
-              <div class="testimonial-card__author">
-                <strong>Teqwa Khelifa</strong>
-                <span>MSc Student, Institute of Metal Forming, TU Bergakademie Freiberg</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <span class="testimonial-card__quote" aria-hidden="true">&ldquo;</span>
-              <p class="testimonial-card__text">As a process engineer at TSMC, I needed a very specific understanding of how microstructural mechanisms connect to real-world material behavior. Dr. Qayyum bridged that gap between academic rigor and engineering practice in a way I hadn&rsquo;t found anywhere else.</p>
-              <div class="testimonial-card__author">
-                <strong>Shao-Shen Tseng</strong>
-                <span>Design Engineer, TSMC, Taiwan</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <span class="testimonial-card__quote" aria-hidden="true">&ldquo;</span>
-              <p class="testimonial-card__text">Dr. Qayyum&rsquo;s scientific writing workshop was a career-defining experience. He turned what felt like an overwhelming task into a structured, learnable skill. My confidence in writing and presenting research results improved dramatically.</p>
-              <div class="testimonial-card__author">
-                <strong>Fariha Mukhtar</strong>
-                <span>Maintenance Reliability Specialist, Tetra Pak, Sweden</span>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <span class="testimonial-card__quote" aria-hidden="true">&ldquo;</span>
-              <p class="testimonial-card__text">Dr. Qayyum is a true brainstorming guru with an incredible depth of experience. During my time as a working student in the German steel industry, his strategic guidance was instrumental. He helped me develop a sophisticated analytical approach and a compelling visualization for a complex project that ultimately received high praise from my management team. Beyond his technical expertise, he has been a pivotal mentor throughout my Master&rsquo;s studies. I look forward to seeking his advice at every new crossroad in my career.</p>
-              <div class="testimonial-card__author">
-                <strong>Abdelrahman Baraka</strong>
-                <span>MSc Steel Technology, TU Bergakademie Freiberg, Germany</span>
-              </div>
-            </div>
-          </div>
-          <div class="testimonials-slider__dots" id="testimonialDots"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 7 — MEDIA & CONTENT
-         ═══════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="media">
-      <div class="container">
-        <p class="section__label animate-on-scroll">Knowledge &amp; Content</p>
-        <h2 class="section__heading animate-on-scroll">Tutorials, Teaching &amp; Vlogs</h2>
-        <p class="section__subtext animate-on-scroll">I share everything I know &mdash; simulation workflows, writing strategies, and life in research.</p>
-
-        <div class="playlist-grid animate-on-scroll">
-          <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wnSb15Evq771OxyFvmV6bEe" target="_blank" rel="noopener" class="playlist-card">
-            <div class="playlist-card__icon">
-              <svg width="36" height="36" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="var(--accent-1)" stroke-width="2"/><polygon points="20,16 34,24 20,32" fill="var(--accent-1)"/></svg>
-            </div>
-            <h3 class="playlist-card__title">Offload Podcasts</h3>
-            <p class="playlist-card__desc">Candid conversations with guests about topics students care about</p>
+        <p class="section__label">Career moves</p>
+        <h2 class="section__heading">Where are you heading?</h2>
+        <div class="move-grid">
+          <a class="move-card" href="services/academic-career-germany.html">
+            <span class="move-card__kicker">To Germany</span>
+            <h3>PhD, postdoc or research job in Germany</h3>
+            <ul>
+              <li>Choosing between a PhD, a postdoc, a TV-L 13 post or industry</li>
+              <li>Finding the right groups and writing to professors</li>
+              <li>German-style applications and your first year there</li>
+            </ul>
+            <span class="move-card__link">How I coach this &rarr;</span>
           </a>
-          <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wlyrQWUBPcq1hYR6eBE1ZcA" target="_blank" rel="noopener" class="playlist-card">
-            <div class="playlist-card__icon">
-              <svg width="36" height="36" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="var(--accent-1)" stroke-width="2"/><polygon points="20,16 34,24 20,32" fill="var(--accent-1)"/></svg>
-            </div>
-            <h3 class="playlist-card__title">Writing Club</h3>
-            <p class="playlist-card__desc">Productive writing tips for scientists and researchers</p>
-          </a>
-          <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wlNpC8KkQx9Y4WnKz3Koxmq" target="_blank" rel="noopener" class="playlist-card">
-            <div class="playlist-card__icon">
-              <svg width="36" height="36" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="var(--accent-1)" stroke-width="2"/><polygon points="20,16 34,24 20,32" fill="var(--accent-1)"/></svg>
-            </div>
-            <h3 class="playlist-card__title">Research &amp; DAMASK</h3>
-            <p class="playlist-card__desc">Case studies, DAMASK crystal plasticity workflows, and simulation examples</p>
-          </a>
-          <a href="https://www.youtube.com/playlist?list=PL8WDWljKD5wnR_2mJ0l3Yjc8l3I4dmUz6" target="_blank" rel="noopener" class="playlist-card">
-            <div class="playlist-card__icon">
-              <svg width="36" height="36" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="var(--accent-1)" stroke-width="2"/><polygon points="20,16 34,24 20,32" fill="var(--accent-1)"/></svg>
-            </div>
-            <h3 class="playlist-card__title">ABAQUS Simulations</h3>
-            <p class="playlist-card__desc">Thermo-mechanical fatigue cracking and advanced FEM tutorials</p>
+          <a class="move-card" href="services/academic-jobs-saudi-arabia-gulf.html">
+            <span class="move-card__kicker">To the Gulf</span>
+            <h3>Academic jobs in Saudi Arabia and the Gulf</h3>
+            <ul>
+              <li>Faculty and postdoc posts in Saudi Arabia, the UAE, Qatar and Kuwait</li>
+              <li>A CV and teaching record that Gulf committees look for</li>
+              <li>Interviews, the questions to ask about an offer, and your first months</li>
+            </ul>
+            <span class="move-card__link">How I coach this &rarr;</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 8 — THOUGHTS / BLOG
-         ═══════════════════════════════════════════════════ -->
-    <section class="section" id="thoughts">
+    <!-- ═══════════════ RESEARCH HELP ═══════════════ -->
+    <section class="section" id="research">
       <div class="container">
-        <p class="section__label animate-on-scroll">Thoughts</p>
-        <h2 class="section__heading animate-on-scroll">Latest from the Blog</h2>
-        <p class="section__subtext animate-on-scroll">Research insights, career reflections, and technical notes.</p>
+        <p class="section__label">Research help</p>
+        <h2 class="section__heading">Stuck with your research?</h2>
+        <div class="problem-grid problem-grid--four">
+          <a class="problem-tile" href="services/phd-research-rescue.html">
+            <strong>My PhD has stalled</strong>
+            <span>No real progress for months and no clear path to submission.</span>
+          </a>
+          <a class="problem-tile" href="services/phd-research-rescue.html#supervisor">
+            <strong>My supervisor and I don&rsquo;t work</strong>
+            <span>Silence, moving goalposts or a dispute over the paper.</span>
+          </a>
+          <a class="problem-tile" href="services/scientific-writing-coaching.html">
+            <strong>My paper keeps getting rejected</strong>
+            <span>Desk rejections or a major revision you don&rsquo;t know how to answer.</span>
+          </a>
+          <a class="problem-tile" href="services/crystal-plasticity-simulation-consulting.html">
+            <strong>My simulation won&rsquo;t behave</strong>
+            <span>A crystal plasticity or forming model that won&rsquo;t converge or calibrate.</span>
+          </a>
+        </div>
+        <p class="more-line">Labs and companies: <a href="services/#simulation">simulation &amp; materials consulting</a>. Research groups: <a href="services/custom-digital-courses-workshops.html">workshops</a>. Or see <a href="services/">all services</a>.</p>
+      </div>
+    </section>
 
+    <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <p class="section__label">How it works</p>
+        <h2 class="section__heading">A written plan in about a week</h2>
+        <div class="steps-row">
+          <div class="step-card">
+            <h3>Tell me what&rsquo;s going on</h3>
+            <p>A few lines on your situation and deadline. I reply within two working days.</p>
+          </div>
+          <div class="step-card">
+            <h3>Roadmap session</h3>
+            <p>A 60-minute video call. I read your material beforehand.</p>
+          </div>
+          <div class="step-card">
+            <h3>Written plan</h3>
+            <p>Within five working days: what to do, in which order, by when.</p>
+          </div>
+          <div class="step-card">
+            <h3>Your choice</h3>
+            <p>Carry it out alone, or continue with me.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ WHY ME + TESTIMONIALS ═══════════════ -->
+    <section class="section" id="why">
+      <div class="container">
+        <p class="section__label">Why work with me</p>
+        <h2 class="section__heading">A working scientist, not a generic coach</h2>
+        <div class="proof-row">
+          <div><strong>9 yrs</strong><span>in German research, now faculty in Saudi Arabia</span></div>
+          <div><strong>150+</strong><span>journal manuscripts reviewed</span></div>
+          <div><strong>20+</strong><span>theses supervised, students from 15+ countries</span></div>
+          <div><strong>1,371</strong><span>citations (Google Scholar, Sept 2026)</span></div>
+        </div>
+        <div class="testimonial-grid" id="stories">
+          <figure class="t-card">
+            <blockquote>&ldquo;As a process engineer at TSMC, I needed a very specific understanding of how microstructural mechanisms connect to real-world material behavior. Dr. Qayyum bridged that gap between academic rigor and engineering practice in a way I hadn&rsquo;t found anywhere else.&rdquo;</blockquote>
+            <figcaption><cite><strong>Shao-Shen Tseng</strong>, Design Engineer, TSMC, Taiwan</cite></figcaption>
+          </figure>
+          <figure class="t-card">
+            <blockquote>&ldquo;Dr. Qayyum&rsquo;s scientific writing workshop was a career-defining experience. He turned what felt like an overwhelming task into a structured, learnable skill. My confidence in writing and presenting research results improved dramatically.&rdquo;</blockquote>
+            <figcaption><cite><strong>Fariha Mukhtar</strong>, Maintenance Reliability Specialist, Tetra Pak, Sweden</cite></figcaption>
+          </figure>
+          <figure class="t-card">
+            <blockquote>&ldquo;Anyone who has the opportunity to have Dr. Qayyum as a professor, mentor, leader, colleague, or even just a friend is exceptionally fortunate. He embodies each of these roles with integrity, passion, and excellence.&rdquo;</blockquote>
+            <figcaption><cite><strong>Teqwa Khelifa</strong>, MSc Student, Institute of Metal Forming, TU Bergakademie Freiberg</cite></figcaption>
+          </figure>
+        </div>
+        <p class="more-line"><a href="/about/">More about me, my research and case stories &rarr;</a></p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FROM THE BLOG ═══════════════ -->
+    <section class="section section--alt" id="thoughts">
+      <div class="container">
+        <p class="section__label">Start here</p>
+        <h2 class="section__heading">Free guides from the blog</h2>
         <div class="blog-grid">
-          <a href="blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html" class="blog-card animate-on-scroll">
-            <span class="blog-card__date">October 1, 2026</span>
-            <span class="blog-card__category">Research Tools &amp; AI</span>
-            <h3 class="blog-card__title">How to Use AI to Write a Paper (Without the Fake Citations)</h3>
-            <p class="blog-card__excerpt">Every tool promises to write the paper for you. The bottleneck was never the writing. Here is the v0 workflow I use to get a paper to first draft, and the checks that keep every citation real.</p>
+          <a href="blog/posts/2026-05-landing-academic-job-saudi-arabia.html" class="blog-card">
+            <span class="blog-card__date">May 14, 2026</span>
+            <span class="blog-card__category">Academic Life</span>
+            <h3 class="blog-card__title">How to Land an Academic Job in Saudi Arabia &mdash; A Personal Playbook</h3>
+            <p class="blog-card__excerpt">Two to three years of deliberate groundwork: ground intelligence, profile alignment, LinkedIn networking, and understanding the informal job market that most applicants never see.</p>
             <span class="blog-card__link">Read more &rarr;</span>
           </a>
 
-          <a href="blog/posts/2026-09-codex-for-researchers-windows-guide.html" class="blog-card animate-on-scroll">
-            <span class="blog-card__date">September 19, 2026</span>
-            <span class="blog-card__category">Research Tools &amp; AI</span>
-            <h3 class="blog-card__title">Codex for Researchers: From Data to Figures to a Written Report in Seconds</h3>
-            <p class="blog-card__excerpt">Install OpenAI Codex CLI on Windows, then run one real workflow end to end: pull World Bank data, build figures, and compile a LaTeX report.</p>
-            <span class="blog-card__link">Read more &rarr;</span>
-          </a>
-
-          <a href="blog/posts/2026-08-damask-crystal-plasticity-documentation.html" class="blog-card animate-on-scroll">
-            <span class="blog-card__date">August 24, 2026</span>
-            <span class="blog-card__category">Crystal Plasticity</span>
-            <h3 class="blog-card__title">DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps</h3>
-            <p class="blog-card__excerpt">What the official DAMASK docs explain well, what beginners still miss, and how EBSD-based crystal plasticity workflows become publishable research rather than just runnable files.</p>
-            <span class="blog-card__link">Read more &rarr;</span>
-          </a>
-
-          <a href="blog/posts/2026-08-microsim-phase-field-solidification-open-source-workflow.html" class="blog-card animate-on-scroll">
-            <span class="blog-card__date">August 24, 2026</span>
-            <span class="blog-card__category">Phase Field Simulation</span>
-            <h3 class="blog-card__title">MicroSim Phase Field Solidification: What We Added to an Open Source Workflow</h3>
-            <p class="blog-card__excerpt">What MicroSim gave us, what was missing for publishable Al-Si phase-field work, and what our maintained fork adds around KKS OpenCL, CALPHAD, restarts, moving windows, and validation.</p>
-            <span class="blog-card__link">Read more &rarr;</span>
-          </a>
-
-          <a href="blog/posts/2026-07-dr-ing-vs-phd-german-doctorate-title.html" class="blog-card animate-on-scroll">
-            <span class="blog-card__date">July 20, 2026</span>
-            <span class="blog-card__category">Career Advice</span>
-            <h3 class="blog-card__title">Dr.-Ing. vs PhD: Is the German Engineering Doctorate Equivalent?</h3>
-            <p class="blog-card__excerpt">What Dr.-Ing. means, whether it is equivalent to a PhD, and how to write the German engineering doctorate on an international CV.</p>
-            <span class="blog-card__link">Read more &rarr;</span>
-          </a>
-
-          <a href="blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html" class="blog-card animate-on-scroll">
+          <a href="blog/posts/2026-06-how-to-build-postdoc-network-germany-phd.html" class="blog-card">
             <span class="blog-card__date">June 7, 2026</span>
             <span class="blog-card__category">Career Advice</span>
             <h3 class="blog-card__title">How to Build a Postdoc Network in Germany Before You Need One</h3>
@@ -849,289 +424,149 @@
             <span class="blog-card__link">Read more &rarr;</span>
           </a>
 
+          <a href="blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html" class="blog-card">
+            <span class="blog-card__date">October 1, 2026</span>
+            <span class="blog-card__category">Research Tools &amp; AI</span>
+            <h3 class="blog-card__title">How to Use AI to Write a Paper (Without the Fake Citations)</h3>
+            <p class="blog-card__excerpt">Every tool promises to write the paper for you. The bottleneck was never the writing. Here is the v0 workflow I use to get a paper to first draft, and the checks that keep every citation real.</p>
+            <span class="blog-card__link">Read more &rarr;</span>
+          </a>
         </div>
-
-        <div class="text-center animate-on-scroll">
-          <a href="blog/" class="btn btn--outline">Read All Thoughts &rarr;</a>
-        </div>
+        <p class="more-line"><a href="blog/">All posts &rarr;</a></p>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 9 — FAQ
-         ═══════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="faq">
+    <!-- ═══════════════ FAQ ═══════════════ -->
+    <section class="section" id="faq">
       <div class="container container--narrow">
-        <p class="section__label animate-on-scroll">FAQ</p>
-        <h2 class="section__heading animate-on-scroll">Common Questions</h2>
-        <p class="section__subtext animate-on-scroll">Structured for search engines and AI answer systems. More questions added regularly.</p>
-
-        <div class="faq-list faq-list--collapsed" id="faqList">
-          <div class="faq-item animate-on-scroll">
+        <p class="section__label">FAQ</p>
+        <h2 class="section__heading">Before you write</h2>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>What is crystal plasticity simulation and when should I hire a consultant?</span>
+              <span>Can you guarantee I get the job, the admission or the acceptance?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>Crystal plasticity simulation models how individual grains in a polycrystalline metal deform, rotate, and accumulate damage under mechanical loading. It is used when standard FEM plasticity models cannot capture microstructure-dependent behavior such as texture evolution, slip system activity, or localized strain hotspots. You should hire a consultant when your research requires microstructurally-informed predictions and you need expertise in tools like DAMASK or ABAQUS UMAT.</p>
+              <p>No, and nobody honest can. Employers, committees and editors make those decisions. What I guarantee is the work we agree on: a careful diagnosis, a written plan or review, and straight answers about what is weak and how to fix it.</p>
             </div>
           </div>
-          <div class="faq-item animate-on-scroll">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>What simulation software does Dr. Faisal Qayyum use?</span>
+              <span>Do you place candidates in jobs in Germany or the Gulf?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>Dr. Qayyum works primarily with DAMASK for crystal plasticity finite element simulations, ABAQUS for large-scale metal forming, thermo-mechanical fatigue, and crack propagation analysis, and MatCalc for thermodynamic phase transformation calculations. For data processing and visualization he uses MTEX (MATLAB), Python, and ParaView.</p>
+              <p>No. I coach you through the process: where to apply, your documents, interviews and the offer. I am not a recruiter, I take no fee tied to being hired, and questions about your own visa case go to a qualified lawyer.</p>
             </div>
           </div>
-          <div class="faq-item animate-on-scroll">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>What is the difference between mechanical test analysis consulting and running the tests yourself?</span>
+              <span>My problem is with my supervisor. Is that confidential?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>Mechanical test analysis consulting focuses on the interpretation, validation, and modeling of existing experimental data &mdash; not the physical execution of testing. Dr. Qayyum helps clients understand tensile, fatigue, hardness, and in-situ test results in the context of microstructure, failure mechanisms, and simulation calibration, without requiring a laboratory setup on his end.</p>
+              <p>Yes. Supervisor conflicts, authorship disputes and unpublished data stay between us. I never contact your supervisor or institution unless you ask me to.</p>
             </div>
           </div>
-          <div class="faq-item animate-on-scroll">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>How does phase field simulation work for microstructure evolution?</span>
+              <span>Will you write my thesis or paper for me?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>Phase field simulation uses a continuous order parameter field to describe phase boundaries without tracking interfaces explicitly. It is used to model solidification, recrystallization, spheroidization, and solid-state phase transformations in steels and alloys. Dr. Qayyum has applied phase field methods within the DFG-funded IMPACT project for Cr and Mo alloyed carbon steels.</p>
+              <p>No. You stay the author. I review, explain, plan and coach, and you make the changes, which keeps the work yours and within your university&rsquo;s and journal&rsquo;s rules.</p>
             </div>
           </div>
-          <div class="faq-item animate-on-scroll">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>What is a process-structure-property relationship in materials science?</span>
+              <span>What happens in a Roadmap session?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>The process-structure-property chain describes how manufacturing processes (e.g., rolling, heat treatment) determine microstructure (grain size, texture, phase fractions), which in turn controls mechanical and functional properties (strength, ductility, fatigue life). Consulting in this area involves designing or interpreting experiments and simulations that link all three tiers.</p>
+              <p>You fill in a short form, we have a 60-minute video call, and within five working days you receive a written plan for your case: what to do, in which order, and a realistic timeline. Many people carry it out on their own.</p>
             </div>
           </div>
-          <div class="faq-item animate-on-scroll">
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false">
-              <span>How can I improve my scientific writing as a PhD student in engineering?</span>
+              <span>How quickly do you reply?</span>
               <span class="faq-item__icon">+</span>
             </button>
             <div class="faq-item__answer">
-              <p>Dr. Qayyum offers scientific writing coaching drawing from his experience leading a Writing Club for 3+ years, publishing 39+ peer-reviewed works, and designing a digital course called &ldquo;How to Write a Lot.&rdquo; The approach focuses on consistent writing habits, structured argumentation, and journal-specific language clarity.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>What does multiscale materials modeling involve?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>Multiscale modeling connects physical phenomena across different length scales: from atomistic and crystal lattice behavior (nano/micro scale) through grain-level crystal plasticity (mesoscale) to continuum forming simulations (macro scale). It requires integrating computational methods, experimental data, and physical understanding across all scales.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>How do I find a qualified expert witness for materials failure analysis?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>A qualified materials failure analysis expert witness should have a PhD in materials or mechanical engineering, deep knowledge of fracture mechanics, microstructure characterization, and mechanical testing, plus a verifiable publication record. Dr. Qayyum combines over a decade of experimental and numerical failure analysis research with academic credentials from TU Bergakademie Freiberg.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>What is TRIP steel and why is it relevant for composite modeling?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>TRIP (Transformation-Induced Plasticity) steel undergoes a martensitic phase transformation during deformation, providing exceptional strength-ductility combinations. When used as a matrix in metal matrix composites (MMCs) with ceramic particles such as zirconia, the interaction between phase transformation, particle-matrix interface damage, and crystal plasticity creates complex multi-mechanism behavior that requires specialized simulation models.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>How long does a materials simulation consulting project typically take?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>Project duration depends on scope. A focused literature review or experimental data analysis session can be completed in 1&ndash;2 weeks. A full crystal plasticity model calibration and simulation campaign typically takes 4&ndash;12 weeks. A complete process-structure-property analysis with publication-ready results may span several months. All scopes are discussed and agreed upon before project initiation.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>What makes a strong DFG or Alexander von Humboldt grant proposal?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>Strong proposals clearly define an unsolved scientific problem, demonstrate the applicant&rsquo;s unique qualification to address it, and present a realistic, milestone-based work plan. Dr. Qayyum has been awarded DFG, AvH, DAAD, Joachim Herz, JSPS, and SAB grants and offers consulting on proposal structure, narrative, budget planning, and reviewer-targeted language.</p>
-            </div>
-          </div>
-          <div class="faq-item animate-on-scroll">
-            <button class="faq-item__question" aria-expanded="false">
-              <span>How can I analyze EBSD data and interpret crystallographic texture?</span>
-              <span class="faq-item__icon">+</span>
-            </button>
-            <div class="faq-item__answer">
-              <p>EBSD (Electron Backscatter Diffraction) data analysis for crystallographic texture involves indexing diffraction patterns, constructing pole figures, inverse pole figures, and ODFs (orientation distribution functions), and correlating grain-level orientation data with mechanical response. Dr. Qayyum uses MTEX in MATLAB for this analysis and offers consulting on data interpretation, visualization, and simulation input preparation.</p>
+              <p>Within two working days. Send a few lines about your situation and your deadline, or book a free 15-minute call if you would rather talk first.</p>
             </div>
           </div>
         </div>
-        <button class="btn btn--outline faq-show-more" id="faqShowMore" type="button">Show All Questions</button>
-        <p class="faq-note animate-on-scroll">Have a question not listed here? <a href="#contact">Send it to me &rarr;</a></p>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════
-         SECTION 10 — CONTACT
-         ═══════════════════════════════════════════════════ -->
-    <section class="section" id="contact">
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="section section--alt" id="contact">
       <div class="container">
-        <p class="section__label animate-on-scroll">Let&rsquo;s Work Together</p>
-        <h2 class="section__heading section__heading--large animate-on-scroll">Get In Touch.</h2>
-        <p class="section__subtext animate-on-scroll">Whether you have a simulation challenge, need a mentor, want to commission a course, or need an expert opinion &mdash; I respond to every serious inquiry.</p>
-
-        <div class="contact-grid">
-          <div class="contact-action animate-on-scroll">
-            <button class="contact-link contact-link--cta" id="emailBtn" type="button">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
-              <div>
-                <strong>Send Me an Email</strong>
-                <span>Usually reply same day</span>
-              </div>
-            </button>
-            <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="contact-link contact-link--cta" id="discoveryBtn">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <div>
-                <strong>15-Minute Call</strong>
-                <span>No commitment</span>
-              </div>
-            </a>
-            <a href="https://wa.me/4917677016391?text=Hello%20Dr.%20Qayyum%2C%20I%20am%20interested%20in%20your%20consulting%20services." target="_blank" rel="noopener" class="contact-link contact-link--cta contact-link--whatsapp">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              <div>
-                <strong>WhatsApp Message</strong>
-                <span>Quick questions</span>
-              </div>
-            </a>
+        <div class="contact-split">
+          <div class="contact-intro">
+            <p class="section__label">Get help</p>
+            <h2>Tell me what&rsquo;s going on.</h2>
+            <p>A few lines are enough. I read every message myself and reply within two working days.</p>
+            <ol class="contact-next">
+              <li>I reply with my honest read and whether I can help.</li>
+              <li>If it fits, we book a Roadmap session.</li>
+              <li>You get a written plan within five working days.</li>
+            </ol>
+            <p class="contact-alt">Rather talk first? <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener">Book a free 15-minute call</a>. Prefer chat? <a href="https://wa.me/4917677016391?text=Hello%20Dr.%20Qayyum%2C%20I%20am%20interested%20in%20your%20consulting%20services." target="_blank" rel="noopener">WhatsApp</a> or <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener">LinkedIn</a>.</p>
           </div>
 
-          <div class="contact-links animate-on-scroll">
-            <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <div>
-                <strong>LinkedIn</strong>
-                <span>Professional network</span>
-              </div>
-            </a>
-            <a href="https://www.researchgate.net/profile/Faisal-Qayyum-2" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-2.403 0-4.353 1.95-4.353 4.353 0 2.404 1.95 4.354 4.353 4.354C21.99 8.707 23.94 6.757 23.94 4.353 23.94 1.95 21.99 0 19.586 0zM.06 6.6v10.8h3.6c3.6 0 5.4-1.8 5.4-5.4S7.26 6.6 3.66 6.6H.06zm3.6 2.4c1.8 0 1.8 1.2 1.8 3s0 3-1.8 3h-.6V9h.6zm12.126 1.2c-2.7 0-4.5 1.8-4.5 4.5s1.8 4.5 4.5 4.5c1.8 0 3.15-.9 3.825-2.25h-2.7c-.225.45-.675.675-1.125.675-.9 0-1.575-.675-1.575-1.575h5.625c.075-.45.075-.9.075-1.35 0-2.7-1.8-4.5-4.125-4.5zm-1.575 3.6c.15-.9.675-1.575 1.575-1.575s1.425.675 1.575 1.575h-3.15z"/></svg>
-              <div>
-                <strong>ResearchGate</strong>
-                <span>Academic network</span>
-              </div>
-            </a>
-            <a href="https://scholar.google.com/citations?user=lXrpH_AAAAAJ" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
-              <div>
-                <strong>Google Scholar</strong>
-                <span>Publication record</span>
-              </div>
-            </a>
-            <a href="https://orcid.org/0000-0001-6393-2858" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378a.869.869 0 110 1.738.869.869 0 010-1.738zm-.78 3.451h1.56v11.561H6.59V7.829zm3.614 0h4.21c3.652 0 5.396 2.602 5.396 5.781 0 3.178-1.745 5.78-5.396 5.78h-4.21V7.83zm1.56 1.387v8.787h2.532c2.936 0 3.954-2.182 3.954-4.393 0-2.212-1.018-4.394-3.954-4.394h-2.532z"/></svg>
-              <div>
-                <strong>ORCID</strong>
-                <span>Researcher ID</span>
-              </div>
-            </a>
-            <a href="https://github.com/fysalqayyum/" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              <div>
-                <strong>GitHub</strong>
-                <span>Code &amp; projects</span>
-              </div>
-            </a>
-            <a href="https://www.youtube.com/@FaisalQayyum" target="_blank" rel="noopener" class="contact-link">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              <div>
-                <strong>YouTube</strong>
-                <span>Tutorials &amp; vlogs</span>
-              </div>
-            </a>
-          </div>
+          <form class="help-form" id="helpForm" action="https://formspree.io/f/xppwvoey" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New help request from faisalqayyum.com">
+            <div class="help-form__trap" aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+            <div class="help-form__row">
+              <label for="hf-name">Your name</label>
+              <input id="hf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="help-form__row">
+              <label for="hf-email">Email</label>
+              <input id="hf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="help-form__row">
+              <label for="hf-area">What do you need help with?</label>
+              <select id="hf-area" name="area" required>
+                <option value="" selected disabled>Choose one</option>
+                <option value="germany">Moving to Germany (PhD, postdoc or job)</option>
+                <option value="gulf">An academic job in Saudi Arabia or the Gulf</option>
+                <option value="phd">A stalled PhD or a supervisor problem</option>
+                <option value="paper">A paper, a rejection or a grant proposal</option>
+                <option value="simulation">A simulation or materials project</option>
+                <option value="workshop">A workshop for my group</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="help-form__row">
+              <label for="hf-situation">Your situation in a few lines</label>
+              <textarea id="hf-situation" name="situation" rows="5" required></textarea>
+            </div>
+            <div class="help-form__row">
+              <label for="hf-deadline">Your deadline or timeline <span>(optional)</span></label>
+              <input id="hf-deadline" name="deadline" type="text" placeholder="e.g. submission in March, contract ends in June">
+            </div>
+            <div class="help-form__row">
+              <label for="hf-tried">What have you already tried? <span>(optional)</span></label>
+              <textarea id="hf-tried" name="tried" rows="3"></textarea>
+            </div>
+            <button class="btn btn--primary help-form__submit" type="submit">Send</button>
+            <p class="help-form__note">Your message goes to me through Formspree and is used only to reply. See the <a href="/privacy.html">privacy policy</a>.</p>
+            <p class="help-form__status" id="helpFormStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
-
       </div>
     </section>
   </main>
-
-  <!-- Contact reason picker modal -->
-  <div class="contact-modal-overlay" id="contactModalOverlay" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-    <div class="contact-modal">
-      <div class="contact-modal__title" id="contactModalTitle">What's this about?</div>
-      <div class="contact-modal__sub">Choose the option that best describes your message.</div>
-      <div class="contact-modal__options">
-        <button class="contact-modal__option" data-href="https://cal.eu/fysalqayyum/15min">
-          <span class="contact-modal__option-icon">📅</span>
-          <div class="contact-modal__option-text">
-            <strong>Book a 15-minute call</strong>
-            <span>Pick a slot directly &mdash; no email needed</span>
-          </div>
-        </button>
-        <button class="contact-modal__option" data-subject="Consulting inquiry" data-body="Hello Dr. Qayyum,%0A%0AI would like to discuss a consulting engagement.%0A%0A[Please describe your project here]%0A%0ABest regards,%0A[Your Name]">
-          <span class="contact-modal__option-icon">🔬</span>
-          <div class="contact-modal__option-text">
-            <strong>Consulting or research project</strong>
-            <span>Simulation, EBSD analysis, materials modeling</span>
-          </div>
-        </button>
-        <button class="contact-modal__option" data-subject="Mentoring / PhD guidance" data-body="Hello Dr. Qayyum,%0A%0AI am looking for mentoring support.%0A%0A[Please describe your situation]%0A%0ABest regards,%0A[Your Name]">
-          <span class="contact-modal__option-icon">🎓</span>
-          <div class="contact-modal__option-text">
-            <strong>Mentoring or PhD guidance</strong>
-            <span>Thesis support, scientific writing, career advice</span>
-          </div>
-        </button>
-        <button class="contact-modal__option" data-subject="Collaboration or joint research" data-body="Hello Dr. Qayyum,%0A%0AI would like to explore a research collaboration.%0A%0A[Please describe your proposal]%0A%0ABest regards,%0A[Your Name]">
-          <span class="contact-modal__option-icon">🤝</span>
-          <div class="contact-modal__option-text">
-            <strong>Collaboration or joint research</strong>
-            <span>Co-authorship, grants, institutional partnerships</span>
-          </div>
-        </button>
-        <button class="contact-modal__option" data-href="/write-for-us.html">
-          <span class="contact-modal__option-icon">✍️</span>
-          <div class="contact-modal__option-text">
-            <strong>Publish a guest post</strong>
-            <span>See rates and guidelines &rarr;</span>
-          </div>
-        </button>
-        <button class="contact-modal__option" data-subject="Press / media inquiry" data-body="Hello Dr. Qayyum,%0A%0AI am reaching out regarding a press or media opportunity.%0A%0A[Please describe]%0A%0ABest regards,%0A[Your Name]">
-          <span class="contact-modal__option-icon">📰</span>
-          <div class="contact-modal__option-text">
-            <strong>Press or media</strong>
-            <span>Interview, quote, expert comment</span>
-          </div>
-        </button>
-      </div>
-      <div class="contact-modal__close" id="contactModalClose">Cancel</div>
-    </div>
-  </div>
 
   <!-- ═══════════════════════════════════════════════════
        FOOTER
        ═══════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__logo">
-        <svg viewBox="0 0 40 40" width="32" height="32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
-          <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
-          <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
-          <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
-        </svg>
-      </div>
-      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
+      <p class="footer__name">Faisal Qayyum Research Consulting</p>
       <div class="footer__socials">
         <a href="https://www.linkedin.com/in/fysalqayyum/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -1152,16 +587,11 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </a>
       </div>
-      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
-      <p class="footer__meta">faisalqayyum.com &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a> &middot; <a href="/write-for-us.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Write for Us</a></p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> Dr.-Ing. Faisal Qayyum. All rights reserved.</p>
+      <p class="footer__meta"><a href="/services/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Services</a> &middot; <a href="/about/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">About</a> &middot; <a href="/blog/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Blog</a> &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
     </div>
   </footer>
 
-  <div class="sticky-cta" id="stickyCta">
-    <span class="sticky-cta__label">Available for consulting &amp; mentoring</span>
-    <a href="#contact" class="sticky-cta__btn">Work With Me &rarr;</a>
-  </div>
-
-  <script defer src="assets/js/main.js?v=20260919"></script>
+  <script defer src="assets/js/main.js?v=20261003"></script>
 </body>
 </html>

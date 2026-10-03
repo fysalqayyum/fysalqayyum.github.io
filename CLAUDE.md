@@ -41,9 +41,9 @@ contains traffic figures and positioning notes that must not be public.
    TOC, post-meta with reading time, component CSS, subscribe box.
    (`post-template.html` was deleted 2026-07-02 — it had drifted; do not recreate it.)
 2. Add a `.blog-card` to **`blog/index.html`** (top of grid, newest first).
-3. Add a `.blog-card.animate-on-scroll` to **`index.html` `#thoughts`** grid AND
-   remove the 7th-newest card — the homepage holds a hard cap of **6 posts**
-   (2 rows of 3). The dropped post stays reachable via "Read All Thoughts".
+3. The homepage `#thoughts` grid is a **curated "Start here" set of 3 cards**, career-first
+   (since the 2026-10 redesign), not the newest posts. Only swap a card in when a new post
+   is a better first read for the career or research audience.
 4. `sitemap.xml`, `feed.xml`, and `llms.txt` are **generated — do not hand-edit**.
    `push-to-live.command` runs `python3 tools/build-artifacts.py` automatically;
    it reads each post's BlogPosting JSON-LD (headline/dates/description/url),
@@ -64,16 +64,36 @@ risks a manual action against the whole domain, not just that page.
 
 ## Site architecture notes
 
+- **Positioning (redesign 2026-10):** the site is "Faisal Qayyum Research Consulting".
+  Light theme, petrol `--primary #0B4F6C` + burnt orange `--cta #C2410C` (buttons only),
+  Source Serif 4 (headings) + Source Sans 3 (body). Old token names (`--accent-1`,
+  `--bg-card`, ...) are aliases kept so inline post styles still resolve. The redesign
+  layer and the shared service-page template CSS live at the **end** of `style.css`.
+- **Pages:** homepage = consultancy landing, career-first (hero, career moves: Germany/Gulf,
+  research help tiles, how it works, why-me + 3 testimonials, 3 curated posts, FAQ ×6, contact).
+  Case stories live on `/about/#stories`. Academic profile, publications, awards,
+  media and collaborations live on `/about/`. Services hub `/services/` groups all 15
+  service pages into Finish & Publish, Careers & Mobility, Simulation & Materials,
+  Training. No prices on the site.
+- **One primary action:** any element with `data-help="<area>"` opens the contact picker on
+  the homepage, or a pre-filled help email elsewhere (main.js section 9a; prompts =
+  situation, deadline, what was tried). Every post ends in one `.help-box` matched to its
+  area and has a `.post-byline` linking to `/about/` and the matching service page.
+  main.js adds the mobile sticky help bar on posts and service pages only (not the
+  homepage).
+- **Shared chrome:** nav, mobile menu and footer markup are identical on every sub-page;
+  copy them from any service page when creating a page.
 - Homepage is one long page with section anchors; blog posts are standalone files
   under `blog/posts/`. The homepage `#thoughts` grid and `blog/index.html` are
   **two separate grids with no shared data source** — posts must be added to both.
 - Blog post navs intentionally hardcode `class="nav scrolled"` and have **no
-  `id="nav"`** — wiring them to main.js's scroll handler would strip the dark
-  bar styling at the top of the page. Leave as is.
-- The contact modal (`#contactModalOverlay`) exists only on the homepage.
-  Service cards open it with the chosen service appended to the mail subject
-  (`pendingService` in main.js). Do not revert service cards to direct mailto —
-  that caused ~10% dead-click sessions in Clarity.
+  `id="nav"`**. Leave as is.
+- Contact = the Formspree help form on the homepage (`#helpForm`, main.js 9a/9c). `data-help`
+  triggers preselect the topic and scroll to it; on other pages they go to
+  `/?area=<key>#contact`. Do not go back to bare mailto links: that caused ~10% dead-click
+  sessions in Clarity. Email (`buildMailto`) stays only as a fallback.
+- Social image for every page: `assets/img/og-card-2026.jpg` (topic pages may use their own).
+- "Write for Us" is deliberately not linked from the footer (positioning); the page stays live.
 - Subscribe boxes on posts/blog index go through `buildMailto` in main.js
   (section 17). Upgrade path: swap to a Formspree/Buttondown form when the
   owner provides an account ID.

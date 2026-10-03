@@ -25,8 +25,9 @@
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=20260919">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20261003">
 
   <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
   <script defer src="../../assets/js/analytics.js?v=20260720"></script>
@@ -214,21 +215,22 @@
 
   <nav class="nav scrolled">
     <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="Home">
+      <a href="/" class="nav__logo" aria-label="Faisal Qayyum Research Consulting, home">
         <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
           <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
           <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
           <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
         </svg>
-        <span class="nav__name">Dr. Faisal Qayyum</span>
+        <span class="nav__name">Faisal Qayyum<small>Research Consulting</small></span>
       </a>
       <ul class="nav__links">
-        <li><a href="/#about" class="nav__link">About</a></li>
-        <li><a href="/#services" class="nav__link">Services</a></li>
-        <li><a href="/#publications" class="nav__link">Research</a></li>
-        <li><a href="/#thoughts" class="nav__link active">Thoughts</a></li>
-        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+        <li><a href="/#careers" class="nav__link">Career moves</a></li>
+        <li><a href="/#research" class="nav__link">Research help</a></li>
+        <li><a href="/services/" class="nav__link">All services</a></li>
+        <li><a href="/about/" class="nav__link">About</a></li>
+        <li><a href="/blog/" class="nav__link">Blog</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Get help</a></li>
       </ul>
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -239,11 +241,12 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu__links">
       <li><a href="/">Home</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#publications">Research</a></li>
+      <li><a href="/#careers">Career moves</a></li>
+      <li><a href="/#research">Research help</a></li>
+      <li><a href="/services/">All services</a></li>
+      <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/#contact">Get help</a></li>
     </ul>
   </div>
 
@@ -252,6 +255,7 @@
       <a href="/blog/" class="back-link">&larr; Back to all posts</a>
       <h1>DAMASK Crystal Plasticity Documentation: Official Docs, Real Workflows, and Beginner Traps</h1>
       <p class="post-meta">August 24, 2026 &middot; Crystal Plasticity &amp; DAMASK &middot; 9 min read</p>
+      <p class="post-byline">By <a href="/about/">Dr.-Ing. Faisal Qayyum</a>. Facing this yourself? <a href="/services/crystal-plasticity-simulation-consulting.html">See how I can help</a>.</p>
 
       <p>When people search for DAMASK crystal plasticity documentation, they are usually not asking only for a URL. They are asking how to get from a clean example in the docs to a model that answers a real materials question: a measured EBSD map, an anisotropic stress-strain response, a suspicious local strain field, or a reviewer asking why the chosen constitutive law is defensible.</p>
 
@@ -339,7 +343,7 @@
       <p>That distinction matters. If the EBSD-to-RVE step is weak, every later stress-field map inherits that weakness. If it is documented well, the crystal plasticity result becomes a bridge between measured microstructure and mechanical response.</p>
 
       <figure class="figure-block">
-        <img src="../../assets/img/ebsd-derived-rve-construction.jpg" alt="EBSD-derived RVE construction for crystal plasticity simulation" loading="lazy" width="1370" height="1400">
+        <img src="../../assets/img/ebsd-derived-rve-construction.webp" alt="EBSD-derived RVE construction for crystal plasticity simulation" loading="lazy" width="1370" height="1400">
         <figcaption>EBSD-derived model construction: the microstructure route must be explained before local stress, strain, or damage fields can be interpreted.</figcaption>
       </figure>
 
@@ -417,11 +421,11 @@
 
       <p>For a deeper publication-focused checklist, read my guide on <a href="2026-03-damask-international-journal-plasticity.html">how to publish DAMASK crystal plasticity research in the International Journal of Plasticity</a>. For the process side, the companion post on <a href="2026-03-sheet-metal-forming-simulation.html">sheet metal forming simulation</a> explains where crystal plasticity belongs inside a multiscale forming workflow.</p>
 
-      <div class="cta-box">
-        <h3>Need a DAMASK Workflow Reviewed?</h3>
-        <p>If your model runs but the calibration, EBSD conversion, or paper framing still feels fragile, I can review the workflow and identify the gates that need to pass before you build claims on it.</p>
-        <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
-        <a href="/services/crystal-plasticity-simulation-consulting.html" class="btn btn--outline">See Crystal Plasticity Consulting</a>
+      <div class="help-box">
+        <h3>Is your crystal plasticity model fighting you?</h3>
+        <p>I help labs and companies set up, calibrate and debug DAMASK and crystal plasticity models, and turn the results into something you can defend.</p>
+        <a href="/#contact" class="btn btn--primary" data-help="Simulation: crystal plasticity">Tell me what&rsquo;s going on</a>
+        <a href="/services/crystal-plasticity-simulation-consulting.html" class="btn btn--outline">How I can help</a>
       </div>
 
       <div class="subscribe-box">
@@ -436,12 +440,12 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
-      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
-      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+      <p class="footer__name">Faisal Qayyum Research Consulting</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> Dr.-Ing. Faisal Qayyum. All rights reserved.</p>
+      <p class="footer__meta"><a href="/services/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Services</a> &middot; <a href="/about/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">About</a> &middot; <a href="/blog/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Blog</a> &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
     </div>
   </footer>
 
-  <script defer src="../../assets/js/main.js?v=20260919"></script>
+  <script defer src="../../assets/js/main.js?v=20261003"></script>
 </body>
 </html>

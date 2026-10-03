@@ -1,23 +1,34 @@
-# Dr.-Ing. Faisal Qayyum
+# Faisal Qayyum Research Consulting
 
-> Assistant Professor of Mechanical Engineering at the University of Tabuk, Saudi Arabia. PhD (magna cum laude) from TU Bergakademie Freiberg, Germany. Consultant in crystal plasticity simulation (DAMASK), metal forming FEM (ABAQUS), EBSD/microstructure analysis, PhD mentoring, scientific writing coaching, and grant proposal consulting. 39+ peer-reviewed publications, 1,230+ citations, h-index 22.
+> Research consulting by Dr.-Ing. Faisal Qayyum, a materials scientist and mechanical engineer (Dr.-Ing. magna cum laude, TU Bergakademie Freiberg, Germany; nine years at Freiberg; Assistant Professor at the University of Tabuk, Saudi Arabia, since February 2026). Helps researchers who are stuck with a PhD, a paper, a supervisor conflict or a career move to Germany or the Gulf, and consults on crystal plasticity and materials simulation for labs and industry. Google Scholar: 1,371 citations, h-index 23 (September 2026). 150+ manuscripts reviewed; editorial board, Discover Materials (Springer Nature). Works remotely in English, German and Urdu. Services, not outcomes: no guaranteed admissions, acceptances or jobs; no ghostwriting; career coaching is not recruitment.
 
-Site: https://faisalqayyum.com/ — all consulting engagements are scoped individually.
-Book a 15-minute discovery call: https://cal.eu/fysalqayyum/15min
+Site: https://faisalqayyum.com/
+How to start: describe your situation at https://faisalqayyum.com/#contact or book a free 15-minute call: https://cal.eu/fysalqayyum/15min
+About: https://faisalqayyum.com/about/
+All services: https://faisalqayyum.com/services/
 
-## Consulting services
-- Crystal plasticity simulation (DAMASK): CPFEM model setup, calibration, interpretation — details: https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html
-- Metal forming FEM (ABAQUS): forging, rolling, extrusion, sheet forming, thermo-mechanical coupling — details: https://faisalqayyum.com/services/metal-forming-fem-consulting.html
-- Phase field simulation: recrystallization, spheroidization, grain growth — details: https://faisalqayyum.com/services/phase-field-simulation-consulting.html
-- Mechanical test data analysis: tensile, fatigue, hardness, impact (analytical, no lab work) — details: https://faisalqayyum.com/services/mechanical-test-data-analysis.html
-- Microstructure characterization: SEM, EBSD, DIC interpretation; MTEX texture analysis — details: https://faisalqayyum.com/services/ebsd-analysis-consulting.html
-- Process-structure-property analysis — details: https://faisalqayyum.com/services/process-structure-property-analysis.html
-- Multiscale modeling strategy — details: https://faisalqayyum.com/services/multiscale-modeling-strategy.html
-- Materials failure analysis, incl. expert witness contexts — details: https://faisalqayyum.com/services/materials-failure-analysis.html
-- PhD & research mentoring — details: https://faisalqayyum.com/services/phd-research-mentoring.html
-- Scientific writing coaching — details: https://faisalqayyum.com/services/scientific-writing-coaching.html
-- Grant proposal consulting (DFG, AvH, DAAD, EU Horizon) — details: https://faisalqayyum.com/services/grant-proposal-consulting.html
-- Custom digital courses and workshops for research teams — details: https://faisalqayyum.com/services/custom-digital-courses-workshops.html
+## Finish & Publish
+- PhD & research rescue (stalled PhD, supervisor conflict, authorship dispute, rejected paper): https://faisalqayyum.com/services/phd-research-rescue.html
+- Scientific writing coaching and reviewer responses: https://faisalqayyum.com/services/scientific-writing-coaching.html
+- PhD & research mentoring: https://faisalqayyum.com/services/phd-research-mentoring.html
+- Grant proposal consulting: https://faisalqayyum.com/services/grant-proposal-consulting.html
+
+## Careers & Mobility
+- PhD, postdoc and research careers in Germany (coaching): https://faisalqayyum.com/services/academic-career-germany.html
+- Academic jobs in Saudi Arabia and the Gulf (coaching): https://faisalqayyum.com/services/academic-jobs-saudi-arabia-gulf.html
+
+## Simulation & Materials
+- Crystal plasticity simulation (DAMASK): https://faisalqayyum.com/services/crystal-plasticity-simulation-consulting.html
+- Metal forming FEM (ABAQUS): https://faisalqayyum.com/services/metal-forming-fem-consulting.html
+- Phase field simulation: https://faisalqayyum.com/services/phase-field-simulation-consulting.html
+- EBSD and microstructure analysis: https://faisalqayyum.com/services/ebsd-analysis-consulting.html
+- Materials failure analysis: https://faisalqayyum.com/services/materials-failure-analysis.html
+- Mechanical test data analysis: https://faisalqayyum.com/services/mechanical-test-data-analysis.html
+- Process-structure-property analysis: https://faisalqayyum.com/services/process-structure-property-analysis.html
+- Multiscale modeling strategy: https://faisalqayyum.com/services/multiscale-modeling-strategy.html
+
+## Training
+- Custom courses and workshops for research groups: https://faisalqayyum.com/services/custom-digital-courses-workshops.html
 
 ## Blog posts
 - [How to Use AI to Write a Paper (Without the Fake Citations)](https://faisalqayyum.com/blog/posts/2026-10-how-to-use-ai-write-paper-v0-workflow.html) (2026-10-01): Agentic AI can take a paper from rough notes to a clean first draft in one pass. Here is the v0 workflow I use, and the checks that keep every citation real.

@@ -14,15 +14,16 @@
   <meta property="og:url" content="https://faisalqayyum.com/services/multiscale-modeling-strategy.html">
   <meta property="og:title" content="Multiscale Materials Modeling Strategy Consulting">
   <meta property="og:description" content="Scale selection, tool matching, and validation strategy for multiscale computational campaigns — from a researcher who builds models at every scale personally.">
-  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-image.jpg">
+  <meta property="og:image" content="https://faisalqayyum.com/assets/img/og-card-2026.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Multiscale Materials Modeling Strategy Consulting">
   <meta name="twitter:description" content="Scale selection, tool matching, and validation strategy for multiscale computational campaigns — from a researcher who builds models at every scale personally.">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='6' fill='none' stroke='%23E07B2830' stroke-width='1'/%3E%3Cpath d='M10 10 L22 10 M10 10 L10 30 M10 20 L19 20' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3Ccircle cx='24' cy='20' r='8' stroke='%23E07B28' stroke-width='2.5' fill='none'/%3E%3Cpath d='M29 26 L35 32' stroke='%23E07B28' stroke-width='2.5' stroke-linecap='square' fill='none'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=20260919">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261003">
 
   <!-- Analytics (consent-gated: see assets/js/analytics.js) -->
   <script defer src="../assets/js/analytics.js?v=20260720"></script>
@@ -75,7 +76,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://faisalqayyum.com/#services"
+        "item": "https://faisalqayyum.com/services/"
       },
       {
         "@type": "ListItem",
@@ -136,162 +137,27 @@
   }
   </script>
 
-  <style>
-    .service-hero {
-      padding: 9rem 2rem 3rem;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .service-hero h1 {
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      color: var(--text-primary);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    .service-hero .lede {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      max-width: 640px;
-    }
-    .service-body {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 1rem 2rem 4rem;
-    }
-    .service-body h2 {
-      font-size: 1.4rem;
-      color: var(--text-primary);
-      margin: 2.5rem 0 1rem;
-    }
-    .service-body p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
-    .service-body ul { color: var(--text-secondary); margin: 0 0 1rem 1.25rem; line-height: 1.7; }
-    .service-body li { margin-bottom: 0.5rem; }
-    .service-body a { color: var(--accent-1); }
-    .scope-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .scope-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem;
-    }
-    .scope-card strong { display: block; color: var(--text-primary); margin-bottom: 0.4rem; font-size: 0.95rem; }
-    .scope-card span { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.55; display: block; }
-    .proof-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .proof-item {
-      flex: 1;
-      min-width: 160px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 1rem;
-      text-align: center;
-    }
-    .proof-item strong { display: block; font-size: 1.4rem; color: var(--accent-1); }
-    .proof-item span { font-size: 0.78rem; color: var(--text-secondary); }
-    .service-quote {
-      border-left: 3px solid var(--accent-1);
-      background: var(--bg-card);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin: 1.75rem 0;
-      font-style: italic;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-    .service-quote cite {
-      display: block;
-      margin-top: 0.6rem;
-      font-style: normal;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .process-steps { counter-reset: step; margin: 1.5rem 0; padding: 0; list-style: none; }
-    .process-steps li {
-      position: relative;
-      padding-left: 3rem;
-      margin-bottom: 1.25rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    .process-steps li::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--accent-1);
-      color: #fff;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-    }
-    .process-steps strong { color: var(--text-primary); }
-    .faq-plain details {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      margin-bottom: 0.75rem;
-      padding: 0;
-    }
-    .faq-plain summary {
-      cursor: pointer;
-      padding: 1rem 1.25rem;
-      color: var(--text-primary);
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .faq-plain details p {
-      padding: 0 1.25rem 1rem;
-      margin: 0;
-      font-size: 0.9rem;
-    }
-    .cta-box {
-      background: linear-gradient(135deg, rgba(224,123,40,0.12), rgba(224,123,40,0.04));
-      border: 1px solid rgba(224,123,40,0.3);
-      border-radius: var(--radius-md);
-      padding: 2rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-    .cta-box h2 { color: var(--accent-1); margin: 0 0 0.75rem; }
-    .cta-box p { margin-bottom: 1.25rem; }
-    .cta-box .btn { display: inline-block; margin: 0.25rem; }
-  </style>
 </head>
 <body>
 
   <nav class="nav scrolled">
     <div class="nav__inner">
-      <a href="/" class="nav__logo" aria-label="Home">
+      <a href="/" class="nav__logo" aria-label="Faisal Qayyum Research Consulting, home">
         <svg class="nav__logo-svg" viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="1" y="1" width="38" height="38" rx="6" fill="none" stroke="var(--border-accent)" stroke-width="1"/>
           <path d="M10 10 L22 10 M10 10 L10 30 M10 20 L19 20" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
           <circle cx="24" cy="20" r="8" stroke="var(--accent-1)" stroke-width="2.5" fill="none"/>
           <path d="M29 26 L35 32" stroke="var(--accent-1)" stroke-width="2.5" stroke-linecap="square" fill="none"/>
         </svg>
-        <span class="nav__name">Dr. Faisal Qayyum</span>
+        <span class="nav__name">Faisal Qayyum<small>Research Consulting</small></span>
       </a>
       <ul class="nav__links">
-        <li><a href="/#about" class="nav__link">About</a></li>
-        <li><a href="/#services" class="nav__link active">Services</a></li>
-        <li><a href="/#publications" class="nav__link">Research</a></li>
-        <li><a href="/#thoughts" class="nav__link">Thoughts</a></li>
-        <li><a href="/#contact" class="nav__link nav__link--cta">Contact</a></li>
+        <li><a href="/#careers" class="nav__link">Career moves</a></li>
+        <li><a href="/#research" class="nav__link">Research help</a></li>
+        <li><a href="/services/" class="nav__link">All services</a></li>
+        <li><a href="/about/" class="nav__link">About</a></li>
+        <li><a href="/blog/" class="nav__link">Blog</a></li>
+        <li><a href="/#contact" class="nav__link nav__link--cta">Get help</a></li>
       </ul>
       <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -302,11 +168,12 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu__links">
       <li><a href="/">Home</a></li>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#publications">Research</a></li>
+      <li><a href="/#careers">Career moves</a></li>
+      <li><a href="/#research">Research help</a></li>
+      <li><a href="/services/">All services</a></li>
+      <li><a href="/about/">About</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/#contact">Get help</a></li>
     </ul>
   </div>
 
@@ -354,7 +221,7 @@
       <h2>Why me</h2>
       <div class="proof-strip">
         <div class="proof-item"><strong>4</strong><span>scales worked personally: phase field, CPFEM, forming FEM, EBSD</span></div>
-        <div class="proof-item"><strong>39+</strong><span>publications spanning the full modeling stack</span></div>
+        <div class="proof-item"><strong>54</strong><span>Scopus-indexed publications (Sept 2026)</span></div>
         <div class="proof-item"><strong>DFG-funded</strong><span>multiscale research (phase field &rarr; crystal plasticity)</span></div>
         <div class="proof-item"><strong>Elsevier</strong><span>co-edited book on new-generation metal mechanics</span></div>
       </div>
@@ -400,7 +267,7 @@
         <h2>Start With 15 Minutes</h2>
         <p>Book a call and describe the material system and question. I will tell you honestly which scales actually need modeling &mdash; and which do not.</p>
         <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener" class="btn btn--primary">Book a 15-Minute Call</a>
-        <a href="/#contact" class="btn btn--outline">Send a Message</a>
+        <a href="/#contact" class="btn btn--outline" data-help="">Describe your situation</a>
       </div>
 
       <p><em>Related: <a href="/services/process-structure-property-analysis.html">Process&ndash;structure&ndash;property analysis</a> &middot; <a href="/services/crystal-plasticity-simulation-consulting.html">Crystal plasticity simulation consulting</a></em></p>
@@ -410,12 +277,12 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__name">Dr.-Ing. Faisal Qayyum</p>
-      <p class="footer__copy">&copy; <span id="footerYear"></span> All rights reserved.</p>
-      <p class="footer__meta">faisalqayyum.com &middot; Hosted on GitHub Pages &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
+      <p class="footer__name">Faisal Qayyum Research Consulting</p>
+      <p class="footer__copy">&copy; <span id="footerYear"></span> Dr.-Ing. Faisal Qayyum. All rights reserved.</p>
+      <p class="footer__meta"><a href="/services/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Services</a> &middot; <a href="/about/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">About</a> &middot; <a href="/blog/" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Blog</a> &middot; <a href="/privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Privacy</a></p>
     </div>
   </footer>
 
-  <script defer src="../assets/js/main.js?v=20260919"></script>
+  <script defer src="../assets/js/main.js?v=20261003"></script>
 </body>
 </html>

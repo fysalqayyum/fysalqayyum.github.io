@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dr.-Ing. Faisal Qayyum — Blog &amp; Thoughts</title>
+    <title>Faisal Qayyum Research Consulting — Blog</title>
     <link>https://faisalqayyum.com/blog/</link>
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <description>Research insights, career reflections, and technical notes on crystal plasticity, DAMASK, ABAQUS, and scientific writing.</description>
+    <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
     <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate>
     <item>
