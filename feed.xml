@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Why Is There So Much Stigma Around Using AI in Scientific Work?</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-10-why-stigma-generative-ai-scientific-research.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-10-why-stigma-generative-ai-scientific-research.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Nearly every researcher now uses generative AI somewhere in their work, yet most will not admit it. A working scientist on why the stigma is misplaced.</description>
+    </item>
     <item>
       <title>How to Write a Master's Thesis in Germany: Outline, V0, Feedback, and How It Is Graded</title>
       <link>https://faisalqayyum.com/blog/posts/2026-10-how-to-write-master-thesis-germany.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
       <description>How LPBF aluminum simulation connects residual stress, microstructure, EBSD, and DAMASK crystal plasticity for AlSi10Mg anisotropy and AM process design.</description>
-    </item>
-    <item>
-      <title>Moving from Germany to Saudi Arabia for an Academic Job — A Complete Guide for Families</title>
-      <link>https://faisalqayyum.com/blog/posts/2026-03-moving-germany-to-saudi-arabia-academic-job.html</link>
-      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-moving-germany-to-saudi-arabia-academic-job.html</guid>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <description>A first-hand walkthrough of relocating from Germany to Saudi Arabia for a faculty position: visa, Tasheer, Mosadaqa, QVP, medical certificates, apostille, timelines, and costs.</description>
     </item>
   </channel>
 </rss>
