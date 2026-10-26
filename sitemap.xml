@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://faisalqayyum.com/about/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -125,6 +125,12 @@
     <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://faisalqayyum.com/blog/posts/2026-10-shanghai-sci-tech-co-research-program-guide.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://faisalqayyum.com/blog/posts/2026-10-why-stigma-generative-ai-scientific-research.html</loc>

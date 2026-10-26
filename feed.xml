@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Shanghai Sci-tech Co-research Program: How I Won and How to Apply</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-10-shanghai-sci-tech-co-research-program-guide.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-10-shanghai-sci-tech-co-research-program-guide.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description>I lead a 2026 Shanghai Sci-tech Co-research Program project. Eligibility, the RMB 400,000 grant, the 6-month stay, the forms and timeline, step by step.</description>
+    </item>
     <item>
       <title>Why Is There So Much Stigma Around Using AI in Scientific Work?</title>
       <link>https://faisalqayyum.com/blog/posts/2026-10-why-stigma-generative-ai-scientific-research.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-damask-international-journal-plasticity.html</guid>
       <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
       <description>What gets DAMASK crystal plasticity studies through International Journal of Plasticity review: model justification, hierarchical calibration, and RVE proof.</description>
-    </item>
-    <item>
-      <title>LPBF Aluminum Simulation: Residual Stress, Microstructure, and Crystal Plasticity</title>
-      <link>https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</link>
-      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-numerical-simulations-additive-manufacturing-aluminum.html</guid>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <description>How LPBF aluminum simulation connects residual stress, microstructure, EBSD, and DAMASK crystal plasticity for AlSi10Mg anisotropy and AM process design.</description>
     </item>
   </channel>
 </rss>
