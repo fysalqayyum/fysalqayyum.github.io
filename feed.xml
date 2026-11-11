@@ -6,7 +6,14 @@
     <atom:link href="https://faisalqayyum.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Practical guides for researchers: finishing a PhD, getting papers published, academic careers in Germany and the Gulf, and crystal plasticity and materials simulation.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Germany or Saudi Arabia? Every Country Comes as a Full Box</title>
+      <link>https://faisalqayyum.com/blog/posts/2026-11-germany-or-saudi-arabia-full-box-decision.html</link>
+      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-11-germany-or-saudi-arabia-full-box-decision.html</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <description>A young engineer asked me to choose: a German Master's or a Saudi job. Why it matters less than he thinks, what savings really look like, and what to ask first.</description>
+    </item>
     <item>
       <title>Every Choice Is a Stick With Two Ends</title>
       <link>https://faisalqayyum.com/blog/posts/2026-11-every-choice-stick-two-ends.html</link>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-05-first-steps-faculty-university-tabuk-saudi-arabia.html</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
       <description>A first-hand on-ground guide for new faculty at University of Tabuk: SIM card, Iqama medical, HR contract, Absher, bank account, driving licence, and family Iqama.</description>
-    </item>
-    <item>
-      <title>Sheet Metal Forming Simulation: Springback, Forming Limits, and Crystal Plasticity</title>
-      <link>https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</link>
-      <guid isPermaLink="true">https://faisalqayyum.com/blog/posts/2026-03-sheet-metal-forming-simulation.html</guid>
-      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
-      <description>An expert perspective on sheet metal forming simulation, FEM-based metal forming process optimization, and the role of crystal plasticity in predicting forming behavior.</description>
     </item>
   </channel>
 </rss>

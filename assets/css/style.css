@@ -2134,8 +2134,11 @@ h3 { font-size: var(--fs-h3); }
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+  padding: 0.85rem 1rem;
   box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1rem;
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -2147,23 +2150,32 @@ h3 { font-size: var(--fs-h3); }
   pointer-events: all;
 }
 .consent-banner__text {
-  font-size: 0.85rem;
+  flex: 1;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  margin: 0;
+  line-height: 1.45;
 }
+.consent-banner__text a { color: var(--primary); text-decoration: underline; }
+/* Accept and Decline carry equal weight (same style, same size). */
 .consent-banner__actions {
   display: flex;
-  gap: 0.75rem;
-  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 .consent-banner__actions .btn {
-  padding: 0.5rem 1.1rem;
+  padding: 0.45rem 0.9rem;
   font-size: 0.85rem;
+  min-width: 5.5rem;
+  text-align: center;
 }
-@media (max-width: 480px) {
-  .consent-banner__actions { flex-direction: column-reverse; }
-  .consent-banner__actions .btn { width: 100%; text-align: center; }
+@media (max-width: 560px) {
+  .consent-banner { flex-direction: column; align-items: stretch; left: 0.5rem; right: 0.5rem; bottom: 0.5rem; }
+  .consent-banner__actions .btn { flex: 1; }
+}
+/* Phones: sit above the sticky help bar instead of covering it. */
+@media (max-width: 768px) {
+  body:has(.sticky-cta) .consent-banner { bottom: 4.5rem; }
 }
 
 

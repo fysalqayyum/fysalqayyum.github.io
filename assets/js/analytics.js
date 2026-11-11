@@ -77,10 +77,10 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML =
-      '<p class="consent-banner__text">This site counts anonymous, cookieless page views to know what gets read. Accept to also allow analytics cookies and Microsoft Clarity, which help me see how pages actually get used. Decline and nothing is stored on your device. See the <a href="/privacy.html">privacy policy</a>.</p>' +
+      '<p class="consent-banner__text">I count anonymous, cookieless page views. Accept to also allow analytics cookies and Microsoft Clarity; decline and nothing is stored on your device. <a href="/privacy.html">Privacy policy</a>.</p>' +
       '<div class="consent-banner__actions">' +
       '<button type="button" class="btn btn--outline consent-banner__decline">Decline</button>' +
-      '<button type="button" class="btn btn--primary consent-banner__accept">Accept</button>' +
+      '<button type="button" class="btn btn--outline consent-banner__accept">Accept</button>' +
       '</div>';
     document.body.appendChild(banner);
 
