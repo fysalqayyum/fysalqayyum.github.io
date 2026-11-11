@@ -188,33 +188,6 @@
     }
   }
 
-  function bookingFallbackEmail() {
-    trackSiteEvent('booking_fallback_message', window.location.pathname);
-    buildMailto(
-      'Booking link problem / appointment request',
-      'Hello Dr. Qayyum,\n\nI tried to book a 15-minute call, but the booking page did not work for me.\n\nMy timezone is: [Your timezone]\nSuitable times for me are:\n1. [Option 1]\n2. [Option 2]\n3. [Option 3]\n\nWhat I would like to discuss:\n[Briefly describe your question]\n\nBest regards,\n[Your Name]'
-    );
-  }
-
-  function enhanceBookingCtas() {
-    document.querySelectorAll('a[href*="cal.eu/fysalqayyum/15min"]').forEach(function (link) {
-      link.addEventListener('click', function () {
-        trackSiteEvent('booking_click', link.textContent.trim() || window.location.pathname);
-      });
-
-      var ctaBox = link.closest('.cta-box');
-      // Boxes that already offer a help email don't need the fallback button.
-      if (!ctaBox || ctaBox.querySelector('.booking-fallback-link') || ctaBox.querySelector('[data-help]')) return;
-
-      var fallback = document.createElement('button');
-      fallback.type = 'button';
-      fallback.className = 'btn btn--outline booking-fallback-link';
-      fallback.textContent = 'Booking not working? Send a message';
-      fallback.addEventListener('click', bookingFallbackEmail);
-      link.insertAdjacentElement('afterend', fallback);
-    });
-  }
-
   // The three qualifying prompts every help request carries (situation,
   // deadline, what has been tried). Asking for help should take one click.
   var HELP_PROMPT = 'Hello Dr. Qayyum,\n\nMy situation in a few lines:\n[What is going on]\n\nMy deadline or timeline:\n[e.g. submission in March, contract ends in June]\n\nWhat I have already tried:\n[...]\n\nBest regards,\n[Your name]';
@@ -256,9 +229,6 @@
       var href = this.getAttribute('data-href');
       if (href) {
         if (href.indexOf('http') === 0) {
-          if (href.indexOf('cal.eu/fysalqayyum/15min') !== -1) {
-            trackSiteEvent('booking_click', 'contact_modal');
-          }
           window.open(href, '_blank', 'noopener');
           closeContactModal();
         } else {
@@ -339,6 +309,10 @@
     e.preventDefault();
     var key = helpAreaKey(trigger.getAttribute('data-help'));
     trackSiteEvent('contact_us', 'help_' + (key || 'general'));
+    // Clarity events carry no label, so placement gets its own event name.
+    if (trigger.closest('.help-box--inline')) trackSiteEvent('mid_post_help', key || 'general');
+    else if (trigger.closest('.sticky-cta')) trackSiteEvent('sticky_help', key || 'general');
+    else if (trigger.closest('.help-tile')) trackSiteEvent('tile_click', key || 'general');
     if (helpForm) {
       openHelpForm(key);
     } else {
@@ -377,7 +351,7 @@
         if (!res.ok) throw new Error('status ' + res.status);
         trackSiteEvent('form_submit', 'area_' + area);
         helpForm.innerHTML = '<div class="help-form__done"><h3>Thank you. Your message is on its way.</h3>' +
-          '<p>I will reply within two working days. If it is urgent, <a href="https://cal.eu/fysalqayyum/15min" target="_blank" rel="noopener">book a 15-minute call</a>.</p></div>';
+          '<p>I will reply within two working days.</p></div>';
       }).catch(function () {
         trackSiteEvent('form_error', 'area_' + area);
         btn.disabled = false;
@@ -411,7 +385,9 @@
     var btn = document.createElement('a');
     btn.className = 'sticky-cta__btn';
     btn.href = '/#contact';
-    btn.setAttribute('data-help', isService ? (document.title.split('|')[0].trim()) : 'Blog reader');
+    // Posts: reuse the area of the post's own end-of-post help box.
+    var endHelp = isPost ? document.querySelector('.post-content .help-box:not(.help-box--inline) [data-help]') : null;
+    btn.setAttribute('data-help', isService ? (document.title.split('|')[0].trim()) : (endHelp ? endHelp.getAttribute('data-help') : 'Blog reader'));
     btn.textContent = 'Get help \u2192';
     var toc = isPost ? document.querySelector('.post-content nav.toc') : null;
     if (toc) {
@@ -459,7 +435,6 @@
   })();
 
   // ─── 9b. FUNNEL EVENT LABELS ──────────────────────
-  enhanceBookingCtas();
 
   document.addEventListener('click', function (e) {
     var target = e.target.closest('a, button');
@@ -484,6 +459,7 @@
 
     if (target.closest('.post-content') && (href.indexOf('/blog/posts/') !== -1 || href.indexOf('2026-') === 0)) {
       trackSiteEvent('internal_related_click', href);
+      if (target.closest('.help-box--inline')) trackSiteEvent('mid_post_related', href);
       return;
     }
 

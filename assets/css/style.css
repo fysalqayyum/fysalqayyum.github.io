@@ -1989,10 +1989,6 @@ h3 { font-size: var(--fs-h3); }
   color: var(--accent-1);
 }
 
-.post-content .booking-fallback-link {
-  margin: 0.25rem;
-}
-
 .back-link {
   display: inline-block;
   margin-bottom: 2rem;
@@ -2794,3 +2790,23 @@ section[id], header[id] { scroll-margin-top: 84px; }
 .yt-facade__play::after { content: ""; border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent #fff; margin-left: 4px; }
 .yt-facade__btn:hover .yt-facade__play, .yt-facade__btn:focus-visible .yt-facade__play { background: var(--cta-hover); }
 .yt-facade__caption { margin-top: 0.6rem; font-size: 0.92rem; color: var(--text-muted); }
+
+/* ═══════════════════════════════════════════════════
+   MID-POST NEXT STEP (UX pass 2026-11-11): compact card after the first section
+   of the top-traffic posts — one related read + one help link.
+   ═══════════════════════════════════════════════════ */
+.help-box--inline {
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary);
+}
+.help-box--inline p { margin: 0; font-size: 1rem; line-height: 1.5; }
+.help-box--inline p + p { margin-top: 0.6rem; }
+.help-box__next span {
+  display: block;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.15rem;
+}
+.post-content .help-box--inline a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.post-content .help-box__ask a { color: var(--cta); }
+.post-content .help-box__ask a:hover { color: var(--cta-hover); }

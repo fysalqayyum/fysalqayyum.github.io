@@ -153,7 +153,7 @@ llms = f"""# Faisal Qayyum Research Consulting
 > Research consulting by Dr.-Ing. Faisal Qayyum, a materials scientist and mechanical engineer (Dr.-Ing. magna cum laude, TU Bergakademie Freiberg, Germany; nine years at Freiberg; Assistant Professor at the University of Tabuk, Saudi Arabia, since February 2026). Helps researchers who are stuck with a PhD, a paper, a supervisor conflict or a career move to Germany or the Gulf, and consults on crystal plasticity and materials simulation for labs and industry. Google Scholar: 1,371 citations, h-index 23 (September 2026). 150+ manuscripts reviewed; editorial board, Discover Materials (Springer Nature). Works remotely in English, German and Urdu. Services, not outcomes: no guaranteed admissions, acceptances or jobs; no ghostwriting; career coaching is not recruitment.
 
 Site: {SITE}/
-How to start: describe your situation at {SITE}/#contact or book a free 15-minute call: https://cal.eu/fysalqayyum/15min
+How to start: describe your situation at {SITE}/#contact (I reply within two working days)
 About: {SITE}/about/
 All services: {SITE}/services/
 
