@@ -1342,19 +1342,6 @@ h3 { font-size: var(--fs-h3); }
   border-left-color: var(--accent-1);
 }
 
-.contact-link--whatsapp {
-  border-left-color: #25D366;
-}
-
-.contact-link--whatsapp:hover {
-  border-color: #25D366;
-  border-left-color: #25D366;
-}
-
-.contact-link--whatsapp svg {
-  color: #25D366;
-}
-
 .contact-link {
   display: flex;
   align-items: center;
@@ -2694,8 +2681,6 @@ footer { border-top: 1px solid var(--border); background: var(--surface); }
   width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--primary); color: #fff;
   font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; justify-content: center;
 }
-.contact-alt { font-size: 1rem; }
-.contact-alt a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .help-form {
   background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow-md);

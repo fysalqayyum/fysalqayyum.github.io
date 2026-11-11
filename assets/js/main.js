@@ -447,11 +447,6 @@
       return;
     }
 
-    if (href.indexOf('wa.me/') !== -1) {
-      trackSiteEvent('whatsapp_click', window.location.pathname);
-      return;
-    }
-
     if (href.indexOf('/services/') !== -1 || href.indexOf('services/') === 0) {
       trackSiteEvent('service_detail_click', href);
       return;
