@@ -12,7 +12,7 @@ Professional digital profile featuring research publications, consulting service
 
 - HTML5 / CSS3 / Vanilla JavaScript
 - No frameworks, no build tools
-- Hosted on GitHub Pages with custom domain
+- Hosted on Vercel with custom domain
 - SEO-optimized with JSON-LD structured data
 
 ## Contact

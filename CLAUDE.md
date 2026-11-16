@@ -1,8 +1,9 @@
 # CLAUDE.md — faisalqayyum.com
 
 Public consulting portfolio of Dr.-Ing. Faisal Qayyum (materials science professor).
-Static HTML/CSS/vanilla JS, no build step, hosted on GitHub Pages with the custom
-apex domain `faisalqayyum.com`. **This repo is public** — treat every commit accordingly.
+Static HTML/CSS/vanilla JS, no build step, hosted on Vercel (project `faisalqayyum-com`, team InterfaceLab;
+moved from GitHub Pages 2026-11-16) with the custom apex domain `faisalqayyum.com`; every push to
+`main` deploys. `vercel.json` sets `trailingSlash: true` to keep the GitHub Pages URL behaviour. **This repo is public** — treat every commit accordingly.
 
 **Read `PROJECT_MEMORY.md` first** (project root, git-ignored, local only). It holds
 current state, settled decisions, and next steps. This file holds the conventions.
