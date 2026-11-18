@@ -7,6 +7,9 @@ DEPLOYMENT.md
 *.command
 push-to-live.*
 
+# Photo portfolio (photos.faisalqayyum.com): own private repo, deployed separately; never in this public repo
+/photos/
+
 # ShipStudio metadata
 .shipstudio/
 
