@@ -7,6 +7,8 @@ moved from GitHub Pages 2026-11-16) with the custom apex domain `faisalqayyum.co
 
 **Read `PROJECT_MEMORY.md` first** (project root, git-ignored, local only). It holds
 current state, settled decisions, and next steps. This file holds the conventions.
+`photos/` is a separate, git-ignored project (the photo portfolio): read `photos/PROJECT_MEMORY.md`
+before touching it, and never stage anything under `photos/` in this repo.
 Do not duplicate content between the two, and never commit PROJECT_MEMORY.md — it
 contains traffic figures and positioning notes that must not be public.
 
